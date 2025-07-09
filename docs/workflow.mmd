@@ -19,43 +19,43 @@
 
 flowchart TD
     %% Data Sources
-    EurLex[("🗄️ EurLex<br/>Database")]
-    EuPubs[("📚 EU Publications<br/>Register")]
+    EurLex[("EurLex<br/>Database")]
+    EuPubs[("EU Publications<br/>Register")]
     
     %% Phase 1: Data Collection & Preparation
-    subgraph Phase1["🔧 Phase 1: Data Preparation"]
+    subgraph Phase1["Phase 1: Data Preparation"]
         direction TB
-        Collection["📥 Data Collection<br/><small>eurlex R package<br/>API integration</small>"]
-        Standard["⚙️ Standardization<br/><small>Metadata schema<br/>Document hashing</small>"]
-        Dedup["🔍 Deduplication<br/><small>Exact & fuzzy matching<br/>Quality assurance</small>"]
+        Collection["Data Collection<br/><small>eurlex R package<br/>API integration</small>"]
+        Standard["Standardisation<br/><small>Metadata schema<br/>Document hashing</small>"]
+        Dedup["Deduplication<br/><small>Exact & fuzzy matching<br/>Quality assurance</small>"]
     end
     
     %% Phase 2: Content Filtering
-    subgraph Phase2["🎯 Phase 2: Content Filtering"]
+    subgraph Phase2["Phase 2: Content Filtering"]
         direction TB
-        DictFilter["📖 Dictionary Filter<br/><small>Climate mitigation terms<br/>Green Deal keywords</small>"]
-        MLBootstrap["🤖 ML Bootstrap<br/><small>BERT classification<br/>Training set creation</small>"]
-        ActiveLearn["🔄 Active Learning<br/><small>Expert validation loop<br/>Iterative improvement</small>"]
+        DictFilter["Dictionary Filter<br/><small>Climate mitigation terms<br/>Green Deal keywords</small>"]
+        MLBootstrap["ML Bootstrap<br/><small>BERT classification<br/>Training set creation</small>"]
+        ActiveLearn["Active Learning<br/><small>Expert validation loop<br/>Iterative improvement</small>"]
     end
     
     %% Phase 3: Paradigm Classification
-    subgraph Phase3["🧠 Phase 3: Paradigm Analysis"]
+    subgraph Phase3["Phase 3: Paradigm Analysis"]
         direction TB
-        ExpertEx["👨‍🏫 Expert Examples<br/><small>Paradigm definitions<br/>Curated samples</small>"]
-        FewShot["💡 Few-Shot Prompting<br/><small>Adaptive clustering<br/>Hierarchical strategy</small>"]
-        LLMAnalysis["🤖 LLM Classification<br/><small>Neoclassical/Keynesian<br/>Confidence scoring</small>"]
+        ExpertEx["Expert Examples<br/><small>Paradigm definitions<br/>Curated samples</small>"]
+        FewShot["Few-Shot Prompting<br/><small>Adaptive clustering<br/>Hierarchical strategy</small>"]
+        LLMAnalysis["LLM Classification<br/><small>Neoclassical/Keynesian<br/>Confidence scoring</small>"]
     end
     
     %% Validation Layer
-    subgraph Validation["✅ Validation Framework"]
+    subgraph Validation["Validation Framework"]
         direction TB
-        ExpertReview["👥 Expert Review<br/><small>Domain validation<br/>Quality assessment</small>"]
-        CohenKappa["📊 Cohen's Kappa<br/><small>Inter-coder reliability<br/>Statistical validation</small>"]
-        FinalResults["📈 Final Results<br/><small>Policy paradigm insights<br/>Temporal analysis</small>"]
+        ExpertReview["Expert Review<br/><small>Domain validation<br/>Quality assessment</small>"]
+        CohenKappa["Cohen's Kappa<br/><small>Inter-coder reliability<br/>Statistical validation</small>"]
+        FinalResults["Final Results<br/><small>Policy paradigm insights<br/>Temporal analysis</small>"]
     end
     
     %% Quality Assurance
-    QA["🛡️ Quality Assurance<br/><small>Error handling<br/>Fallback mechanisms</small>"]
+    QA["Quality Assurance<br/><small>Error handling<br/>Fallback mechanisms</small>"]
     
     %% Flow connections with enhanced styling
     EurLex -.->|"API calls"| Collection
