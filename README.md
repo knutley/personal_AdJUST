@@ -93,10 +93,10 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 ## Technical Requirements
 
 ### Dependencies
-- **R Packages**: `eurlex`, statistical analysis packages, 'reticulate', 'tidyverse'
+- **R Packages**: `eurlex`, 'reticulate', 'tidyverse', etc. 
 - **Python Libraries**: `BeautifulSoup`, `Scrapy`, `transformers`, 
 - **APIs**: EU Publications Office Elasticsearch API
-- **ML Models**: BERT-based language models
+- **ML Models**: BERT (HuggingFace transformers)
 
 ### Infrastructure (Needs to be Discussed) 
 - API rate limiting and management
