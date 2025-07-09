@@ -39,7 +39,7 @@ The AdJUST Project is a research initiative focused on analysing dominant climat
 
 **Fuzzy Matching:**
 - Title similarity analysis
-- Semantic scoring (Jaro-Winkler, cosine similarity, Levenshtein distance)
+- Semantic scoring (need to discuss preference between Jaro-Winkler, cosine similarity, Levenshtein distance)
 - Temporal similarity windowing
 
 **Quality Assurance:**
@@ -57,7 +57,7 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 ```
 
 **Machine Learning Classification:**
-- Bootstrap expert-labeled training set
+- Bootstrap expert-labelled training set
 - Active learning with BERT predictions
 - Iterative improvement through expert validation
 - Inter-coder reliability assessment (Cohen's kappa)
@@ -93,8 +93,8 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 ## Technical Requirements
 
 ### Dependencies
-- **R Packages**: `eurlex`, statistical analysis packages
-- **Python Libraries**: `BeautifulSoup`, `Scrapy`, `transformers`, `sklearn`
+- **R Packages**: `eurlex`, statistical analysis packages, 'reticulate', 'tidyverse'
+- **Python Libraries**: `BeautifulSoup`, `Scrapy`, `transformers`, 
 - **APIs**: EU Publications Office Elasticsearch API
 - **ML Models**: BERT-based language models
 
