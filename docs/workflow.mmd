@@ -1,0 +1,95 @@
+%%{init: {
+    'theme': 'base',
+    'themeVariables': {
+        'primaryColor': '#2E5266',
+        'primaryTextColor': '#ffffff',
+        'primaryBorderColor': '#1B3A4B',
+        'lineColor': '#4A90A4',
+        'secondaryColor': '#87BDD8',
+        'tertiaryColor': '#DAECF3',
+        'background': '#ffffff',
+        'mainBkg': '#2E5266',
+        'secondBkg': '#87BDD8',
+        'tertiaryBkg': '#DAECF3',
+        'clusterBkg': '#F8FBFC',
+        'clusterBorder': '#4A90A4',
+        'edgeLabelBackground': '#ffffff'
+    }
+}}%%
+
+flowchart TD
+    %% Data Sources
+    EurLex[("🗄️ EurLex<br/>Database")]
+    EuPubs[("📚 EU Publications<br/>Register")]
+    
+    %% Phase 1: Data Collection & Preparation
+    subgraph Phase1["🔧 Phase 1: Data Preparation"]
+        direction TB
+        Collection["📥 Data Collection<br/><small>eurlex R package<br/>API integration</small>"]
+        Standard["⚙️ Standardization<br/><small>Metadata schema<br/>Document hashing</small>"]
+        Dedup["🔍 Deduplication<br/><small>Exact & fuzzy matching<br/>Quality assurance</small>"]
+    end
+    
+    %% Phase 2: Content Filtering
+    subgraph Phase2["🎯 Phase 2: Content Filtering"]
+        direction TB
+        DictFilter["📖 Dictionary Filter<br/><small>Climate mitigation terms<br/>Green Deal keywords</small>"]
+        MLBootstrap["🤖 ML Bootstrap<br/><small>BERT classification<br/>Training set creation</small>"]
+        ActiveLearn["🔄 Active Learning<br/><small>Expert validation loop<br/>Iterative improvement</small>"]
+    end
+    
+    %% Phase 3: Paradigm Classification
+    subgraph Phase3["🧠 Phase 3: Paradigm Analysis"]
+        direction TB
+        ExpertEx["👨‍🏫 Expert Examples<br/><small>Paradigm definitions<br/>Curated samples</small>"]
+        FewShot["💡 Few-Shot Prompting<br/><small>Adaptive clustering<br/>Hierarchical strategy</small>"]
+        LLMAnalysis["🤖 LLM Classification<br/><small>Neoclassical/Keynesian<br/>Confidence scoring</small>"]
+    end
+    
+    %% Validation Layer
+    subgraph Validation["✅ Validation Framework"]
+        direction TB
+        ExpertReview["👥 Expert Review<br/><small>Domain validation<br/>Quality assessment</small>"]
+        CohenKappa["📊 Cohen's Kappa<br/><small>Inter-coder reliability<br/>Statistical validation</small>"]
+        FinalResults["📈 Final Results<br/><small>Policy paradigm insights<br/>Temporal analysis</small>"]
+    end
+    
+    %% Quality Assurance
+    QA["🛡️ Quality Assurance<br/><small>Error handling<br/>Fallback mechanisms</small>"]
+    
+    %% Flow connections with enhanced styling
+    EurLex -.->|"API calls"| Collection
+    EuPubs -.->|"Web scraping"| Collection
+    
+    Collection ==>|"Raw documents"| Standard
+    Standard ==>|"Clean metadata"| Dedup
+    Dedup ==>|"Unique corpus"| DictFilter
+    
+    DictFilter ==>|"Filtered docs"| MLBootstrap
+    MLBootstrap ==>|"Training data"| ActiveLearn
+    ActiveLearn ==>|"Validated corpus"| ExpertEx
+    
+    ExpertEx ==>|"Example set"| FewShot
+    FewShot ==>|"Prompt templates"| LLMAnalysis
+    LLMAnalysis ==>|"Classifications"| ExpertReview
+    
+    ExpertReview ==>|"Reviewed results"| CohenKappa
+    CohenKappa ==>|"Validated classifications"| FinalResults
+    
+    %% Quality assurance connections
+    QA -.->|"Monitors"| Phase1
+    QA -.->|"Validates"| Phase2
+    QA -.->|"Ensures quality"| Phase3
+    
+    %% Styling
+    classDef phaseBox fill:#F8FBFC,stroke:#4A90A4,stroke-width:2px,color:#2E5266
+    classDef dataSource fill:#87BDD8,stroke:#2E5266,stroke-width:2px,color:#ffffff
+    classDef process fill:#2E5266,stroke:#1B3A4B,stroke-width:2px,color:#ffffff
+    classDef validation fill:#DAECF3,stroke:#4A90A4,stroke-width:2px,color:#2E5266
+    classDef qa fill:#FFF3CD,stroke:#856404,stroke-width:2px,color:#856404
+    
+    class Phase1,Phase2,Phase3,Validation phaseBox
+    class EurLex,EuPubs dataSource
+    class Collection,Standard,Dedup,DictFilter,MLBootstrap,ActiveLearn,ExpertEx,FewShot,LLMAnalysis process
+    class ExpertReview,CohenKappa,FinalResults validation
+    class QA qa
