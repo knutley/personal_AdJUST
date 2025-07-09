@@ -85,7 +85,7 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 - Confidence-based quality assessment
 
 ### Policy Analysis
-- Multi-paradigm classification (neoclassical, Keynesian, mixed)
+- Multi-paradigm classification (neoclassical, Keynesian, mixed, etc.)
 - Temporal analysis of paradigm evolution
 - Document type and actor analysis
 - Comprehensive validation framework
@@ -98,8 +98,7 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 - **APIs**: EU Publications Office Elasticsearch API
 - **ML Models**: BERT-based language models
 
-### Infrastructure
-- Database for document storage and metadata
+### Infrastructure (Needs to be Discussed) 
 - API rate limiting and management
 - Distributed processing capabilities
 - Version control and data lineage tracking
@@ -148,20 +147,11 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 
 This project involves collaboration between technical developers and domain experts in EU climate policy. Contributions should maintain the balance between technical rigor and policy domain expertise.
 
-## License
-
-[Specify license information]
-
 ## Contact
 
 **Principal Investigator**: Dr. Marion Dumas and Dr. Fergus Green 
-* This is done by alphabetical order and can be changed. *
-** Research Assitant **: Katelyn Nutley 
+**Research Assitant**: Katelyn Nutley 
 **Institutional Affiliation**: UCL/LSE  
-
-## Acknowledgments
-
-Special thanks to Dr. Green and Dr. Dumas for their substantive expertise in defining query terms and providing domain knowledge for the project.
 
 ---
 
