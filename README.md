@@ -154,9 +154,10 @@ This project involves collaboration between technical developers and domain expe
 
 ## Contact
 
-**Principal Investigator**: Katelyn Nutley  
+**Principal Investigator**: Dr. Marion Dumas and Dr. Fergus Green 
+* This is done by alphabetical order and can be changed. *
+** Research Assitant **: Katelyn Nutley 
 **Institutional Affiliation**: UCL/LSE  
-**Project**: AdJUST Project Pitch
 
 ## Acknowledgments
 
