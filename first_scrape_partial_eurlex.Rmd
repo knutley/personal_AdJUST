@@ -1,0 +1,361 @@
+---
+title: "Accessing EU Pre-Legislative Documents via EurLex R Package"
+author: "Katelyn Nutley"
+date: "16-07-2025"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: flatly
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Overview
+
+This document demonstrates how to access EU pre-legislative documents using the EurLex R package. The package documentation is available via [CRAN](https://cran.r-project.org/web/packages/eurlex/index.html) and the author's Git is available [here](https://michalovadek.github.io/eurlex/).
+
+## 1. Install EurLex Package and Dependencies
+
+```{r install-packages, eval=FALSE}
+# Install EurLex package and suggested dependencies
+install.packages(c("eurlex", "wordcloud", "purrr", "ggiraph", "revest", "testthat"))
+
+# Only call the function if you don't already have these packages installed
+packages <- c("dplyr", "eurlex", "ggiraph", "ggplot2", "httr", "knitr", "library", 
+              "purrr", "rmarkdown", "rvest", "testthat", "tidyr", "wordcloud")
+lapply(packages, library, character.only = TRUE)
+```
+
+```{r load-libraries, include=FALSE}
+library(dplyr)
+library(eurlex)
+library(ggplot2)
+library(httr)
+library(knitr)
+library(purrr)
+library(rvest)
+library(DT)
+```
+
+### Package Function Overview
+
+The package's main calls and their utility:
+
+- `elx_curia_list()` - scrape list of court cases from Curia (Court of Justice of the European Union)
+- `elx_download_xml()` - download XML notice associated with a URL (basically a list of URLs)
+- `elx_fetch_data()` - retrieve additional data on EU documents (for metadata later)
+- `elx_label_eurovoc()` - label EuroVoc concepts (multilingual thesaurus maintained by Pubs)
+- `elx_make_query()` - create SPARQL queries 
+- `elx_run_query()` - execute SPARQL queries
+
+The `elx_make_query()` function is the most useful here. There are some bugs in the most recent version 0.4.8, but we can work around them without creating our own scraper.
+
+## 2. Define SPARQL Query to Retrieve Pre-Legislative Documents
+
+```{r define-query}
+query <- elx_make_query(
+  # RESOURCE PARAMETER: specifies what type of EU legal document the SPARQL query 
+  # is going to trawl for. Options are "any", "directive", "regulation", "decision"
+  # "recommendation", "intagr", "manual", "proposal", and "national_impl". 
+  # Chose "proposal" because it's most relevant to pre-legislative documents
+  resource_type = "proposal",
+  
+  # MANUAL TYPE PARAMETER: allows for further specification of document sub-type. 
+  # Options include "COM" (Commission documents), "SEC" (staff working documents),
+  # "SWD" (newer staff working documents), and "JOIN" (unclear). 
+  # Left empty because we don't need to restrict it further at this time.
+  manual_type = " ",
+  
+  # DIRECTORY CODE PARAMETER: Eur-Lex uses hierarchical classification systems
+  # More info: https://eur-lex.europa.eu/browse/directories/legislation.html
+  # For environmental topics, the key directory code is:
+  # "15" = Environment, consumers, and health protection; 
+  # "1510" = Environment/ environmental policy;
+  # "1520" = Consumer protection
+  # "1540" = Health protection 
+  directory = "1510"
+  
+  # SECTOR CODE PARAMETER: sector codes are numeric and relate to policy areas.
+  # They correspond with the CELEX numbers but must be between 0 and 9.
+  # sector = " ",
+  
+  # ADDITIONAL PARAMETERS WE CAN ADD: 
+  # DATE RANGE: "YYYY-MM-DD" 
+  # date_begin = "YYYY-MM-DD", # start date 
+  # date_end = Sys.Date(), # today
+  
+  # AUTHOR: 
+  # Specify for originating institution; options:
+  # "European Commission" for more initial proposals
+  # "Council of the European Union" for Council positions
+  # "European Parliament" for EP amendments or stated positions
+  # author = "European Commission", # Note: operates through exact matches, not partial/fuzzy matches
+  
+  # LANGUAGE: 
+  # Specify document language, i.e. "en", "fr", "de", "es", etc.  
+  # language = "en",
+  
+  # INCLUDE CORRIGENDA AND CONSOLIDATED VERSIONS
+  # include_corrigenda = TRUE, 
+  # include_consolidated = FALSE, # usually FALSE for pre-legislative docs 
+  
+  # FORCE SPARQL PARAMETER
+  # Forces the function to return raw SPARQL query instead of executing it
+  # Useful for debugging or customizing the query further
+  # force_sparql = TRUE  # Set to TRUE to see the actual SPARQL query
+)
+```
+
+## 3. Examine the Results Data Structure
+
+```{r run-query}
+results <- elx_run_query(query)
+str(results)
+print(colnames(results))
+```
+
+Each row in the results contains three pieces of information:
+1. **work**: an internal ID / UUID (e.g., 7cbc770e-d809-11e6-ad7c-01aa75ed71a1)
+2. **type**: a document type (e.g., PROP_REG, PROP_DEC)
+3. **celex**: a CELEX number (e.g., 52017PC0008, 51997PC0550(05))
+
+**Note**: There's an issue in year extraction from the CELEX numbers and the URL scrape that required re-tooling. For information on CELEX format: [CELEX Infographic](https://eur-lex.europa.eu/content/tools/eur-lex-celex-infographic-A3.pdf)
+
+CELEX format: `52020PC0008` means `5`(sector)`2020`(year)`PC`(document type)`0008`(sequence)
+
+## 4. Debug Issues Associated with CELEX Numbers from Results
+
+```{r extract-year-function}
+extract_year_from_celex <- function(celex) {
+  # For modern CELEX numbers (2000+), extract 4-digit year from positions 2-5
+  year_str <- substr(celex, 2, 5)
+  return(as.numeric(year_str))
+}
+```
+
+## 5. Reload and Reprocess Data
+
+```{r reprocess-data}
+# This call only runs under the assumption that you have the 'results' data from 
+# the above query. Alternative: results <- elx_search_data(query = "environment", type = "proposal")
+
+# Apply corrected year extraction
+results$year <- extract_year_from_celex(results$celex)
+
+# Filter for proposals
+coms_proposals <- results[grepl("^5[0-9]{4}PC", results$celex), ] # grepl functions just clean everything up
+coms_proposals$year <- extract_year_from_celex(coms_proposals$celex)
+
+# Overview of what the data looks like: 
+print(paste("Environmental proposals (1973-2025):", nrow(coms_proposals)))
+print("Distribution by year:")
+print(table(coms_proposals$year))
+```
+
+## 6. Alternative Data Access Methods
+
+```{r url-construction}
+# Direct URL construction and web scraping
+construct_eurlex_url <- function(celex) {
+  paste0("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:", celex)
+}
+
+# Add URLs to dataframe
+coms_proposals$url <- construct_eurlex_url(coms_proposals$celex)
+
+# Sort by year and select top proposals
+coms_proposals <- coms_proposals[order(coms_proposals$year, decreasing = TRUE), ]
+```
+
+### Display All Proposals
+
+```{r display-all-proposals}
+# Display the dataframe in an interactive table
+DT::datatable(coms_proposals, 
+              options = list(pageLength = 10, scrollX = TRUE),
+              caption = "All Environmental Proposals")
+```
+
+## 7. Filter by Document Type
+
+```{r filter-document-types}
+# Focus on most relevant document types
+relevant_types <- c("PROP_REG", "PROP_DIR", "PROP_DEC", "AMEND_PROP_REG", "AMEND_PROP_DIR") 
+# Focused on these 5 types as they were most relevant, 
+# but happy to discuss if we need to expand!
+
+key_proposals <- coms_proposals[coms_proposals$type %in% relevant_types, ]
+
+print(paste("Filtered to", nrow(key_proposals), "key proposals"))
+print(paste("Dropped", nrow(coms_proposals) - nrow(key_proposals), "documents"))
+```
+
+### Display Key Proposals
+
+```{r display-key-proposals}
+# Display the filtered dataframe
+DT::datatable(key_proposals, 
+              options = list(pageLength = 10, scrollX = TRUE),
+              caption = "Key Environmental Proposals (Filtered by Document Type)")
+```
+
+## 8. Further Filtering Based on Dictionary Method
+
+```{r environmental-keywords}
+# Define environmental keywords to search for:
+environmental_keywords <- c(
+  "climate", "environment", "pollution", "emission", "carbon", "greenhouse gas",
+  "biodiversity", "sustainability", "renewable", "energy efficiency", "waste",
+  "water quality", "air quality", "circular economy", "green deal", "taxonomy"
+) 
+
+# Note: This can be expanded, especially as we get into the meat of the 
+# documents we have already pulled!
+
+# Function to score environmental relevance on documents (this is simply cumulative)
+score_environmental_relevance <- function(text, keywords = environmental_keywords) {
+  if(is.na(text) || text == "") return(0)
+  
+  text_lower <- tolower(text)
+  score <- sum(sapply(keywords, function(kw) {
+    length(gregexpr(kw, text_lower)[[1]]) - 1
+  }))
+  
+  return(score)
+} 
+
+# Note: We can expand this to score the text itself rather than the title, but 
+# that requires a lot of processing power and I wanted to make sure that it was 
+# of use beforehand.
+```
+
+## 9. Scrape Document Titles
+
+```{r scrape-titles}
+# Scrape for title (there's an issue with the eurlex functionality)
+scrape_eurlex_title <- function(url) {
+  tryCatch({
+    res <- GET(url, user_agent("Mozilla/5.0"))
+    page <- read_html(res)
+    
+    # Extract from meta tag
+    title <- page %>%
+      html_node("meta[name='WT.z_docTitle']") %>%
+      html_attr("content")
+    
+    if (!is.na(title) && nzchar(title)) {
+      return(title)
+    } else {
+      return(NA)
+    }
+  }, error = function(e) {
+    message("Failed on URL: ", url)
+    return(NA)
+  })
+}
+
+# Apply scrape to get titles
+key_proposals$title <- map_chr(key_proposals$url, scrape_eurlex_title)
+
+# Score titles based on relevance to keywords 
+key_proposals$score <- sapply(key_proposals$title, score_environmental_relevance)
+```
+
+## 10. Final Results
+
+```{r final-results}
+# Final look at dataframe with enhanced data
+DT::datatable(key_proposals, 
+              options = list(pageLength = 10, scrollX = TRUE),
+              caption = "Final Environmental Proposals with Titles and Relevance Scores") %>%
+  DT::formatStyle('score', 
+                  background = DT::styleColorBar(key_proposals$score, 'lightblue'),
+                  backgroundSize = '100% 90%',
+                  backgroundRepeat = 'no-repeat',
+                  backgroundPosition = 'center')
+```
+
+### Summary Statistics
+
+```{r summary-stats}
+# Summary of the final dataset
+cat("Final Dataset Summary:\n")
+cat("Total documents:", nrow(key_proposals), "\n")
+cat("Year range:", min(key_proposals$year, na.rm = TRUE), "-", max(key_proposals$year, na.rm = TRUE), "\n")
+cat("Average relevance score:", round(mean(key_proposals$score, na.rm = TRUE), 2), "\n")
+cat("Documents with titles:", sum(!is.na(key_proposals$title)), "\n")
+
+# Distribution by document type
+cat("\nDocument types:\n")
+print(table(key_proposals$type))
+
+# Top scored documents
+cat("\nTop 10 highest scoring documents:\n")
+top_docs <- key_proposals[order(key_proposals$score, decreasing = TRUE), ][1:10, c("celex", "title", "score", "year")]
+print(top_docs)
+```
+
+## Alternative Functions (Commented Out)
+
+The following functions were developed as alternatives but are currently commented out due to package limitations:
+
+```{r alternative-functions, eval=FALSE}
+# Get document metadata using notice type
+get_document_metadata <- function(celex) {
+  tryCatch({
+    # Try to get basic document information
+    doc_info <- elx_fetch_data(celex, type = "text")
+    return(doc_info)
+  }, error = function(e) {
+    return(NULL)
+  })
+}
+
+# Web scraping function for EUR-Lex pages
+scrape_eurlex_content <- function(url) {
+  tryCatch({
+    page <- read_html(url)
+    
+    # Extract title
+    title <- page %>% 
+      html_node("h1") %>% 
+      html_text(trim = TRUE)
+    
+    # Extract main content
+    content <- page %>% 
+      html_nodes("div.eli-main-content") %>% 
+      html_text(trim = TRUE)
+    
+    # Extract summary if available
+    summary <- page %>% 
+      html_nodes("div.eli-summary") %>% 
+      html_text(trim = TRUE)
+    
+    return(list(
+      title = title,
+      content = paste(content, collapse = " "),
+      summary = paste(summary, collapse = " ")
+    ))
+  }, error = function(e) {
+    return(list(title = NA, content = NA, summary = NA))
+  })
+}
+```
+
+## Notes and Future Improvements
+
+1. **Package Issues**: There are some bugs in eurlex version 0.4.8 that required workarounds
+2. **Document Type Selection**: The 5 document types selected can be expanded based on research needs
+3. **Keyword Expansion**: The environmental keywords list can be expanded as we analyze more documents
+4. **Content Analysis**: Future versions could score full document text rather than just titles
+5. **Performance**: Full content scraping requires significant processing power
+
+---
+
+*This analysis provides a foundation for accessing and filtering EU pre-legislative documents related to environmental policy. The methodology can be adapted for other policy areas by adjusting the directory codes and keywords.*
