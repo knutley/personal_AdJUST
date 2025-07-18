@@ -199,7 +199,7 @@ environmental_keywords <- c(
 # Please note that this can be expanded, especially as we get into the meat of the 
 # documents we have already pulled! 
 
-# Function to score environmental relevance on documents
+# Function to score environmental relevance on documents (this is simply cumulative)
 score_environmental_relevance <- function(text, keywords = environmental_keywords) {
   if(is.na(text) || text == "") return(0)
   
@@ -209,8 +209,11 @@ score_environmental_relevance <- function(text, keywords = environmental_keyword
   }))
   
   return(score)
-}
+} # Also, we can expand this to score the text itself rather than the title, but 
+# that requires a lot of processing power and I wanted to make sure that it was 
+# of use before hand. 
 
+# Scrape for title (again, there's an issue with the eurlex functionality)
 scrape_eurlex_title <- function(url) {
   tryCatch({
     res <- GET(url, user_agent("Mozilla/5.0"))
@@ -231,8 +234,20 @@ scrape_eurlex_title <- function(url) {
     return(NA)
   })
 }
+
+# Apply scrape to get titles
 key_proposals$title <- map_chr(key_proposals$url, scrape_eurlex_title)
+
+# Score titles based on relevance to keywords 
 key_proposals$score <- sapply(key_proposals$title, score_environmental_relevance)
+
+# Final look at dataframe 
 View(key_proposals)
+
+library(rmarkdown)
+rmarkdown::render("first_scrape_partial_eurlex.R", "pdf_document")
+write.csv(key_proposals, "~/Documents/GitHub/personal_AdJUST/key_proposals.csv")
+
+
 
 
