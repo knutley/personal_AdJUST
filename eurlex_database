@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUR-Lex Research Database</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #003d82;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .dataset-stats {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .download-section {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .download-link {
+            display: inline-block;
+            background: #003d82;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 10px 5px 0;
+            font-weight: 500;
+        }
+        .download-link:hover {
+            background: #0056b3;
+        }
+        .file-info {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .usage-section {
+            background: #e8f4f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .code-block {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>EUR-Lex Research Database</h1>
+        <p>Comprehensive collection of European Union legal documents</p>
+    </div>
+
+    <div class="dataset-stats">
+        <h2>📊 Dataset Overview</h2>
+        <ul>
+            <li><strong>Total Documents:</strong> ~22,000 EU legal texts</li>
+            <li><strong>Content:</strong> Full document text with metadata</li>
+            <li><strong>Time Period:</strong> Various years of EU legislation</li>
+            <li><strong>Document Types:</strong> Regulations, Directives, Decisions, Communications, etc.</li>
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Total Words:</strong> ~3.9+ million words</li>
+        </ul>
+    </div>
+
+    <div class="download-section">
+        <h2>📥 Download Dataset</h2>
+        
+        <h3>Main Database</h3>
+        <a href="data/eurlex_research_database.sqlite" class="download-link">Download SQLite Database</a>
+        <div class="file-info">Complete database with full text and metadata (~1-2GB)</div>
+
+        <h3>CSV Exports</h3>
+        <a href="data/eurlex_complete_dataset.csv" class="download-link">Complete Dataset (CSV)</a>
+        <div class="file-info">All documents in CSV format for easy analysis</div>
+
+        <a href="data/sample_documents.csv" class="download-link">Sample Documents (CSV)</a>
+        <div class="file-info">Preview of 20 documents to explore the dataset</div>
+
+        <a href="data/database_summary.csv" class="download-link">Database Statistics (CSV)</a>
+        <div class="file-info">Summary statistics and metadata about the collection</div>
+    </div>
+
+    <div class="usage-section">
+        <h2>💻 How to Use</h2>
+        
+        <h3>With R (SQLite)</h3>
+        <div class="code-block">
+library(DBI)<br>
+library(RSQLite)<br><br>
+
+# Connect to database<br>
+con <- dbConnect(RSQLite::SQLite(), "eurlex_research_database.sqlite")<br><br>
+
+# View available tables<br>
+dbListTables(con)<br><br>
+
+# Query documents<br>
+documents <- dbGetQuery(con, "SELECT * FROM documents LIMIT 10")<br><br>
+
+# Search for specific terms<br>
+climate_docs <- dbGetQuery(con,<br>
+  "SELECT celex_id, title, word_count FROM documents<br>
+   WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")<br>
+        </div>
+
+        <h3>With Python (CSV)</h3>
+        <div class="code-block">
+import pandas as pd<br><br>
+
+# Load the dataset<br>
+df = pd.read_csv('eurlex_complete_dataset.csv')<br><br>
+
+# Basic exploration<br>
+print(df.shape)<br>
+print(df.columns)<br>
+print(df['document_type'].value_counts())<br><br>
+
+# Text analysis<br>
+climate_docs = df[df['full_text'].str.contains('climate', case=False, na=False)]<br>
+        </div>
+
+        <h3>With Excel/Google Sheets</h3>
+        <p>Download the CSV files and open directly in spreadsheet applications for basic analysis and filtering.</p>
+    </div>
+
+    <div class="dataset-stats">
+        <h2>📋 Dataset Schema</h2>
+        <h3>Documents Table</h3>
+        <ul>
+            <li><code>celex_id</code> - Unique EU document identifier</li>
+            <li><code>title</code> - Document title</li>
+            <li><code>document_type</code> - Type (Regulation, Directive, etc.)</li>
+            <li><code>date_published</code> - Publication date</li>
+            <li><code>author</code> - Authoring institution</li>
+            <li><code>full_text</code> - Complete document content</li>
+            <li><code>word_count</code> - Number of words in document</li>
+            <li><code>url</code> - Original EUR-Lex URL</li>
+        </ul>
+    </div>
+
+    <div class="dataset-stats">
+        <h2>ℹ️ About</h2>
+        <p>This dataset was created for the <strong>AdJUST Project</strong> research by Katelyn Nutley. 
+        The data was collected from the official EUR-Lex website in August 2025.</p>
+        
+        <p><strong>Citation:</strong> Please cite this dataset appropriately in your research and acknowledge 
+        the EUR-Lex database as the original source of the legal documents.</p>
+        
+        <p><strong>License:</strong> Academic and research use. Please respect EUR-Lex terms of service.</p>
+    </div>
+</body>
+</html>
