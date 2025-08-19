@@ -104,14 +104,16 @@
         <div class="file-info">Returns first 10 documents in JSON format</div>
         
         <div class="code-block">
-<strong>API Endpoint:</strong><br>
-GET https://eurlex-prelim-database-production.up.railway.app/api/data<br><br>
+<pre>
+API Endpoint:
+GET https://eurlex-prelim-database-production.up.railway.app/api/data
 
-<strong>Example Usage:</strong><br>
-curl https://eurlex-prelim-database-production.up.railway.app/api/data<br><br>
+Example Usage:
+curl https://eurlex-prelim-database-production.up.railway.app/api/data
 
-<strong>Response Format:</strong><br>
+Response Format:
 JSON array of document objects with celex_id, title, full_text, etc.
+</pre>
         </div>
     </div>
 
@@ -128,55 +130,61 @@ JSON array of document objects with celex_id, title, full_text, etc.
         
         <h3>With R (SQLite)</h3>
         <div class="code-block">
-library(DBI)<br>
-library(RSQLite)<br><br>
+<pre>
+library(DBI)
+library(RSQLite)
 
-# Connect to database<br>
-con <- dbConnect(RSQLite::SQLite(), "database.db")<br><br>
+# Connect to database
+con <- dbConnect(RSQLite::SQLite(), "database.db")
 
-# View available tables<br>
-dbListTables(con)<br><br>
+# View available tables
+dbListTables(con)
 
-# Query documents<br>
-documents <- dbGetQuery(con, "SELECT * FROM documents LIMIT 10")<br><br>
+# Query documents
+documents <- dbGetQuery(con, "SELECT * FROM documents LIMIT 10")
 
-# Search for specific terms<br>
-climate_docs <- dbGetQuery(con,<br>
-  "SELECT celex_id, title, word_count FROM documents<br>
-   WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")<br>
+# Search for specific terms
+climate_docs <- dbGetQuery(con,
+  "SELECT celex_id, title, word_count FROM documents 
+   WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")
+</pre>
         </div>
 
         <h3>With Python (API)</h3>
         <div class="code-block">
-import requests<br>
-import json<br><br>
+<pre>
+import requests
+import json
 
-# Fetch data from API<br>
-response = requests.get('https://eurlex-prelim-database-production.up.railway.app/api/data')<br>
-documents = response.json()<br><br>
+# Fetch data from API
+response = requests.get('https://eurlex-prelim-database-production.up.railway.app/api/data')
+documents = response.json()
 
-# Process documents<br>
-for doc in documents:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;print(f"Document: {doc['celex_id']}")<br>
-&nbsp;&nbsp;&nbsp;&nbsp;print(f"Title: {doc['title']}")<br>
-&nbsp;&nbsp;&nbsp;&nbsp;print(f"Words: {doc['word_count']}")
+# Process documents
+for doc in documents:
+    print(f"Document: {doc['celex_id']}")
+    print(f"Title: {doc['title']}")
+    print(f"Words: {doc['word_count']}")
+</pre>
         </div>
 
         <h3>With Python (SQLite)</h3>
         <div class="code-block">
-import sqlite3<br>
-import pandas as pd<br><br>
+<pre>
+import sqlite3
+import pandas as pd
 
-# Connect to downloaded database<br>
-conn = sqlite3.connect('database.db')<br><br>
+# Connect to downloaded database
+conn = sqlite3.connect('database.db')
 
-# Load data into pandas<br>
-df = pd.read_sql_query("SELECT * FROM documents", conn)<br><br>
+# Load data into pandas
+df = pd.read_sql_query("SELECT * FROM documents", conn)
 
-# Basic exploration<br>
-print(df.shape)<br>
-print(df.columns)<br>
+# Basic exploration
+print(df.shape)
+print(df.columns)
 print(df['document_type'].value_counts())
+</pre>
         </div>
     </div>
 
