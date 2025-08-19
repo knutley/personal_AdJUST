@@ -70,6 +70,13 @@
             margin: 10px 0;
             overflow-x: auto;
         }
+        .api-section {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -90,22 +97,30 @@
         </ul>
     </div>
 
+    <div class="api-section">
+        <h2>🔌 Live API Access</h2>
+        <p>Access the data programmatically via our REST API:</p>
+        <a href="/api/data" class="download-link">View Sample Data (JSON)</a>
+        <div class="file-info">Returns first 10 documents in JSON format</div>
+        
+        <div class="code-block">
+<strong>API Endpoint:</strong><br>
+GET https://eurlex-prelim-database-production.up.railway.app/api/data<br><br>
+
+<strong>Example Usage:</strong><br>
+curl https://eurlex-prelim-database-production.up.railway.app/api/data<br><br>
+
+<strong>Response Format:</strong><br>
+JSON array of document objects with celex_id, title, full_text, etc.
+        </div>
+    </div>
+
     <div class="download-section">
         <h2>📥 Download Dataset</h2>
         
-        <h3>Main Database</h3>
-        <a href="https://yourproject.railway.app/eurlex_research_database.sqlite" class="download-link">Download SQLite Database</a>
-        <div class="file-info">Complete database with full text and metadata (~1-2GB)</div>
-
-        <h3>CSV Exports</h3>
-        <a href="https://yourproject.railway.app/eurlex_complete_dataset.csv" class="download-link">Complete Dataset (CSV)</a>
-        <div class="file-info">All documents in CSV format for easy analysis</div>
-
-        <a href="https://yourproject.railway.app/sample_documents.csv" class="download-link">Sample Documents (CSV)</a>
-        <div class="file-info">Preview of 20 documents to explore the dataset</div>
-
-        <a href="https://yourproject.railway.app/database_summary.csv" class="download-link">Database Statistics (CSV)</a>
-        <div class="file-info">Summary statistics and metadata about the collection</div>
+        <h3>Complete Database</h3>
+        <a href="/database.db" class="download-link">Download SQLite Database</a>
+        <div class="file-info">Complete database with full text and metadata (~40MB)</div>
     </div>
 
     <div class="usage-section">
@@ -117,7 +132,7 @@ library(DBI)<br>
 library(RSQLite)<br><br>
 
 # Connect to database<br>
-con <- dbConnect(RSQLite::SQLite(), "eurlex_research_database.sqlite")<br><br>
+con <- dbConnect(RSQLite::SQLite(), "database.db")<br><br>
 
 # View available tables<br>
 dbListTables(con)<br><br>
@@ -131,24 +146,38 @@ climate_docs <- dbGetQuery(con,<br>
    WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")<br>
         </div>
 
-        <h3>With Python (CSV)</h3>
+        <h3>With Python (API)</h3>
         <div class="code-block">
+import requests<br>
+import json<br><br>
+
+# Fetch data from API<br>
+response = requests.get('https://eurlex-prelim-database-production.up.railway.app/api/data')<br>
+documents = response.json()<br><br>
+
+# Process documents<br>
+for doc in documents:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Document: {doc['celex_id']}")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Title: {doc['title']}")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(f"Words: {doc['word_count']}")
+        </div>
+
+        <h3>With Python (SQLite)</h3>
+        <div class="code-block">
+import sqlite3<br>
 import pandas as pd<br><br>
 
-# Load the dataset<br>
-df = pd.read_csv('eurlex_complete_dataset.csv')<br><br>
+# Connect to downloaded database<br>
+conn = sqlite3.connect('database.db')<br><br>
+
+# Load data into pandas<br>
+df = pd.read_sql_query("SELECT * FROM documents", conn)<br><br>
 
 # Basic exploration<br>
 print(df.shape)<br>
 print(df.columns)<br>
-print(df['document_type'].value_counts())<br><br>
-
-# Text analysis<br>
-climate_docs = df[df['full_text'].str.contains('climate', case=False, na=False)]<br>
+print(df['document_type'].value_counts())
         </div>
-
-        <h3>With Excel/Google Sheets</h3>
-        <p>Download the CSV files and open directly in spreadsheet applications for basic analysis and filtering.</p>
     </div>
 
     <div class="dataset-stats">
@@ -163,6 +192,7 @@ climate_docs = df[df['full_text'].str.contains('climate', case=False, na=False)]
             <li><code>full_text</code> - Complete document content</li>
             <li><code>word_count</code> - Number of words in document</li>
             <li><code>url</code> - Original EUR-Lex URL</li>
+            <li><code>scrape_status</code> - Data collection status</li>
         </ul>
     </div>
 
@@ -175,6 +205,8 @@ climate_docs = df[df['full_text'].str.contains('climate', case=False, na=False)]
         the EUR-Lex database as the original source of the legal documents.</p>
         
         <p><strong>License:</strong> Academic and research use. Please respect EUR-Lex terms of service.</p>
+        
+        <p><strong>Technical Details:</strong> Database hosted on Railway, accessible via REST API and direct download.</p>
     </div>
 </body>
 </html>
