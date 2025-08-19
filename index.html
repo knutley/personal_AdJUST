@@ -154,18 +154,31 @@ climate_docs <- dbGetQuery(con,
         <h3>With Python (API)</h3>
         <div class="code-block">
 <pre>
-import requests
-import json
+import sqlite3
+import pandas as pd
 
-# Fetch data from API
-response = requests.get('https://eurlex-prelim-database-production.up.railway.app/api/data')
-documents = response.json()
+# Connect to database
+con = sqlite3.connect('database.db')
 
-# Process documents
-for doc in documents:
-    print(f"Document: {doc['celex_id']}")
-    print(f"Title: {doc['title']}")
-    print(f"Words: {doc['word_count']}")
+# View available tables
+cursor = con.cursor()
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = cursor.fetchall()
+print("Available tables:", [table[0] for table in tables])
+
+# Query documents
+documents = pd.read_sql_query("SELECT * FROM documents LIMIT 10", con)
+print(documents)
+
+# Search for specific terms
+climate_docs = pd.read_sql_query("""
+    SELECT celex_id, title, word_count FROM documents 
+    WHERE full_text LIKE '%climate%' AND scrape_status = 'success'
+""", con)
+print(climate_docs)
+
+# Close connection
+con.close()
 </pre>
         </div>
 
