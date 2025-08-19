@@ -131,11 +131,12 @@ JSON array of document objects with celex_id, title, full_text, etc.
         <h3>With R (SQLite)</h3>
         <div class="code-block">
 <pre>
-library(DBI)
-library(RSQLite)
+# Download the database from Railway
+download.file("https://eurlex-prelim-database-production.up.railway.app/database.db", 
+              "database_from_railway.db")
 
-# Connect to database
-con <- dbConnect(RSQLite::SQLite(), "database.db")
+# Connect to the downloaded file
+con <- dbConnect(RSQLite::SQLite(), "database_from_railway.db")
 
 # View available tables
 dbListTables(con)
@@ -145,7 +146,7 @@ documents <- dbGetQuery(con, "SELECT * FROM documents LIMIT 10")
 
 # Search for specific terms
 climate_docs <- dbGetQuery(con,
-  "SELECT celex_id, title, word_count FROM documents 
+                           "SELECT celex_id, title, word_count, full_text FROM documents 
    WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")
 </pre>
         </div>
