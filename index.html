@@ -148,6 +148,9 @@ documents <- dbGetQuery(con, "SELECT * FROM documents LIMIT 10")
 climate_docs <- dbGetQuery(con,
                            "SELECT celex_id, title, word_count, full_text FROM documents 
    WHERE full_text LIKE '%climate%' AND scrape_status = 'success'")
+
+# Close connection when done
+dbDisconnect(con)
 </pre>
         </div>
 
