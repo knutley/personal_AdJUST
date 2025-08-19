@@ -186,18 +186,31 @@ con.close()
         <div class="code-block">
 <pre>
 import sqlite3
-import pandas as pd
 
-# Connect to downloaded database
-conn = sqlite3.connect('database.db')
+# Connect to database
+con = sqlite3.connect('database.db')
+cursor = con.cursor()
 
-# Load data into pandas
-df = pd.read_sql_query("SELECT * FROM documents", conn)
+# View available tables
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = cursor.fetchall()
+print("Available tables:", [table[0] for table in tables])
 
-# Basic exploration
-print(df.shape)
-print(df.columns)
-print(df['document_type'].value_counts())
+# Query documents
+cursor.execute("SELECT * FROM documents LIMIT 10")
+documents = cursor.fetchall()
+print("Documents:", documents)
+
+# Search for specific terms
+cursor.execute("""
+    SELECT celex_id, title, word_count FROM documents 
+    WHERE full_text LIKE ? AND scrape_status = ?
+""", ('%climate%', 'success'))
+climate_docs = cursor.fetchall()
+print("Climate documents:", climate_docs)
+
+# Close connection
+con.close()
 </pre>
         </div>
     </div>
