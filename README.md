@@ -18,6 +18,7 @@ The AdJUST Project is a research initiative focused on analysing dominant climat
 
 **Data Sources:**
 - **EurLex Database**: Utilising the `eurlex` R package for efficient data sourcing
+    - Information on resource_types found here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/resource-type
 - **Register of Commission Documents**: EU Publications Office API integration or custom scraping tools
 
 **Standardisation Framework:**
