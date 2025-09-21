@@ -154,6 +154,8 @@ This project involves collaboration between technical developers and domain expe
 - **Computational Researcher**: Katelyn Nutley, kn32@st-andrews.ac.uk
 **Institutional Affiliation**: UCL/LSE  
 
+## Contribution Taxonomy ## 
+forthcoming
 ---
 
 *This project represents a novel approach to automated policy analysis, combining computational methods with expert domain knowledge to understand climate policy paradigms in the European Union.*
