@@ -150,8 +150,8 @@ This project involves collaboration between technical developers and domain expe
 
 ## Contact
 
-**Principal Investigator**: Dr. Marion Dumas and Dr. Fergus Green 
-**Research Assistant**: Katelyn Nutley 
+- **Principal Investigator(s)**: Dr. Marion Dumas and Dr. Fergus Green
+- **Computational Researcher**: Katelyn Nutley, kn32@st-andrews.ac.uk
 **Institutional Affiliation**: UCL/LSE  
 
 ---
