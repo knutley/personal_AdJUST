@@ -19,79 +19,74 @@
 
 **Data:**
 - **Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing
-    - Information on resource_types found here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/resource-type
+    - 
     - Code for the EurLex scrape entitled **reworking_eurlex_scrape.R**
-    - Data produced from code entitled **deduplicated_scrape.csv**
+    - Data produced from code entitled **deduplicated_scrape.csv** 
 
 **Standardisation Framework:**
 - Standardised metadata schema capturing:
-  - Document ID
-  - Title
-  - Publication date
-  - Source database
+  - Type: resource type, i.e. PROP_REG, DEC_DRAFT, SWD, etc.
+      - Information on resource_types found here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?        uri=http://publications.europa.eu/resource/authority/resource-type
+  - Document ID: celex number (the alphanumeric identifier used by the EU)
+  - Date: publication date
+  - Author: body responsible
+  - Directory: directory
+        - Information on directory found here: https://eur-lex.europa.eu/browse/directories/legislation.html
+  - Resource Type Used: manual or predefined
   - URL
-  - Document type
-  - Actors
-  - File hash
+  - Title
+ 
+  **Deduplication:**
+  - Exact Matching: Document ID comparison; automated merging
+  - Fuzzy Matching: Title similarity analysis
+  - Quality Assurance: Probabilstic sampling for manual review;
+ 
+  Ultimately, nothing was flagged. 
 
-### Phase 2: Deduplication System
+### Phase 2: Text Scraping 
 
-**Exact Matching:**
-- Document ID comparison across EU bodies
-- Automated merging of identical documents
+**Text Scraper:** EurLex only gives title names, so it was necessary to build a separate scraper; entitled **text_scraper.py**
+- Worth noting is that I had to ex post facto include a secondary script ot clean the checkpoints built into the scraper; entitled **clean_checkpoints.py**
+- The output file is called corpus_with_text.csv in the code and is not uploaded here due to space concerns 
 
-**Fuzzy Matching:**
-- Title similarity analysis
-- Semantic scoring (need to discuss preference between Jaro-Winkler, cosine similarity, Levenshtein distance)
-- Temporal similarity windowing
+### Phase 3: Document Screening
 
-**Quality Assurance:**
-- Probabilistic sampling for manual review
-- Robust error handling and logging
-- Fallback mechanisms for API limitations
+**Structural Relevance:** 
+- Random, discrete sampling based on doc_type (28 total in deduplicated_scrape.csv) combined with ad hoc review for structural relevance 
+    - Overview available in the corresponding paper; but, AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC, AMEND_PROP_REG, RECO, and AMEND_PROP_DIR were excluded (leaving 23 doc_types and 20,316 documents)
 
-### Phase 3: Content Filtering
+**Substantive Relevance (Hybridisation):** 
 
-**Dictionary-Based Method:**
-```r
-mitigate_terms <- c("emission reduction", "decarbonisation", "carbon neutral")
-green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55", 
-                     "climate law", "climate target plan", "just transition")
-```
+- **Data-driven Approach (MNIR):**
+    - Random sample (n =100) of the remaining 20,316 documents taken and hand-coded for positive vs. negative set class relevance; sample entitled **corpus_random.xlsx**
+    - This resulted in a list of 1,694 validated keywords; the code is entitled **mnir_keyword.py** and the keyword list is entitled **target_keywords_validated.txt**
+ 
+- **Expert-led Approach:**
+    - An expert-curated list of keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords**
+ 
+**Integration of Approaches:** 
+    - Keywords organised into three reliability tiers with paradigm bonus: 
+    Tier 1 (High-Confidence): Core environmental policy terms with strong signal (weight: 3.0)
+    Tier 2 (Moderate-Confidence): Contextually relevant terms requiring validation (weight: 1.5)
+    Tier 3 (Ambiguous): Context-dependent terms (weight: 0.5)
+    - Scoring Formula:
+    Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
+    - Output file entitled **corpus_STRATEGY2_moderate.csv**
 
-**Machine Learning Classification:**
-- Bootstrap expert-labelled training set
+### Phase 4: Manual Labelling and Machine Learning Classification:
+
+- Bootstrap labelled training set
 - Active learning with BERT predictions
 - Iterative improvement through expert validation
 - Inter-coder reliability assessment (Cohen's kappa)
 
-### Phase 4: Paradigm Classification
+### Phase 5: Paradigm Classification
 
 **Few-Shot Prompt Engineering:**
 - Expert-curated paradigm examples
 - Adaptive few-shot prompting with k-means clustering
 - Hierarchical classification strategy
 - Confidence scoring system
-
-## Key Features
-
-### Data Processing
-- Automated corpus collection from multiple EU databases
-- Intelligent deduplication using multiple matching strategies
-- Standardised metadata extraction and storage
-- Robust error handling and recovery mechanisms
-
-### Machine Learning
-- BERT-based document classification
-- Active learning for training set optimisation
-- Expert-in-the-loop validation system
-- Confidence-based quality assessment
-
-### Policy Analysis
-- Multi-paradigm classification (neoclassical, Keynesian, mixed, etc.)
-- Temporal analysis of paradigm evolution
-- Document type and actor analysis
-- Comprehensive validation framework
 
 ## Technical Requirements
 
@@ -106,49 +101,9 @@ green_deal_terms <- c("European Green Deal", "Green Deal", "Fit for 55",
 - Distributed processing capabilities
 - Version control and data lineage tracking
 
-## Methodology
-
-### Document Collection
-1. Define query terms and date ranges with domain experts
-2. Systematic retrieval from EurLex and EU Publications databases
-3. Metadata extraction and standardisation
-4. Initial corpus validation
-
-### Deduplication Pipeline
-1. Exact matching by document ID
-2. Fuzzy matching using multiple similarity metrics
-3. Manual validation of detected duplicates
-4. Final corpus preparation
-
-### Content Classification
-1. Dictionary-based initial filtering
-2. Expert annotation of training examples
-3. Machine learning model training and validation
-4. Iterative improvement through active learning
-
-### Paradigm Analysis
-1. Expert-defined paradigm frameworks
-2. Few-shot prompt engineering development
-3. Large-scale document classification
-4. Results validation and quality assessment
-
-## Expected Outcomes
-
-- Comprehensive corpus of EU climate policy documents
-- Automated classification system for policy paradigms
-- Insights into dominant climate policy approaches in the EU
-- Methodological framework for similar policy analysis projects
-
-## Validation Strategy
-
-- **Manual Review**: Probabilistic sampling of classifications
-- **Expert Validation**: Domain expert review of paradigm assignments
-- **Inter-coder Reliability**: Statistical validation of classification consistency
-- **Confidence Scoring**: Uncertainty quantification for all classifications
-
 ## Contributing
 
-This project involves collaboration between technical developers and domain experts in EU climate policy. Contributions should maintain the balance between technical rigor and policy domain expertise.
+This project involves collaboration between technical developers and domain experts in EU climate policy. Contributions should maintain the balance between technical rigour and policy domain expertise.
 
 ## Contact
 
