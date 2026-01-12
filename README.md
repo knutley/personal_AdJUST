@@ -3,23 +3,25 @@
 
 ## Overview
 
-The AdJUST Project is a research initiative focused on analysing dominant climate policy paradigms in the European Union through automated document analysis and machine learning techniques. This project aims to systematically classify and analyse EU climate policy documents to understand the underlying paradigms that shape climate mitigation and Green New Deal policies.
+[Forthcoming.]
 
 ## Project Objectives
 
-- Identify and analyse dominant climate policy paradigms in EU pre-legislative documents
-- Develop automated systems for corpus collection, deduplication, and classification
-- Create a comprehensive dataset of climate-relevant EU policy documents
-- Apply machine learning techniques to classify documents by policy paradigm
+- Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance
+- Manually annotate a representative subsample to identify environmental policy paradigms (neoclassical economics, green growth, evolutionary economics, post-growth)
+- Develop and apply computational classification methods (BERT and few-shot prompting) to classify paradigms across the full corpus
+- Analyse paradigm distribution patterns to assess EU policy coherence and identify tensions between economic and environmental priorities
+- Create an API and database for continued access to the corpus, thereby ensuring future research on the topic
 
 ## Technical Approach
 
 ### Phase 1: Corpus Collection and Standardisation
 
-**Data Sources:**
-- **EurLex Database**: Utilising the `eurlex` R package for efficient data sourcing
+**Data:**
+- **Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing
     - Information on resource_types found here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/resource-type
-- **Register of Commission Documents**: EU Publications Office API integration or custom scraping tools
+    - Code for the EurLex scrape entitled **reworking_eurlex_scrape.R**
+    - Data produced from code entitled **deduplicated_scrape.csv**
 
 **Standardisation Framework:**
 - Standardised metadata schema capturing:
