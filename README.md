@@ -65,13 +65,15 @@
     - An expert-curated list of keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords**
  
 **Integration of Approaches:** 
-    - Keywords organised into three reliability tiers with paradigm bonus: 
-    Tier 1 (High-Confidence): Core environmental policy terms with strong signal (weight: 3.0)
-    Tier 2 (Moderate-Confidence): Contextually relevant terms requiring validation (weight: 1.5)
-    Tier 3 (Ambiguous): Context-dependent terms (weight: 0.5)
-    - Scoring Formula:
-    Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
-    - Output file entitled **corpus_STRATEGY2_moderate.csv**
+- Keywords organised into three reliability tiers with paradigm bonus:
+  - **Tier 1 (High-Confidence):** Core environmental policy terms with strong signal (weight: 3.0)
+  - **Tier 2 (Moderate-Confidence):** Contextually relevant terms requiring validation (weight: 1.5)
+  - **Tier 3 (Ambiguous):** Context-dependent terms (weight: 0.5)
+- **Scoring Formula:**
+```
+  Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
+```
+- **Output file:** `corpus_STRATEGY2_moderate.csv`
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
