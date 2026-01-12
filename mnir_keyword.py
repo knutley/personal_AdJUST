@@ -1,3 +1,7 @@
+# Author: Katelyn Nutley
+# Title: MNIR for Statistically Significant Keywords (Derived from Tabby, 2013) 
+# Date: 06-11-2025
+
 # -*- coding: utf-8 -*-
 """
 Filter Corpus Using MNIR Keywords from Tabby
@@ -7,9 +11,6 @@ Naïve-Bayes Information Retrieval) using Tabby to filter the full corpus.
 
 MNIR provides empirically validated keywords with precision/recall metrics
 from a training set of manually coded documents.
-
-Author: Katie Nutley
-Date: January 2026
 """
 
 import os
