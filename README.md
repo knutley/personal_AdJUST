@@ -17,8 +17,7 @@
 
 ### Phase 1: Corpus Collection and Standardisation
 
-**Data:**
-- **Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing
+**Data Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing
     - 
     - Code for the EurLex scrape entitled **reworking_eurlex_scrape.R**
     - Data produced from code entitled **deduplicated_scrape.csv** 
