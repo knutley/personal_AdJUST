@@ -1,3 +1,5 @@
+# UPDATE: [12/01/2026] See reworking_eurlex_scrape.R for the finalised code to pull EurLex data. 
+
 # Author: Katelyn Nutley
 # Title: Accessing EU Pre-Legislative Documents via EurLex R Package 
 # Date: 16-07-2025
