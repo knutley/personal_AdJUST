@@ -1,3 +1,9 @@
+# Author: Katelyn Nutley
+# Title: Checkpoint Clearer
+# Date: 09-08-2025
+
+# Learn from my mistakes ~ 
+
 import os
 import glob
 
