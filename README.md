@@ -72,7 +72,7 @@
 ```
   Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
 ```
-- Output file **corpus_STRATEGY2_moderate.csv**
+- Output file **corpus_STRATEGY2_moderate.csv**; though it's been zipped and split to be able to upload it here
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
