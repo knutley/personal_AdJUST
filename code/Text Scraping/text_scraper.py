@@ -1,3 +1,9 @@
+# UPDATE [12/01/2025]: Make sure to use the accompanying checkpoint clearer if you don't want to be overwhelmed with document text. 
+
+# Author: Katelyn Nutley
+# Title: Scraping the Text of Pre-Legislative Documents from EurLex
+# Date: 08-08-2025
+
 # -*- coding: utf-8 -*-
 """
 EUR-Lex Document Text Scraper
