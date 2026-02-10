@@ -9,16 +9,16 @@
 
 - Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance
 - Manually annotate a representative subsample to identify environmental policy paradigms (neoclassical economics, green growth, evolutionary economics, post-growth)
-- Develop and apply computational classification methods (BERT and few-shot prompting) to classify paradigms across the full corpus
+- Develop and apply computational classification methods (presently, distilBERT, LegalBERT, RoBERTA-xlm) to classify paradigms across the full corpus
+- Use an LLM approach (model TBD) to validate BERT results
 - Analyse paradigm distribution patterns to assess EU policy coherence and identify tensions between economic and environmental priorities
-- Create an API and database for continued access to the corpus, thereby ensuring future research on the topic
+- Create an API and database for continued access to the corpus, thereby ensuring future research on the topic (Railway-hosted)
 
 ## Technical Approach
 
 ### Phase 1: Corpus Collection and Standardisation
 
-**Data Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing
-    - 
+**Data Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing 
     - Code for the EurLex scrape entitled **reworking_eurlex_scrape.R**
     - Data produced from code entitled **deduplicated_scrape.csv** 
 
@@ -45,20 +45,22 @@
 ### Phase 2: Text Scraping 
 
 **Text Scraper:** EurLex only gives title names, so it was necessary to build a separate scraper; entitled **text_scraper.py**
-- Worth noting is that I had to ex post facto include a secondary script ot clean the checkpoints built into the scraper; entitled **clean_checkpoints.py**
+- Worth noting is that I had to ex post facto include a secondary script to clean the checkpoints built into the scraper; entitled **clean_checkpoints.py**
 - The output file is called corpus_with_text.csv in the code and is not uploaded here due to space concerns 
 
 ### Phase 3: Document Screening
 
 **Structural Relevance:** 
 - Random, discrete sampling based on doc_type (28 total in deduplicated_scrape.csv) combined with ad hoc review for structural relevance 
-    - Overview available in the corresponding paper; but, AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC, AMEND_PROP_REG, RECO, and AMEND_PROP_DIR were excluded (leaving 23 doc_types and 20,316 documents)
+    - Overview available in the corresponding paper; but, samples cannot be provided due to space concerns.
+    - Upshot is that AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC, AMEND_PROP_REG, RECO, and AMEND_PROP_DIR were excluded (leaving 23 doc_types and 20,316 documents)
 
 **Substantive Relevance (Hybridisation):** 
 
-- **Data-driven Approach (MNIR):**
+- **Data-driven Approach (Frequency Analysis):**
     - Random sample (n =100) of the remaining 20,316 documents taken and hand-coded for positive vs. negative set class relevance; sample entitled **corpus_random.xlsx**
-    - This resulted in a list of 1,694 validated keywords; the code is entitled **mnir_keyword.py** and the keyword list is entitled **target_keywords_validated.txt**
+    - This resulted in a list of 1,833 keywords; the code is entitled **keyword_extraction.py** and the entire keyword list is entitled **precision_recall_keywords.txt**
+    - This was then further filtered to 225 keywords that had a precision score > 0.75 and/or were ostensibly climate-related; entitled: **retained_precision_keywords.txt**
  
 - **Expert-led Approach:**
     - An expert-curated list of keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords**
