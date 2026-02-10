@@ -1,3 +1,5 @@
+NOTE TO SELF; don't know if I still need this. 
+
 # Author: Katelyn Nutley
 # Title: Keyword Filtering 
 # Date: 15-11-2025
