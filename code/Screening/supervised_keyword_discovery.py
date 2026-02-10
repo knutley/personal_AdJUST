@@ -1,33 +1,26 @@
-# -*- coding: utf-8 -*-
-"""
-Supervised Keyword Discovery via Differential Frequency Analysis
+# Title: Supervised Keyword Discovery
+# Author: Katelyn Nutley
+# Date: 12-11-2025
 
-This script identifies discriminative keywords by comparing word frequencies
-between positive (environmentally relevant) and negative (non-relevant) 
-document classes, then calculating precision and recall for each term.
+# Supervised Keyword Discovery via Differential Frequency Analysis
 
-Author: Katie Nutley
-Date: February 2026
+# Description: This script identifies discriminative keywords by comparing word 
+# frequencies between positive (environmentally relevant) and negative (non-relevant) 
+# document classes, then calculating precision and recall for each term.
 
-Method:
-------
-For each stemmed term appearing in the training corpus, we calculate:
-- Recall: P(term appears | document is positive)
-  = (# positive docs containing term) / (# total positive docs)
-- Precision: P(document is positive | term appears)  
-  = (# positive docs containing term) / (# all docs containing term)
+# Method: 
+# For each stemmed term appearing in the training corpus, we calculate:
+# - Recall: P(term appears | document is positive)
+#   = (# positive docs containing term) / (# total positive docs)
+# - Precision: P(document is positive | term appears)  
+#  = (# positive docs containing term) / (# all docs containing term)
 
-Terms with precision above the baseline rate (positive docs / total docs)
-are considered discriminative of the positive class.
+# Terms with precision above the baseline rate (positive docs / total docs)
+# are considered discriminative of the positive class.
 
-This is a form of supervised feature selection based on class-conditional
-word frequencies, similar to Naive Bayes feature weighting but used here
-for keyword extraction rather than classification.
-
-Note: This is NOT Multinomial Inverse Regression (MNIR/Taddy 2013).
-MNIR uses inverse regression to find low-dimensional projections; this
-method simply calculates discriminative statistics per term.
-"""
+# This is a form of supervised feature selection based on class-conditional
+# word frequencies, similar to Naive Bayes feature weighting but used here
+# for keyword extraction rather than classification.
 
 import os
 import pandas as pd
