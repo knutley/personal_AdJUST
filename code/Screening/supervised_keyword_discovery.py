@@ -233,8 +233,8 @@ def discover_keywords(input_file, text_col='text', label_col='included',
 if __name__ == "__main__":
     # Example usage
     keywords = discover_keywords(
-        input_file='/mnt/user-data/uploads/corpus_random.xlsx',
+        input_file='/Users/katienutley/Documents/GitHub/personal_AdJUST/personal_AdJUST/data/corpus_random.xlsx',
         text_col='text',
         label_col='included',
-        output_dir='/home/claude'
+        output_dir='/Users/katienutley/Documents/GitHub/personal_AdJUST/'
     )
