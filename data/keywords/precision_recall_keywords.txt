@@ -1,11 +1,11 @@
 # Author: Katelyn Nutley
-# Title: Target Keywords Output from MNIR 
+# Title: Keyword Output from Precision Analysis
 # Date: 02-10-2026
 
 TARGET KEYWORDS
-Total search set: 99
+Total search set: 100
 Target set size: 23
-Non-target set size: 76
+Non-target set size: 77
 
 1. emiss (emission emissions)    (Recall: 0.43, Precision: 100.0%)
 2. synergi (synergies)    (Recall: 0.39, Precision: 100.0%)
