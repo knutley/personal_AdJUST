@@ -11,7 +11,7 @@ climate change, global warming, global heating, carbon, greenhouse gas, GHG, emi
 
 UNFCCC, Paris Agreement, Kyoto Protocol, Copenhagen Accord, IPCC, climate agreement, climate negotiations, SDGs, transboundary
 
-cap and trade, emissions trading scheme, carbon credit, carbon offset, carbon pricing, fossil fuel tax, fossil fuel subsidy, subsidies, market-based
+cap and trade, cap-and-trade, emissions trading scheme, carbon credit, carbon offset, carbon pricing, fossil fuel tax, fossil fuel subsidy, subsidies, market-based, coal tax, oil tax, gas tax
 
 green transition, energy transition, ecological transition, green deal, low-carbon, phaseout, mitigation, pathway
 
@@ -27,22 +27,24 @@ sustainability, environmentally, unsustainable, planetary boundaries, sustainabl
 
 green growth, green economy, degrowth, post-growth, limits to growth
 
-just transition, climate justice, environmental justice, Green New Deal
+green innovation, clean innovation,green R&D, clean R&D, green research and development, clean research and development
+
+just transition, climate justice, environmental justice, Green New Deal, green capitalism
 
 ---
 
 ## Tier 2: Moderate-Confidence
 *Clear environmental relevance but benefits from contextual validation*
 
-solar, wind, hydropower, geothermal, tidal, wave, biogas, biomass, renewable, clean energy, alternative energy
+solar, wind, hydropower, geothermal, tidal, wave, biogas, biomass, renewable, clean energy, alternative energy, hydroelectric, lifecycle
 
-coal, oil, natural gas, fossil, methane, flaring, fossil-based
+coal, oil, natural gas, fossil, methane, flaring, fossil-based, bio-based
 
-carbon capture and storage, CCS, CCUS, hydrogen, battery, energy storage, nuclear, thermal, grid, reactor
+carbon capture and storage, CCS, CCUS, hydrogen, battery, batteries, energy storage, nuclear, thermal, grid, reactor
 
-electric vehicle, EV, electromobility, public transit, modal shift, aviation, maritime, shipping
+electric vehicle, EV, electromobility, public transit, modal shift, aviation, maritime, shipping, clean electricity, renewable electricity, electric buses, electric trucks, electric trains, public transport, mass transit, mass transport, walking, cycling, mulit-modal transport
 
-energy efficiency, energy conservation, heat pump, insulation, renovation, appliances, household
+energy efficiency, energy conservation, heat pump, insulation, renovation, appliances, household, low-carbon heat
 
 green steel, green aluminium, hydrofluorocarbons, chemical, plastic, hazardous
 
@@ -50,11 +52,13 @@ green agriculture, sustainable farming, organic farming, agroecology, carbon far
 
 marine, coastal, aquatic, wastewater, ocean, river, sea, freshwater
 
-flood, disaster, resilience, depletion, climate adaptation, threat
+flood, disaster, resilience, depletion, climate adaptation, threat, climate-related, tree-planting, tree planting 
 
 green investment, green finance, green bonds, green technology, clean technology
 
 urban, infrastructure, municipal
+
+vegetarian, vegetarianism, vegan, veganism, low-carbon diet
 
 ---
 
