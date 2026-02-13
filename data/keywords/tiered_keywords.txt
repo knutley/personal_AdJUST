@@ -5,82 +5,124 @@
 ---
 
 ## Tier 1: High-Confidence
-*Core environmental policy terms with consistently strong signal*
+Core environmental policy terms with consistently strong signal
 
-climate change, global warming, global heating, carbon, greenhouse gas, GHG, emissions, net zero, net-zero, carbon-neutral, footprint, climate-friendly, decarbonisation, neutrality, atmospheric, anthropogenic
+### Climate Change & Emissions
+climate change, global warming, global heating, carbon, greenhouse gas, GHG, emissions, emitting, emitters, net zero, net-zero, carbon-neutral, footprint, climate-friendly, climate-related, decarbonisation, decarbonised, neutrality, atmospheric, atmosphere, anthropogenic, temperature, dioxide, particulate
 
-UNFCCC, Paris Agreement, Kyoto Protocol, Copenhagen Accord, IPCC, climate agreement, climate negotiations, SDGs, transboundary
+### International Climate Policy & Frameworks
+UNFCCC, Paris Agreement, Kyoto Protocol, Copenhagen Accord, IPCC, IPPC, climate agreement, climate negotiations, SDGs, transboundary, COP, EAP, E-PRTR, EIR
 
+### Carbon Pricing & Economic Instruments
 cap and trade, cap-and-trade, emissions trading scheme, carbon credit, carbon offset, carbon pricing, fossil fuel tax, fossil fuel subsidy, subsidies, market-based, coal tax, oil tax, gas tax
 
-green transition, energy transition, ecological transition, green deal, low-carbon, phaseout, mitigation, pathway
+### Transition & Mitigation
+green transition, energy transition, ecological transition, green deal, low-carbon, low carbon, phaseout, mitigation, mitigating, mitigate, pathway, pathways, decoupling, greener
 
-biodiversity, ecosystem, ecological, habitat, natura, wetland, flora, fauna, species, nature-based solutions, carbon sink, LULUCF, REDD+
+### Biodiversity & Ecosystems
+biodiversity, ecosystem, eco-system, ecological, habitat, habitats, natura, wetland, wetlands, flora, fauna, species, nature-based solutions, carbon sink, sink, sinks, LULUCF, REDD, REDD+, diversity, wild, bird, birds, animal, animals, tropical, tropics
 
-deforestation, reforestation, afforestation, forest, forestry, desertification, land-based, restoration, conservation
+### Land Use & Forestry
+deforestation, reforestation, afforestation, forest, forests, forestry, desertification, land-based, restoration, restore, restoring, conservation, conserve, conserving, harvest, harvested, harvesting
 
-pollution, pollutant, eutrophication, nitrates, pesticide, sewage, sludge, noise, discharge
+### Pollution & Contamination
+pollution, pollutant, pollutants, polluting, eutrophication, nitrates, pesticide, pesticides, sewage, sludge, noise, discharge, discharged, discharges, discharging, diffuse, diffusion, litter, littering, hazard, hazardous, hazards
 
-zero waste, circular, landfill, biodegradable, incineration, composting, ecodesign, eco-innovation, resource-efficient, recycling, reuse, disposal
+### Waste & Circular Economy
+zero waste, zero-waste, circular, landfill, landfilling, landfills, biodegradable, incineration, incinerators, composting, ecodesign, eco-innovation, eco-innovations, eco-innovative, resource-efficient, resource-intensive, recycling, recycled, reuse, reused, reusing, re-use, disposal, dispose, disposed, wastewater
 
-sustainability, environmentally, unsustainable, planetary boundaries, sustainable consumption
+### Sustainability Concepts
+sustainability, environmentally, unsustainable, planetary boundaries, sustainable consumption, planet, responsibility
 
-green growth, green economy, degrowth, post-growth, limits to growth
+### Green Economy & Growth Models
+green growth, green economy, degrowth, post-growth, limits to growth, green capitalism
 
-green innovation, clean innovation,green R&D, clean R&D, green research and development, clean research and development
+### Innovation & R&D
+green innovation, clean innovation, green R&D, clean R&D, green research and development, clean research and development
 
-just transition, climate justice, environmental justice, Green New Deal, green capitalism
+### Justice & Equity
+just transition, climate justice, environmental justice, Green New Deal
 
 ---
 
 ## Tier 2: Moderate-Confidence
-*Clear environmental relevance but benefits from contextual validation*
+Clear environmental relevance but benefits from contextual validation
 
-solar, wind, hydropower, geothermal, tidal, wave, biogas, biomass, renewable, clean energy, alternative energy, hydroelectric, lifecycle
+### Renewable Energy Sources
+solar, wind, hydropower, geothermal, tidal, wave, biogas, biomass, renewable, renewables, renewal, clean energy, alternative energy, hydroelectric, lifecycle
 
-coal, oil, natural gas, fossil, methane, flaring, fossil-based, bio-based
+### Fossil Fuels
+coal, oil, oils, natural gas, fossil, fossil-based, bio-based, methane, flaring, burn, burning
 
-carbon capture and storage, CCS, CCUS, hydrogen, battery, batteries, energy storage, nuclear, thermal, grid, reactor
+### Energy Technology & Infrastructure
+carbon capture and storage, carbon capture, utilisation and storage, CCS, CCUS, hydrogen, battery, batteries, energy storage, storage, nuclear, thermal, grid, grids, reactor, reactors, fission, fusion, atom, atomic, pipeline, pipelines, upstream, downstream
 
-electric vehicle, EV, electromobility, public transit, modal shift, aviation, maritime, shipping, clean electricity, renewable electricity, electric buses, electric trucks, electric trains, public transport, mass transit, mass transport, walking, cycling, mulit-modal transport
+### Transport & Mobility
+electric vehicle, electric vehicles, EV, EVs, electromobility, public transit, modal shift, aviation, maritime, shipping, clean electricity, renewable electricity, electric buses, electric trucks, electric trains, public transport, mass transit, mass transport, walking, cycling, multi-modal transport, airport, airports, traffic, vehicle, vehicles
 
-energy efficiency, energy conservation, heat pump, insulation, renovation, appliances, household, low-carbon heat
+### Buildings & Energy Efficiency
+energy efficiency, efficiency, energy conservation, heat pump, heat pumps, insulation, renovation, appliances, household, households, low-carbon heat, cooling, cooled, cool, heating, heat
 
-green steel, green aluminium, hydrofluorocarbons, chemical, plastic, hazardous
+### Industry & Manufacturing
+green steel, green aluminium, hydrofluorocarbons, chemical, chemicals, plastic, plastics, metal, metallic, metals, manufacture, manufactured, manufacturer, manufacturers, manufacturing, industrial, industries, raw
 
-green agriculture, sustainable farming, organic farming, agroecology, carbon farming, climate smart agriculture, farm, livestock, fisheries, blue carbon
+### Agriculture & Food Systems
+green agriculture, green farming, sustainable farming, organic farming, agroecology, carbon farming, climate smart agriculture, farm, farming, farms, livestock, fisheries, fish, fishing, blue carbon, agricultural, agriculture, food, foods, vegetarian, vegetarianism, vegan, veganism, low-carbon diet
 
-marine, coastal, aquatic, wastewater, ocean, river, sea, freshwater
+### Marine & Water Systems
+marine, coastal, aquatic, ocean, oceanic, oceans, river, rivers, sea, seas, freshwater, fresh, stream, streams, basin, basins, inland, Mediterranean, island, islands, drinking, drinks
 
-flood, disaster, resilience, depletion, climate adaptation, threat, climate-related, tree-planting, tree planting 
+### Climate Impacts & Adaptation
+flood, flooding, disaster, disasters, resilience, resilient, depletion, depleted, climate adaptation, threat, threats, tree-planting, tree planting, rise, rises, adverse, loss, losses, destruction, destructive, pressure, pressures, degradation, degraded
 
+### Green Finance
 green investment, green finance, green bonds, green technology, clean technology
 
-urban, infrastructure, municipal
+### Governance & Planning
+urban, infrastructure, municipal, municipalities, tourism, NGO, NGOs, spatial, population, populations
 
-vegetarian, vegetarianism, vegan, veganism, low-carbon diet
+### Health & Wellbeing
+healthy, harm, harmful
 
 ---
 
 ## Tier 3: Ambiguous
-*Context-dependent terms — may indicate environmental policy or other domains*
+Context-dependent terms — may indicate environmental policy or other domains
 
-energy, water, air, gas, fuel, electricity, heat, storage
+### Energy (General)
+energy, electricity, power, powered, powers, fuel, fuels, electric, electrical
 
-environment, environmental, green, sustainable, natural, nature, resource
+### Water & Air (General)
+water, waters, air, gas, gases
 
-transport, transportation, vehicle, traffic
+### Environment (General)
+environment, environments, environmental, green, greening, sustainable, sustained, natural, nature, resource, resources, earth
 
-agriculture, agricultural, food, soil, plant, land, biological, degradation
+### Transport (General)
+transport, transportation, transported, transports
 
-climate (without modifier), carbon (in financial contexts)
+### Land & Biology (General)
+land, lands, soil, soils, plant, plants, biological, movement, movements
+
+### Industry (General)
+consumption, consumer, consumers, consuming, technology, technologies, technological, solution, solutions, capture, captured, captures, release, released, releases, releasing, extract, extracted, extractive, substitute, substitutes, substitution, circulate, circulation, preservation, preserve, preserved, preserves, preserving
+
+### Climate (Unmodified)
+climate, climatic, climates (without clear policy modifier)
+
+### Zero (Context-dependent)
+zero (needs context like "net zero" or "zero waste")
 
 ---
 
 ## Notes
 
-1. **Stemmed variants included:** Listed terms capture their common variants (e.g., "emission" includes "emissions", "emitting"; "forest" includes "forests", "forested").
+1. Stemmed variants included: Listed terms capture their common variants (e.g., "emission" includes "emissions", "emitting"; "forest" includes "forests", "forested").
 
-2. **Compound phrases:** Multi-word terms (e.g., "climate change", "carbon capture and storage") should be matched as phrases where possible.
+2. Compound phrases: Multi-word terms (e.g., "climate change", "carbon capture and storage") should be matched as phrases where possible.
 
-3. **Tier 3 usage:** These terms should ideally co-occur with Tier 1 or Tier 2 terms to confirm environmental policy relevance.
+3. Tier 3 usage: These terms should ideally co-occur with Tier 1 or Tier 2 terms to confirm environmental policy relevance.
+
+4. Precision scores: Terms from the precision analysis with scores >=75% were generally placed in Tier 1; those with 50-75% in Tier 2; and those <50% in Tier 3 unless they had clear environmental policy meaning from the expert list.
+
+5. Total unique terms: ~302 keyword entries across all tiers.
