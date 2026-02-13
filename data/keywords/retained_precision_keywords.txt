@@ -1,6 +1,6 @@
 FILTERED TARGET KEYWORDS
 Retained words from precision analysis that are environmental policy related AND/OR have precision > 0.75
-Total: 
+Total: 187
 
     1. emiss (emission emissions)
     (Recall: 0.43, Precision: 100.0%)
