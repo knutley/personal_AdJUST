@@ -1,0 +1,82 @@
+# Environmental Policy Keywords: Three-Tier Framework
+
+**Sources:** Expert-curated keywords (Greene et al., 2025) combined with precision-validated terms from frequency analysis (>0.75 precision or clear environmental policy relevance).
+
+---
+
+## Tier 1: High-Confidence
+*Core environmental policy terms with consistently strong signal*
+
+climate change, global warming, global heating, carbon, greenhouse gas, GHG, emissions, net zero, net-zero, carbon-neutral, footprint, climate-friendly, decarbonisation, neutrality, atmospheric, anthropogenic
+
+UNFCCC, Paris Agreement, Kyoto Protocol, Copenhagen Accord, IPCC, climate agreement, climate negotiations, SDGs, transboundary
+
+cap and trade, emissions trading scheme, carbon credit, carbon offset, carbon pricing, fossil fuel tax, fossil fuel subsidy, subsidies, market-based
+
+green transition, energy transition, ecological transition, green deal, low-carbon, phaseout, mitigation, pathway
+
+biodiversity, ecosystem, ecological, habitat, natura, wetland, flora, fauna, species, nature-based solutions, carbon sink, LULUCF, REDD+
+
+deforestation, reforestation, afforestation, forest, forestry, desertification, land-based, restoration, conservation
+
+pollution, pollutant, eutrophication, nitrates, pesticide, sewage, sludge, noise, discharge
+
+zero waste, circular, landfill, biodegradable, incineration, composting, ecodesign, eco-innovation, resource-efficient, recycling, reuse, disposal
+
+sustainability, environmentally, unsustainable, planetary boundaries, sustainable consumption
+
+green growth, green economy, degrowth, post-growth, limits to growth
+
+just transition, climate justice, environmental justice, Green New Deal
+
+---
+
+## Tier 2: Moderate-Confidence
+*Clear environmental relevance but benefits from contextual validation*
+
+solar, wind, hydropower, geothermal, tidal, wave, biogas, biomass, renewable, clean energy, alternative energy
+
+coal, oil, natural gas, fossil, methane, flaring, fossil-based
+
+carbon capture and storage, CCS, CCUS, hydrogen, battery, energy storage, nuclear, thermal, grid, reactor
+
+electric vehicle, EV, electromobility, public transit, modal shift, aviation, maritime, shipping
+
+energy efficiency, energy conservation, heat pump, insulation, renovation, appliances, household
+
+green steel, green aluminium, hydrofluorocarbons, chemical, plastic, hazardous
+
+green agriculture, sustainable farming, organic farming, agroecology, carbon farming, climate smart agriculture, farm, livestock, fisheries, blue carbon
+
+marine, coastal, aquatic, wastewater, ocean, river, sea, freshwater
+
+flood, disaster, resilience, depletion, climate adaptation, threat
+
+green investment, green finance, green bonds, green technology, clean technology
+
+urban, infrastructure, municipal
+
+---
+
+## Tier 3: Ambiguous
+*Context-dependent terms — may indicate environmental policy or other domains*
+
+energy, water, air, gas, fuel, electricity, heat, storage
+
+environment, environmental, green, sustainable, natural, nature, resource
+
+transport, transportation, vehicle, traffic
+
+agriculture, agricultural, food, soil, plant, land, biological, degradation
+
+climate (without modifier), carbon (in financial contexts)
+
+---
+
+## Notes
+
+1. **Stemmed variants included:** Listed terms capture their common variants (e.g., "emission" includes "emissions", "emitting"; "forest" includes "forests", "forested").
+
+2. **Compound phrases:** Multi-word terms (e.g., "climate change", "carbon capture and storage") should be matched as phrases where possible.
+
+3. **Tier 3 usage:** These terms should ideally co-occur with Tier 1 or Tier 2 terms to confirm environmental policy relevance.
