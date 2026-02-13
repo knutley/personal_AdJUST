@@ -1,5 +1,5 @@
 FILTERED TARGET KEYWORDS
-Retained words from precision analysis that are environmental policy related OR have precision > 0.75
+Retained words from precision analysis that are environmental policy related AND/OR have precision > 0.75
 Total: 225
 
     1. emiss (emission emissions)
