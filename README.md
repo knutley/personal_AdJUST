@@ -65,12 +65,12 @@
 - **Expert-led Approach:**
     - An expert-curated list of keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords**
  
-**Integration of Approaches:** 
+- **Integration of Approaches:** 
 - Keywords organised into three reliability tiers through iterative review (tiers explained in **tiered_keywords.txt**) with paradigm bonus:
   - **Tier 1 (High-Confidence):** Core environmental policy terms with strong signal (weight: 3.0)
   - **Tier 2 (Moderate-Confidence):** Contextually relevant terms requiring validation (weight: 1.5)
   - **Tier 3 (Ambiguous):** Context-dependent terms (weight: 0.5)
-- **Scoring Formula:**
+- ***Scoring Formula:***
 ```
   Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
 ```
@@ -84,7 +84,7 @@
     - 4:2:1 filter: n_tier1 > 3, score > 14.0 
     - 3:1.5:0.5 filter: n_tier1 > 3, score > 10
  - The outcome was 10,805 docs (3:1.5:0.5) and 10,805 (4:2:1), with 100% overlap across cases. Meaning, of course, that although the logic may change, the substantive findings do not.
- - **Scoring**: applied a threshold of > n_keywords and > score; output file **xxx** 
+ - ***Threshold***: applied a threshold of > n_keywords and > score; output file **xxx** 
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
