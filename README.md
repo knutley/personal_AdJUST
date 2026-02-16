@@ -20,7 +20,7 @@
 
 **Data Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing 
     - Code for the EurLex scrape entitled **reworking_eurlex_scrape.R**
-    - Data produced from code entitled **deduplicated_scrape.csv** 
+    - Data produced entitled **deduplicated_scrape.csv** 
 
 **Standardisation Framework:**
 - Standardised metadata schema capturing:
