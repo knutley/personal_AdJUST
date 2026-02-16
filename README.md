@@ -75,6 +75,7 @@
   Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
 ```
 - Application of tiered, scoring framework and a small, initial filter entitled **combined_keyword_intial_filtering.py**
+
 ***Robustness Check:*** 
 - As the weighted scoring system is ordinal (and not reflective of some diagnostic value), we performed a robustness check with different values, but similar logic. Below we employed a 4:2:1 split plus a 3-point paradigm bonus:
 ```
