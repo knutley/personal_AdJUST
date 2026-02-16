@@ -74,6 +74,7 @@
 ```
   Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
 ```
+- Application of tiered, scoring framework and a small, initial filter entitled **combined_keyword_intial_filtering.py**
 ***Robustness Check:*** 
 - As the weighted scoring system is ordinal (and not reflective of some diagnostic value), we performed a robustness check with different values, but similar logic. Below we employed a 4:2:1 split plus a 3-point paradigm bonus:
 ```
@@ -81,7 +82,7 @@
 ```
 - The primary filtering logic remained the same (3 Tier 1 words plus a signal from Tier 2 and 3); 
     - 4:2:1 filter: n_tier1 > 3, score > 14.0 
-    - 3:1.5:0.5 filter: n_tier1 >3, score > 10
+    - 3:1.5:0.5 filter: n_tier1 > 3, score > 10
  - The outcome was 10,805 docs (3:1.5:0.5) and 10,805 (4:2:1), with 100% overlap across cases. Meaning, of course, that although the logic may change, the substantive findings do not.
  - **Scoring**: applied a threshold of > n_keywords and > score; output file **xxx** 
 
