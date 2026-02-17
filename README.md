@@ -84,7 +84,7 @@
     - 4:2:1 filter: n_tier1 > 3, score > 14.0 
     - 3:1.5:0.5 filter: n_tier1 > 3, score > 10
  - The outcome was 10,805 docs (3:1.5:0.5) and 10,805 (4:2:1), with 100% overlap across cases. Meaning, of course, that although the logic may change, the substantive findings do not.
- - ***Threshold***: applied a threshold of > n_keywords and > score; output file **xxx** 
+ - ***Threshold***: samples in the fourth quartile (above the 75th percentile) were retained; this was done in the expectation that only 
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
