@@ -98,3 +98,90 @@ cat("\n=== Overall Alpha (primary label only, conservative lower bound) ===\n")
 
 print(kripp.alpha(rbind(r1_int, r2_int), method = "nominal")) # Not great, below
 # Krippendorff's alpha >0.67
+
+######## 
+# Going to try to reconcile the two; don't need it for alpha, but to give to the RA;  
+
+colnames(fergus_clean)
+
+library(writexl)
+
+# Build per-document label sets and find overlap
+coding_sets <- coding %>%
+  rowwise() %>%
+  mutate(
+    set_fergus = list(na.omit(c(primary_fergus, secondary_fergus, tertiary_fergus))),
+    set_marion = list(na.omit(c(primary_marion, secondary_marion, tertiary_marion))),
+    agreed     = list(intersect(set_fergus, set_marion))
+  ) %>%
+  ungroup()
+
+# Split into reconciled (any overlap) and disputed (no overlap) 
+reconciled <- coding_sets %>%
+  filter(lengths(agreed) > 0) %>%
+  mutate(reconciled_primary = map_chr(agreed, 1))  # first agreed label as primary
+
+flagged_docs <- coding_sets %>%
+  filter(lengths(agreed) == 0)
+
+cat("Reconciled:", nrow(reconciled), "| Disputed:", nrow(flagged_docs), "\n")
+
+# Build the agreed + additional columns
+reconciled_sheet <- reconciled %>%
+  rowwise() %>%
+  mutate(
+    agreed_others     = list(setdiff(agreed, reconciled_primary)),
+    agreed_secondary  = if (length(agreed_others) >= 1) agreed_others[[1]] else NA_character_,
+    agreed_tertiary   = if (length(agreed_others) >= 2) agreed_others[[2]] else NA_character_,
+    fergus_additional = paste(setdiff(set_fergus, agreed), collapse = "; ") %>% na_if(""),
+    marion_additional = paste(setdiff(set_marion, agreed), collapse = "; ") %>% na_if("")
+  ) %>%
+  ungroup() %>%
+  select(ID, 
+         agreed_primary = reconciled_primary,  # rename on the fly
+         agreed_secondary, agreed_tertiary,
+         fergus_additional, marion_additional)
+
+# Disputed tab 
+disputed_sheet <- flagged_docs %>%
+  mutate(adjudicated_label = NA_character_)
+
+# Going to add this back now, 
+# Bind reconciled + disputed into one label lookup 
+# For disputed, adjudicated_label will be NA until you fill them in manually
+label_lookup <- bind_rows(
+  reconciled_sheet %>% mutate(status = "reconciled"),
+  disputed_sheet %>%
+    select(ID, adjudicated_label) %>%
+    rename(agreed_primary = adjudicated_label) %>%
+    mutate(agreed_secondary = NA_character_,
+           agreed_tertiary  = NA_character_,
+           fergus_additional = NA_character_,
+           marion_additional = NA_character_,
+           status = "disputed")
+)
+
+# Join back to full original sheet 
+# Use fergus_sheet as the base — document metadata is the same in both
+
+colnames(marion_sheet)[which(names(marion_sheet) == "Label")] <- "Label.Marion"
+colnames(marion_sheet)[which(names(marion_sheet) == "Secondary Label")] <- "Secondary Label.Marion"
+colnames(marion_sheet)[which(names(marion_sheet) == "Tertiary Label")] <- "Tertiary Label.Marion"
+colnames(marion_sheet)[which(names(marion_sheet) == "Notes")] <- "Notes.Marion"
+
+final_sheet <- fergus_sheet %>%
+  distinct(ID, .keep_all = TRUE) %>%
+  left_join(label_lookup, by = "ID") %>%
+  left_join(marion_sheet %>% select(ID, Label.Marion, `Secondary Label.Marion`, 
+                                    `Tertiary Label.Marion`, Notes.Marion), 
+            by = "ID") %>%
+  relocate(Label.Marion, `Secondary Label.Marion`, `Tertiary Label.Marion`, Notes.Marion,
+           .after = Notes) %>%
+  mutate(status = case_when(
+    ID %in% exclude_ids ~ "excluded",
+    is.na(status)       ~ "no_label",
+    TRUE                ~ status
+  ))
+
+library(writexl)
+write_xlsx(final_sheet, "reconciled_sheet.xlsx")
