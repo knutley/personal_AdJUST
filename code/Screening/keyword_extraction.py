@@ -1,10 +1,10 @@
 """
-Keyword Extraction for Environmental Documents 
+Keyword Extraction for Randomly Sampled Environmental Documents 
 Katelyn Nutley, 07-11-2025
 
-Identifies keywords that statistically distinguish environmental docs (as 
-defined in corpus_random.xlsx) from non-environmental ones using 
-precision/recall metrics.
+Identifies keywords in randomly sampled docs that statistically distinguish 
+environmental docs (as defined in corpus_random.xlsx) from non-environmental 
+ones using precision/recall metrics.
 
 Usage: python keyword_extractor.py <corpus.xlsx> [output.txt]
 """
