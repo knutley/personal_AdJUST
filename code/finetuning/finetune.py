@@ -183,7 +183,7 @@ with open(label_map_path) as f:
         warmup_ratio=args.warmup_ratio,
         weight_decay=args.weight_decay,
         fp16=args.fp16,
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
         metric_for_best_model="macro_f1",   # macro F1 is fair across unbalanced labels
