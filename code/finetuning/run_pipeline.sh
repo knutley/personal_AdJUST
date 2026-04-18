@@ -31,68 +31,80 @@ python data_prep.py \
     --input "$DATA_CSV" \
     --output_dir "$DATA_DIR"
 
-# ── Step 2: DAPT for each model ───────────────────────────────────────────────
+# ── Step 2: Stage 1 — Fine-tune on Meckling & Allan data ──────────────────────
 echo ""
-echo "=== Step 2: Domain-Adaptive Pre-Training ==="
+echo "=== Step 2: Stage 1 Fine-tuning (Meckling) ==="
+
+declare -A HF_NAMES=(
+    [climatebert]="climatebert/distilroberta-base-climate-f"
+    [roberta]="roberta-base"
+    [deberta]="microsoft/deberta-v3-base"
+)
 
 for MODEL_ALIAS in climatebert roberta deberta; do
-    case $MODEL_ALIAS in
-        climatebert) HF_NAME="climatebert/distilroberta-base-climate-f" ;;
-        roberta)     HF_NAME="roberta-base" ;;
-        deberta)     HF_NAME="microsoft/deberta-v3-base" ;;
-    esac
-
-    CKPT_OUT="$CKPT_DIR/${MODEL_ALIAS}-dapt"
+    HF_NAME="${HF_NAMES[$MODEL_ALIAS]}"
     echo ""
-    echo "--- DAPT: $MODEL_ALIAS ($HF_NAME) ---"
-
-    python dapt.py \
-        --model_name          "$HF_NAME" \
-        --corpus_file         "$DATA_DIR/dapt_corpus.txt" \
-        --output_dir          "$CKPT_OUT" \
-        --num_train_epochs    3 \
-        --per_device_train_batch_size 16 \
-        --gradient_accumulation_steps 2 \
-        --learning_rate       5e-5 \
-        $USE_FP16
-done
-
-# ── Step 3: Fine-tune classification on each DAPT checkpoint ──────────────────
-echo ""
-echo "=== Step 3: Classification Fine-tuning ==="
-
-for MODEL_ALIAS in climatebert roberta deberta; do
-    DAPT_CKPT="$CKPT_DIR/${MODEL_ALIAS}-dapt"
-    CLF_OUT="$CKPT_DIR/${MODEL_ALIAS}-clf"
-    echo ""
-    echo "--- Fine-tuning: $MODEL_ALIAS ---"
+    echo "--- Stage 1: $MODEL_ALIAS ---"
 
     python finetune.py \
-        --model_checkpoint    "$DAPT_CKPT" \
-        --data_dir            "$DATA_DIR" \
-        --output_dir          "$CLF_OUT" \
-        --num_train_epochs    5 \
-        --per_device_train_batch_size 16 \
-        --learning_rate       2e-5 \
-        --patience            3 \
+        --model_checkpoint "$HF_NAME" \
+        --data_dir         "$DATA_DIR" \
+        --output_dir       "$CKPT_DIR/${MODEL_ALIAS}-stage1" \
+        --num_train_epochs 5 \
+        --learning_rate    2e-5 \
+        --patience         3 \
         $USE_FP16
-
-    # If using RA-annotated data for fine-tuning instead:
-    # --ra_data_dir ./ra_annotated_data \
 done
 
-# ── Step 4: Compare all models ────────────────────────────────────────────────
+# ── Step 3: Report Stage 1 results ────────────────────────────────────────────
 echo ""
-echo "=== Step 4: Model Comparison ==="
+echo "=== Step 3: Stage 1 Comparison ==="
 
 python compare_models.py \
     --model_dirs \
-        "$CKPT_DIR/climatebert-clf/best_model" \
-        "$CKPT_DIR/roberta-clf/best_model" \
-        "$CKPT_DIR/deberta-clf/best_model" \
-    --test_csv   "$DATA_DIR/clf_test.csv" \
-    --label_map  "$DATA_DIR/label_mapping.json" \
-    --output_dir "$RESULTS_DIR"
+        "$CKPT_DIR/climatebert-stage1/best_model" \
+        "$CKPT_DIR/roberta-stage1/best_model" \
+        "$CKPT_DIR/deberta-stage1/best_model" \
+    --test_csv  "$DATA_DIR/clf_test.csv" \
+    --label_map "$DATA_DIR/label_mapping.json" \
+    --output_dir "$RESULTS_DIR/stage1"
+
+# ── Step 4: Stage 2 — Fine-tune on RA EU pre-legislative data ─────────────────
+echo ""
+echo "=== Step 4: Stage 2 Fine-tuning (RA EU data) ==="
+
+RA_DATA_DIR="./ra_data"   # ← point this at your RA splits when ready
+
+for MODEL_ALIAS in climatebert roberta deberta; do
+    echo ""
+    echo "--- Stage 2: $MODEL_ALIAS ---"
+
+    python finetune.py \
+        --model_checkpoint "$CKPT_DIR/${MODEL_ALIAS}-stage1/best_model" \
+        --data_dir         "$DATA_DIR" \
+        --ra_data_dir      "$RA_DATA_DIR" \
+        --label_map        "$RA_DATA_DIR/label_mapping.json" \
+        --output_dir       "$CKPT_DIR/${MODEL_ALIAS}-stage2" \
+        --num_train_epochs 5 \
+        --learning_rate    2e-5 \
+        --patience         3 \
+        $USE_FP16
+done
+
+# ── Step 5: Report Stage 2 results ────────────────────────────────────────────
+echo ""
+echo "=== Step 5: Stage 2 Comparison ==="
+
+python compare_models.py \
+    --model_dirs \
+        "$CKPT_DIR/climatebert-stage2/best_model" \
+        "$CKPT_DIR/roberta-stage2/best_model" \
+        "$CKPT_DIR/deberta-stage2/best_model" \
+    --test_csv  "$RA_DATA_DIR/clf_test.csv" \
+    --label_map "$RA_DATA_DIR/label_mapping.json" \
+    --output_dir "$RESULTS_DIR/stage2"
 
 echo ""
-echo "✔ Pipeline complete. Results in: $RESULTS_DIR"
+echo "✔ Pipeline complete."
+echo "  Stage 1 results: $RESULTS_DIR/stage1/model_comparison.csv"
+echo "  Stage 2 results: $RESULTS_DIR/stage2/model_comparison.csv"
