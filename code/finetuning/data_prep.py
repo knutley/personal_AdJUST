@@ -54,22 +54,6 @@ def build_input_text(row: pd.Series) -> str:
     return " [SEP] ".join(parts)
 
 
-def prepare_dapt_corpus(df: pd.DataFrame, output_path: Path) -> None:
-    """
-    Write one document per line for the HuggingFace DataCollatorForLanguageModeling.
-    Empty lines separate documents (important for NSP-style models, harmless for others).
-    """
-    texts = df.apply(build_input_text, axis=1)
-    texts = texts[texts.str.len() > 20]          # drop near-empty rows
-    texts = texts.drop_duplicates()
-
-    with open(output_path, "w", encoding="utf-8") as f:
-        for t in texts:
-            f.write(t + "\n\n")                  # blank line = doc boundary
-
-    print(f"[DAPT] Wrote {len(texts)} documents → {output_path}")
-
-
 def prepare_classification_data(df: pd.DataFrame, output_dir: Path) -> dict:
     """
     Build a labelled DataFrame using discourse_label, remapped to the
