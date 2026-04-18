@@ -59,21 +59,21 @@ def compute_metrics(eval_pred):
 
 def load_splits(data_dir: Path, ra_data_dir: Path | None) -> DatasetDict:
     """
-    Load train/val/test CSVs.
-    If RA-annotated data is in a separate directory, use that for train/val,
-    keeping the Meckling test split for comparison.
+    Stage 1 (Meckling): all splits from data_dir.
+    Stage 2 (RA):       all splits from ra_data_dir.
     """
     if ra_data_dir and ra_data_dir != data_dir:
-        logger.info(f"Using RA-annotated data from: {ra_data_dir}")
+        logger.info(f"Stage 2: loading all splits from RA data: {ra_data_dir}")
         train_df = pd.read_csv(ra_data_dir / "clf_train.csv")
         val_df   = pd.read_csv(ra_data_dir / "clf_val.csv")
+        test_df  = pd.read_csv(ra_data_dir / "clf_test.csv")
     else:
+        logger.info(f"Stage 1: loading all splits from Meckling data: {data_dir}")
         train_df = pd.read_csv(data_dir / "clf_train.csv")
         val_df   = pd.read_csv(data_dir / "clf_val.csv")
+        test_df  = pd.read_csv(data_dir / "clf_test.csv")
 
-    test_df = pd.read_csv(data_dir / "clf_test.csv")
-
-    splits = DatasetDict({
+    return DatasetDict({
         "train": Dataset.from_pandas(train_df[["text", "label"]]),
         "val":   Dataset.from_pandas(val_df[["text", "label"]]),
         "test":  Dataset.from_pandas(test_df[["text", "label"]]),
@@ -111,6 +111,8 @@ def main():
                         help="Early stopping patience (eval epochs)")
     parser.add_argument("--fp16",             action="store_true")
     parser.add_argument("--seed",             type=int,   default=42)
+    parser.add_argument("--label_map",     default=None,
+                        help="Path to label_mapping.json. Defaults to data_dir/label_mapping.json")
     args = parser.parse_args()
 
     set_seed(args.seed)
@@ -121,8 +123,8 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # ── Label mapping ──────────────────────────────────────────────────────────
-    label_map_path = data_dir / "label_mapping.json"
-    with open(label_map_path) as f:
+label_map_path = Path(args.label_map) if args.label_map else data_dir / "label_mapping.json"
+with open(label_map_path) as f:
         mapping = json.load(f)
 
     label2id = {k: int(v) for k, v in mapping["label2id"].items()}
