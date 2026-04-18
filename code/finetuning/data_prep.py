@@ -139,13 +139,9 @@ def main():
     df = pd.read_csv(args.input, on_bad_lines="skip")
     print(f"Loaded {len(df)} rows, columns: {list(df.columns)}")
 
-    # 1. DAPT corpus
-    prepare_dapt_corpus(df, output_dir / "dapt_corpus.txt")
-
-    # 2. Classification splits
+    # Classification splits
     label2id, id2label = prepare_classification_data(df, output_dir)
 
-    # Save label mapping
     import json
     mapping = {"label2id": label2id, "id2label": id2label}
     with open(output_dir / "label_mapping.json", "w") as f:
