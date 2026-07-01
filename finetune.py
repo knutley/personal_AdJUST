@@ -12,6 +12,16 @@ Usage — Stage 1:
         --learning_rate 2e-5 \
         --patience 3
 
+Usage — Stage 1 on GPU (Colab etc.):
+    python finetune.py \
+        --model_checkpoint microsoft/deberta-v3-base \
+        --data_dir ./data \
+        --output_dir ./checkpoints/deberta-stage1 \
+        --num_train_epochs 5 \
+        --learning_rate 2e-5 \
+        --patience 3 \
+        --fp16
+
 Usage — Stage 2:
     python finetune.py \
         --model_checkpoint ./checkpoints/climatebert-stage1/best_model \
@@ -23,10 +33,6 @@ Usage — Stage 2:
         --learning_rate 2e-5 \
         --patience 3
 """
-
-import os
-os.environ["PYTORCH_MPS_ENABLED"] = "0"
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 import argparse
 import json
@@ -120,7 +126,7 @@ def main():
     parser.add_argument("--patience",         type=int,   default=3,
                         help="Early stopping patience in epochs")
     parser.add_argument("--fp16",             action="store_true",
-                        help="Mixed precision — only use on GPU")
+                        help="Mixed precision — use on GPU, not on Mac CPU/MPS")
     parser.add_argument("--seed",             type=int,   default=42)
     args = parser.parse_args()
 
@@ -174,8 +180,12 @@ def main():
         def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
             labels  = inputs.pop("labels")
             outputs = model(**inputs)
+            # dtype= ensures weights match model precision (fp16 on GPU, fp32 on CPU)
             loss    = torch.nn.CrossEntropyLoss(
-                weight=class_weights.to(outputs.logits.device)
+                weight=class_weights.to(
+                    device=outputs.logits.device,
+                    dtype=outputs.logits.dtype,
+                )
             )(outputs.logits, labels)
             return (loss, outputs) if return_outputs else loss
 
@@ -198,8 +208,6 @@ def main():
         logging_steps=20,
         report_to="none",
         seed=args.seed,
-        gradient_checkpointing=False,
-        dataloader_pin_memory=False
     )
 
     trainer = WeightedTrainer(
