@@ -1,0 +1,14 @@
+SAMPLING METHODOLOGY NOTE
+AdJUST Project — Structural Relevance Screening
+
+For the structural relevance screening stage, documents were randomly sampled
+from every resource/document type present in the initial corpus. Sampling was
+conducted using a fixed random seed (set.seed(123)) to ensure the sample is
+reproducible.
+
+Following sampling, the selected documents were manually reviewed by the two
+Principal Investigators (PIs) to assess structural relevance -- i.e., whether
+each document type was likely to contain articulations of policy paradigms.
+
+This note is intended as a record of process for internal reference and future
+replication.
