@@ -6,12 +6,35 @@ adjust-project/
 │   ├── requirements.txt        # Python deps
 │   └── renv.lock / DESCRIPTION # R deps
 │
-├── data/
-│   ├── raw/                    # scraped, untouched
-│   ├── interim/                # screening/filtering intermediate outputs
-│   ├── processed/               # final corpora used for modelling
-│   └── external/                # NOT committed — see note below
-│
+├── data_collection/
+│   ├── EurLex_metadata/
+        ├── first_eurlex_query.R # narrow, proof of concept and restricted to one resource type
+        ├── reworked_eurlex_query.R # finalised, multi-directory, multiple resource types, and deduplication
+    ├── EurLex_text/
+        ├── text_scraper.py # adds the text back to EurLex metadata (deduplicated_scrape.csv)
+        ├── clean_checkpoints. # run this in a second terminal as your scrape is running
+├── data_screening/
+    ├── structural_relevance/
+        ├── sampling_note.txt # set.seed (123) and sampled the appropriate number from each resource type
+    ├── substantive_relevance/
+        ├── computational_approach/ 
+            ├── corpus_random.xlsx # set.seed (123), random sample of 100, manually annotated for environmental relevance
+            ├── keyword_extraction.py # keyword extraction from random corpus
+                ├── unfiltered_seeds.csv # 1,113 unfiltered candidate seeds
+                ├── filtered_seeds.csv # 109 filtered seeds
+            ├── two_stage_keyword_discovery.py # uses filtered_seeds.csv and full_corpus.csv
+                ├── unfiltered_discovered_keywords.csv #18,807 candidate keywords
+            ├── bart_classifier.py # classified according to broad environmental relevance
+                ├── filtered_discovered_keywords.csv # 5,504 filtered keywords with BART MNLI 
+                ├── double_filtered_discovered_keywords.csv # 791 double filtered keywords after manual pass
+        ├── qualitative_approach/
+            ├── Expert-Curated keywords # provided by Fergus and Marion
+        ├── keyword_integration/
+            ├── keyword_density.py # integrating the two approaches
+            
+            
+            
+
 ├── src/
 │   ├── 01_collection/
 │   │   └── text_scraper.py
