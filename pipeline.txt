@@ -30,8 +30,8 @@ adjust-project/
         ├── qualitative_approach/
             ├── Expert-Curated keywords # provided by Fergus and Marion
         ├── keyword_integration/
-            ├── keyword_density.py # integrating the two approaches
-            
+            ├── keyword_density.py # integrating the two sets of keywords to score the corpus
+            ├── 85per_corpus.py # filtering by applying a threshold at the 85th percentile
             
             
 
