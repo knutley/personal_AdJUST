@@ -1,0 +1,792 @@
+stem,lift,high_score_count,low_score_count,rate_in_high,rate_in_low,original_words,classification,confidence,model,relevant,notes
+nature-bas,9999.0,183,0,0.0501095290251916,0.0,"nature-base, nature-based",environmental,0.956,model,1,NA
+climate-resili,9999.0,180,0,0.0492880613362541,0.0,"climate-resilience, climate-resilient",environmental,0.758,model,1,NA
+zero-emiss,9999.0,146,0,0.0399780941949616,0.0,"zero-emission, zero-emissions",environmental,0.653,model,1,NA
+hydromorpholog,9999.0,122,0,0.0334063526834611,0.0,"hydromorphologic, hydromorphological",environmental,0.874,model,1,NA
+napcp,9999.0,97,0,0.0265607886089813,0.0,"napcp, napcps",environmental,1.0,known_acronym,1,NA
+microplast,9999.0,93,0,0.0254654983570646,0.0,"microplastic, microplastics",environmental,0.875,model,1,major pollutant
+eutr,9999.0,89,0,0.0243702081051478,0.0,eutr,environmental,1.0,known_acronym,1,NA
+necd,9999.0,86,0,0.0235487404162102,0.0,necd,environmental,1.0,known_acronym,1,NA
+hydromorphology,9999.0,85,0,0.0232749178532311,0.0,hydromorphology,environmental,0.789,model,1,NA
+waterbodi,9999.0,84,0,0.0230010952902519,0.0,"waterbodie, waterbodies",environmental,0.936,model,1,NA
+eep,9999.0,84,0,0.0230010952902519,0.0,"eep, eeping, eeps",environmental,1.0,known_acronym,1,NA
+env-eir,9999.0,83,0,0.0227272727272727,0.0,env-eir,environmental,0.934,model,1,NA
+carbonac,9999.0,75,0,0.0205366922234392,0.0,carbonaceous,environmental,0.791,model,1,"coal, soot, etc."
+biomethan,9999.0,74,0,0.02026286966046,0.0,"biomethane, biomethanization",environmental,0.785,model,1,NA
+cyanamid,9999.0,72,0,0.0197152245345016,0.0,"cyanamide, cyanamides",environmental,0.688,model,1,nitrogen based fertiliser
+taiex-eir,9999.0,71,0,0.0194414019715224,0.0,taiex-eir,environmental,0.515,model,1,NA
+squirrel,9999.0,68,0,0.0186199342825848,0.0,"squirrel, squirrels",environmental,0.875,model,1,red-grey debate
+envicrimenet,9999.0,67,0,0.0183461117196056,0.0,envicrimenet,environmental,0.97,model,1,NA
+old-growth,9999.0,67,0,0.0183461117196056,0.0,old-growth,environmental,0.561,model,1,forests
+asphaltit,9999.0,66,0,0.0180722891566265,0.0,asphaltites,environmental,0.746,model,1,road run-off
+hydrology,9999.0,66,0,0.0180722891566265,0.0,hydrology,environmental,0.871,model,1,NA
+odysse,9999.0,66,0,0.0180722891566265,0.0,odyssee,environmental,0.72,model,1,NA
+eufj,9999.0,65,0,0.0177984665936473,0.0,eufje,environmental,0.522,model,1,NA
+plant-growth,9999.0,62,0,0.0169769989047097,0.0,plant-growth,environmental,0.948,model,1,NA
+eco-schem,9999.0,62,0,0.0169769989047097,0.0,"eco-scheme, eco-schemes",environmental,0.972,model,1,NA
+dune,9999.0,62,0,0.0169769989047097,0.0,"dune, dunes",environmental,0.927,model,1,NA
+bio-energy,9999.0,61,0,0.0167031763417305,0.0,bio-energy,environmental,0.744,model,1,NA
+adriatic-ionian,9999.0,61,0,0.0167031763417305,0.0,adriatic-ionian,environmental,0.752,model,1,NA
+ieep,9999.0,55,0,0.0150602409638554,0.0,ieep,environmental,0.65,model,1,NA
+espir,9999.0,55,0,0.0150602409638554,0.0,espirs,environmental,0.784,model,1,NA
+climatebond,9999.0,54,0,0.0147864184008762,0.0,climatebonds,environmental,0.918,model,1,NA
+sulphur-treat,9999.0,51,0,0.0139649507119386,0.0,sulphur-treated,environmental,0.752,model,1,NA
+polyaromat,9999.0,51,0,0.0139649507119386,0.0,"polyaromatic, polyaromatics",environmental,0.728,model,1,major pollutant
+biodiversity-friendly,9999.0,50,0,0.0136911281489594,0.0,biodiversity-friendly,environmental,0.969,model,1,NA
+carbon-neutr,9999.0,50,0,0.0136911281489594,0.0,carbon-neutral,environmental,0.652,model,1,NA
+bycatch,9999.0,50,0,0.0136911281489594,0.0,"bycatch, bycatches",environmental,0.765,model,1,additional/ harmful catch from fishing
+env_eta,9999.0,49,0,0.0134173055859802,0.0,env_eta,environmental,0.93,model,1,NA
+epea,9999.0,49,0,0.0134173055859802,0.0,"epea, epeas",environmental,0.815,model,1,NA
+agro-forestry,9999.0,49,0,0.0134173055859802,0.0,agro-forestry,environmental,0.979,model,1,NA
+decarboni,9999.0,48,0,0.013143483023001,0.0,"decarboni, decarbonis",environmental,0.667,model,1,NA
+geoss,9999.0,47,0,0.0128696604600219,0.0,geoss,environmental,0.873,model,1,NA
+renaturalis,9999.0,47,0,0.0128696604600219,0.0,"renaturalisation, renaturalise, renaturalising",environmental,0.685,model,1,NA
+macroalga,9999.0,46,0,0.0125958378970427,0.0,macroalgae,environmental,0.826,model,1,keystone species
+luminophor,9999.0,46,0,0.0125958378970427,0.0,luminophores,environmental,0.776,model,1,review - cold energy source?
+phytobentho,9999.0,45,0,0.0123220153340635,0.0,phytobenthos,environmental,0.924,model,1,keystone species
+biotop,9999.0,44,0,0.0120481927710843,0.0,"biotope, biotopes",environmental,0.971,model,1,specific environment
+atrazin,9999.0,43,0,0.0117743702081051,0.0,"atrazin, atrazine",environmental,0.574,model,1,major pollutant
+re-naturalis,9999.0,43,0,0.0117743702081051,0.0,"re-naturalisation, re-naturalise, re-naturalised",environmental,0.819,model,1,NA
+prtr,9999.0,42,0,0.0115005476451259,0.0,"prtr, prtrs",environmental,1.0,known_acronym,1,NA
+cleantech,9999.0,41,0,0.0112267250821467,0.0,cleantech,environmental,0.762,model,1,NA
+dibromopropyl,9999.0,41,0,0.0112267250821467,0.0,dibromopropyl,environmental,0.614,model,1,major pollutant
+dugong,9999.0,41,0,0.0112267250821467,0.0,"dugong, dugongs",environmental,0.695,model,1,keystone species
+eip-agri,9999.0,40,0,0.0109529025191675,0.0,eip-agri,environmental,0.969,model,1,NA
+manate,9999.0,40,0,0.0109529025191675,0.0,manatees,environmental,0.873,model,1,keystone species
+onserv,9999.0,40,0,0.0109529025191675,0.0,onservation,environmental,0.908,model,1,species indicative of environmental health
+biodivers,9999.0,40,0,0.0109529025191675,0.0,biodiverse,environmental,0.975,model,1,NA
+riverbank,9999.0,39,0,0.0106790799561883,0.0,"riverbank, riverbanks",environmental,0.894,model,1,specific environment
+cetacea,9999.0,39,0,0.0106790799561883,0.0,cetacea,environmental,0.925,model,1,species indicative of environmental health
+state-of-nature-in-the-eu,9999.0,39,0,0.0106790799561883,0.0,state-of-nature-in-the-eu,environmental,0.942,model,1,NA
+micropollut,9999.0,38,0,0.0104052573932092,0.0,"micropollutant, micropollutants, micropolluting",environmental,0.745,model,1,NA
+scheldt,9999.0,38,0,0.0104052573932092,0.0,scheldt,environmental,0.538,model,1,specific river
+urbact,9999.0,38,0,0.0104052573932092,0.0,urbact,environmental,0.71,model,1,legislation
+over-fish,9999.0,38,0,0.0104052573932092,0.0,"over-fished, over-fishing",environmental,0.894,model,1,NA
+dumpsit,9999.0,38,0,0.0104052573932092,0.0,"dumpsite, dumpsites",environmental,0.906,model,1,NA
+greenhouse-ga,9999.0,38,0,0.0104052573932092,0.0,greenhouse-gas,environmental,0.871,model,1,NA
+sea-b,9999.0,37,0,0.01013143483023,0.0,"sea-bed, sea-beds",environmental,0.849,model,1,specific environment
+panago,9999.0,37,0,0.01013143483023,0.0,panagos,environmental,0.593,model,1,leading environmental scientist
+sea-bas,9999.0,37,0,0.01013143483023,0.0,sea-based,environmental,0.677,model,1,specific environment
+ramsar,9999.0,36,0,0.0098576122672508,0.0,ramsar,environmental,1.0,known_acronym,1,NA
+re-natur,9999.0,36,0,0.0098576122672508,0.0,"re-naturalization, re-naturalize, re-naturation, re-naturing",environmental,0.803,model,1,NA
+angiosperm,9999.0,36,0,0.0098576122672508,0.0,"angiosperm, angiosperms",environmental,0.949,model,1,species indicative of environmental health
+environmentally-harm,9999.0,35,0,0.0095837897042716,0.0,environmentally-harmful,environmental,0.864,model,1,NA
+mangrov,9999.0,35,0,0.0095837897042716,0.0,"mangrove, mangroves",environmental,0.966,model,1,species indicative of environmental health
+circulareconomy,9999.0,35,0,0.0095837897042716,0.0,circulareconomy,environmental,0.699,model,1,pardigmatic
+eco-tour,9999.0,35,0,0.0095837897042716,0.0,eco-tourism,environmental,0.983,model,1,NA
+geeref,9999.0,35,0,0.0095837897042716,0.0,geeref,environmental,0.719,model,1,NA
+iclei,9999.0,35,0,0.0095837897042716,0.0,iclei,environmental,0.549,model,1,NA
+cgiar,9999.0,35,0,0.0095837897042716,0.0,cgiar,environmental,0.517,model,1,NA
+scallop,9999.0,34,0,0.0093099671412924,0.0,"scallop, scalloped, scallops",environmental,0.761,model,1,species indicative of environmental health/ greener food source
+horizon-europe_en,9999.0,34,0,0.0093099671412924,0.0,horizon-europe_en,environmental,0.541,model,1,NA
+waterbody,9999.0,34,0,0.0093099671412924,0.0,waterbody,environmental,0.88,model,1,specific environment
+ecotour,9999.0,34,0,0.0093099671412924,0.0,"ecotour, ecotourism",environmental,0.972,model,1,NA
+superphosph,9999.0,33,0,0.0090361445783132,0.0,"superphosphate, superphosphates",environmental,0.739,model,1,major pollutant
+eusair,9999.0,33,0,0.0090361445783132,0.0,eusair,environmental,0.878,model,1,framework
+air-pollutant-emissions-data-view,9999.0,33,0,0.0090361445783132,0.0,air-pollutant-emissions-data-viewer,environmental,0.79,model,1,NA
+sulphonitr,9999.0,33,0,0.0090361445783132,0.0,"sulphonitrate, sulphonitric",environmental,0.744,model,1,major pollutant
+ground-wat,9999.0,32,0,0.008762322015334,0.0,"ground-water, ground-waters",environmental,0.878,model,1,NA
+subsea,9999.0,32,0,0.008762322015334,0.0,subsea,environmental,0.703,model,1,specific environment
+tilapia,9999.0,32,0,0.008762322015334,0.0,"tilapia, tilapias",environmental,0.889,model,1,low-impact aquaculture/ invasive species
+hydro-morpholog,9999.0,32,0,0.008762322015334,0.0,hydro-morphological,environmental,0.688,model,1,NA
+nature-and-biodiversity,9999.0,32,0,0.008762322015334,0.0,nature-and-biodiversity,environmental,0.992,model,1,NA
+env_wasmun,9999.0,32,0,0.008762322015334,0.0,env_wasmun,environmental,0.859,model,1,NA
+subterranea,9999.0,31,0,0.0084884994523548,0.0,subterranea,environmental,0.801,model,1,specific environment
+environment-policy,9999.0,31,0,0.0084884994523548,0.0,environment-policy,environmental,0.875,model,1,NA
+phosphoaminolipid,9999.0,31,0,0.0084884994523548,0.0,phosphoaminolipids,environmental,0.724,model,1,environmental indicator
+hydro-pow,9999.0,31,0,0.0084884994523548,0.0,"hydro-power, hydro-powers",environmental,0.674,model,1,NA
+rainforest,9999.0,31,0,0.0084884994523548,0.0,"rainforest, rainforests",environmental,0.959,model,1,specific environment
+headwat,9999.0,30,0,0.0082146768893756,0.0,"headwater, headwaters",environmental,0.957,model,1,NA
+re-cultiv,9999.0,30,0,0.0082146768893756,0.0,re-cultivation,environmental,0.767,model,1,NA
+energy-strategy,9999.0,30,0,0.0082146768893756,0.0,energy-strategy,environmental,0.703,model,1,NA
+oreochromi,9999.0,30,0,0.0082146768893756,0.0,"oreochromi, oreochromis",environmental,0.724,model,1,low-impact aquaculture/ invasive species
+flood_risk,9999.0,29,0,0.0079408543263964,0.0,flood_risk,environmental,0.677,model,1,NA
+biorefineri,9999.0,29,0,0.0079408543263964,0.0,biorefineries,environmental,0.969,model,1,NA
+alewel,9999.0,29,0,0.0079408543263964,0.0,alewell,environmental,0.534,model,1,leading environmental scientist
+emission-reduct,9999.0,29,0,0.0079408543263964,0.0,emission-reduction,environmental,0.679,model,1,NA
+env_air_gg,9999.0,29,0,0.0079408543263964,0.0,env_air_gge,environmental,0.902,model,1,NA
+state-of-wat,9999.0,29,0,0.0079408543263964,0.0,state-of-water,environmental,0.796,model,1,NA
+waste-sort,9999.0,29,0,0.0079408543263964,0.0,waste-sorting,environmental,0.862,model,1,NA
+rewett,9999.0,29,0,0.0079408543263964,0.0,"rewetted, rewetting",environmental,0.574,model,1,NA
+anthropogenically,9999.0,29,0,0.0079408543263964,0.0,anthropogenically,environmental,0.739,model,1,NA
+agriculture-nature-wat,9999.0,29,0,0.0079408543263964,0.0,agriculture-nature-water,environmental,0.926,model,1,NA
+land-degradation-neutr,9999.0,29,0,0.0079408543263964,0.0,land-degradation-neutral,environmental,0.66,model,1,NA
+eucra,9999.0,29,0,0.0079408543263964,0.0,eucra,environmental,0.958,model,1,NA
+environmentalprosecutor,9999.0,29,0,0.0079408543263964,0.0,environmentalprosecutors,environmental,0.826,model,1,NA
+peat-form,9999.0,28,0,0.0076670317634173,0.0,peat-forming,environmental,0.611,model,1,NA
+eudr,9999.0,28,0,0.0076670317634173,0.0,eudr,environmental,0.963,model,1,NA
+eu-et,9999.0,28,0,0.0076670317634173,0.0,eu-ets,environmental,0.503,model,1,legislation
+carbon-fre,9999.0,28,0,0.0076670317634173,0.0,carbon-free,environmental,0.566,model,1,NA
+environmental-relat,9999.0,28,0,0.0076670317634173,0.0,environmental-related,environmental,0.985,model,1,NA
+sphagnum,9999.0,28,0,0.0076670317634173,0.0,sphagnum,environmental,0.822,model,1,NA
+environmental-implementation-review,9999.0,28,0,0.0076670317634173,0.0,environmental-implementation-review,environmental,0.892,model,1,NA
+harm-to-human-health-from-air-pollut,9999.0,28,0,0.0076670317634173,0.0,harm-to-human-health-from-air-pollution,environmental,0.809,model,1,NA
+org_cropar,9999.0,28,0,0.0076670317634173,0.0,org_cropar,environmental,0.722,model,1,NA
+env_waspac,9999.0,28,0,0.0076670317634173,0.0,env_waspac,environmental,0.891,model,1,NA
+natura-2000-baromet,9999.0,28,0,0.0076670317634173,0.0,natura-2000-barometer,environmental,0.912,model,1,NA
+seafloor,9999.0,28,0,0.0076670317634173,0.0,"seafloor, seafloors",environmental,0.847,model,1,specific environment
+nature-restoration-law_en,9999.0,27,0,0.0073932092004381,0.0,nature-restoration-law_en,environmental,0.676,model,1,NA
+climate-action-progress-report-2023-2023-10-24_en,9999.0,27,0,0.0073932092004381,0.0,climate-action-progress-report-2023-2023-10-24_en,environmental,0.826,model,1,NA
+green-budgeting-eu_en,9999.0,27,0,0.0073932092004381,0.0,green-budgeting-eu_en,environmental,0.771,model,1,NA
+env_epi,9999.0,27,0,0.0073932092004381,0.0,env_epi,environmental,0.961,model,1,NA
+env_ac_epea,9999.0,27,0,0.0073932092004381,0.0,env_ac_epea,environmental,0.986,model,1,NA
+delivering-european-green-d,9999.0,27,0,0.0073932092004381,0.0,delivering-european-green-deal,environmental,0.703,model,1,NA
+climate-relev,9999.0,27,0,0.0073932092004381,0.0,climate-relevant,environmental,0.92,model,1,NA
+financing-water-supply-sanitation-and-flood-protection_6893cdac-en,9999.0,27,0,0.0073932092004381,0.0,financing-water-supply-sanitation-and-flood-protection_6893cdac-en,environmental,0.674,model,1,NA
+biogas,9999.0,27,0,0.0073932092004381,0.0,biogases,environmental,0.908,model,1,NA
+eu-air-quality-standards_en,9999.0,27,0,0.0073932092004381,0.0,eu-air-quality-standards_en,environmental,0.723,model,1,NA
+waste-to-energy,9999.0,27,0,0.0073932092004381,0.0,waste-to-energy,environmental,0.68,model,1,NA
+camelid,9999.0,27,0,0.0073932092004381,0.0,camelids,environmental,0.755,model,1,low impact species
+arkshel,9999.0,27,0,0.0073932092004381,0.0,arkshells,environmental,0.797,model,1,species indicative of environmental health
+env_ac_cur,9999.0,27,0,0.0073932092004381,0.0,env_ac_cur,environmental,0.911,model,1,NA
+laminaria,9999.0,27,0,0.0073932092004381,0.0,laminaria,environmental,0.704,model,1,keystone species
+proposal-directive-soil-monitoring-and-resilience_en,9999.0,27,0,0.0073932092004381,0.0,proposal-directive-soil-monitoring-and-resilience_en,environmental,0.745,model,1,NA
+national-air-pollution-control-programmes-and-projections_en,9999.0,27,0,0.0073932092004381,0.0,national-air-pollution-control-programmes-and-projections_en,environmental,0.826,model,1,NA
+swale,9999.0,27,0,0.0073932092004381,0.0,"swale, swales",environmental,0.897,model,1,specific environment
+nreap,9999.0,27,0,0.0073932092004381,0.0,"nreap, nreaps",environmental,0.624,model,1,NA
+neobiota,9999.0,27,0,0.0073932092004381,0.0,neobiota,environmental,0.79,model,1,NA
+bioeconom,9999.0,27,0,0.0073932092004381,0.0,"bioeconom, bioeconomic, bioeconomics",environmental,0.813,model,1,NA
+reducing-emissions-air-pollutants_en,9999.0,27,0,0.0073932092004381,0.0,reducing-emissions-air-pollutants_en,environmental,0.863,model,1,NA
+bio-methan,9999.0,27,0,0.0073932092004381,0.0,bio-methane,environmental,0.801,model,1,NA
+fight-against-environmental-crime-at-a-strategic-level-through-the-strengthening-of-envicrimenet-network-of-experts-in-environmental-criminal-investig,9999.0,27,0,0.0073932092004381,0.0,fight-against-environmental-crime-at-a-strategic-level-through-the-strengthening-of-envicrimenet-network-of-experts-in-environmental-criminal-investigations,environmental,0.872,model,1,NA
+forest-relat,9999.0,27,0,0.0073932092004381,0.0,forest-related,environmental,0.96,model,1,NA
+clean-air-outlook_en,9999.0,27,0,0.0073932092004381,0.0,clean-air-outlook_en,environmental,0.846,model,1,NA
+renewable-energy,9999.0,27,0,0.0073932092004381,0.0,renewable-energy,environmental,0.694,model,1,NA
+national-air-pollutant-emissions-data-view,9999.0,27,0,0.0073932092004381,0.0,national-air-pollutant-emissions-data-viewer,environmental,0.786,model,1,NA
+env_ac_rp,9999.0,27,0,0.0073932092004381,0.0,env_ac_rp,environmental,0.83,model,1,NA
+eper,9999.0,27,0,0.0073932092004381,0.0,eper,environmental,1.0,known_acronym,1,NA
+agro-ecology,9999.0,27,0,0.0073932092004381,0.0,agro-ecology,environmental,0.997,model,1,NA
+env_wasgen,9999.0,27,0,0.0073932092004381,0.0,env_wasgen,environmental,0.942,model,1,NA
+clofenotan,9999.0,27,0,0.0073932092004381,0.0,clofenotane,environmental,0.638,model,1,major pollutant
+estimating-investment-needs-and-financing-capacities-water-related-investment-eu-member-states-2020-05-28_en,9999.0,27,0,0.0073932092004381,0.0,estimating-investment-needs-and-financing-capacities-water-related-investment-eu-member-states-2020-05-28_en,environmental,0.695,model,1,NA
+rhopilema,9999.0,27,0,0.0073932092004381,0.0,rhopilema,environmental,0.509,model,1,invasive species
+rena,9999.0,27,0,0.0073932092004381,0.0,rena,environmental,0.702,model,1,NA
+financing-natura-2000_en,9999.0,27,0,0.0073932092004381,0.0,financing-natura-2000_en,environmental,0.854,model,1,NA
+reducing-emissions-air-pollut,9999.0,27,0,0.0073932092004381,0.0,reducing-emissions-air-pollutants,environmental,0.866,model,1,NA
+business-and-biodiversity_en,9999.0,26,0,0.0071193866374589,0.0,business-and-biodiversity_en,environmental,0.953,model,1,NA
+squalu,9999.0,26,0,0.0071193866374589,0.0,squalus,environmental,0.77,model,1,endangered species
+e-seveso,9999.0,26,0,0.0071193866374589,0.0,e-seveso,environmental,0.734,model,1,NA
+geologist,9999.0,26,0,0.0071193866374589,0.0,"geologist, geologists",environmental,0.96,model,1,NA
+water_en,9999.0,26,0,0.0071193866374589,0.0,water_en,environmental,0.813,model,1,NA
+dir200760ec,9999.0,26,0,0.0071193866374589,0.0,dir200760ec,environmental,0.696,model,1,legislation
+esdac,9999.0,26,0,0.0071193866374589,0.0,esdac,environmental,0.588,model,1,NA
+dibromoethan,9999.0,26,0,0.0071193866374589,0.0,dibromoethane,environmental,0.76,model,1,major pollutant
+estuarin,9999.0,26,0,0.0071193866374589,0.0,estuarine,environmental,0.982,model,1,specific environment
+industrial-pollutant-releases-to-wat,9999.0,25,0,0.0068455640744797,0.0,industrial-pollutant-releases-to-water,environmental,0.802,model,1,NA
+brackish-wat,9999.0,25,0,0.0068455640744797,0.0,brackish-water,environmental,0.615,model,1,specific environment
+national-energy-and-climate-plans-necps_en,9999.0,25,0,0.0068455640744797,0.0,national-energy-and-climate-plans-necps_en,environmental,0.893,model,1,NA
+virola,9999.0,24,0,0.0065717415115005,0.0,virola,environmental,0.838,model,1,keystone species
+nitrates_en,9999.0,24,0,0.0065717415115005,0.0,nitrates_en,environmental,0.556,model,1,major pollutant
+water-us,9999.0,24,0,0.0065717415115005,0.0,"water-use, water-using",environmental,0.745,model,1,NA
+phosphamidon,9999.0,24,0,0.0065717415115005,0.0,phosphamidon,environmental,0.569,model,1,major pollutant
+env_ep,9999.0,24,0,0.0065717415115005,0.0,env_epe,environmental,0.952,model,1,NA
+monocrotopho,9999.0,24,0,0.0065717415115005,0.0,monocrotophos,environmental,0.72,model,1,major pollutant
+water-depend,9999.0,24,0,0.0065717415115005,0.0,"water-dependant, water-dependent",environmental,0.912,model,1,NA
+eco-driv,9999.0,24,0,0.0065717415115005,0.0,eco-driving,environmental,0.995,model,1,NA
+energinet,9999.0,24,0,0.0065717415115005,0.0,"energinet, energinets",environmental,0.97,model,1,private company
+waterbas,9999.0,23,0,0.0062979189485213,0.0,"waterbase, waterbased",environmental,0.953,model,1,specific environment
+chlorobenzil,9999.0,23,0,0.0062979189485213,0.0,chlorobenzilate,environmental,0.642,model,1,major pollutant
+chionoecet,9999.0,23,0,0.0062979189485213,0.0,chionoecetes,environmental,0.935,model,1,invasive species
+groundwater-depend,9999.0,23,0,0.0062979189485213,0.0,groundwater-dependent,environmental,0.884,model,1,NA
+environmentally-relat,9999.0,23,0,0.0062979189485213,0.0,environmentally-related,environmental,0.982,model,1,NA
+carbon-rich,9999.0,23,0,0.0062979189485213,0.0,carbon-rich,environmental,0.609,model,1,NA
+sulphonyl,9999.0,23,0,0.0062979189485213,0.0,sulphonyl,environmental,0.623,model,1,major pollutant
+agri-environmental-clim,9999.0,23,0,0.0062979189485213,0.0,agri-environmental-climate,environmental,0.983,model,1,NA
+biodiversity-rich,9999.0,23,0,0.0062979189485213,0.0,biodiversity-rich,environmental,0.952,model,1,NA
+pastoralist,9999.0,23,0,0.0062979189485213,0.0,"pastoralist, pastoralists",environmental,0.601,model,1,NA
+wateronlin,9999.0,23,0,0.0062979189485213,0.0,wateronline,environmental,0.814,model,1,legislation
+eusdr,9999.0,23,0,0.0062979189485213,0.0,eusdr,environmental,0.865,model,1,NA
+paralithod,9999.0,23,0,0.0062979189485213,0.0,paralithodes,environmental,0.672,model,1,invasive species
+roundwood,9999.0,23,0,0.0062979189485213,0.0,roundwood,environmental,0.522,model,1,NA
+overgraz,9999.0,23,0,0.0062979189485213,0.0,overgrazing,environmental,0.821,model,1,NA
+climate-sensit,9999.0,22,0,0.0060240963855421,0.0,climate-sensitive,environmental,0.894,model,1,NA
+coal-bas,9999.0,22,0,0.0060240963855421,0.0,coal-based,environmental,0.751,model,1,NA
+ecoreg,9999.0,22,0,0.0060240963855421,0.0,"ecoregion, ecoregions",environmental,0.991,model,1,NA
+land-degrad,9999.0,22,0,0.0060240963855421,0.0,land-degradation,environmental,0.737,model,1,NA
+phosphorothio,9999.0,22,0,0.0060240963855421,0.0,"phosphorothioate, phosphorothioates",environmental,0.723,model,1,major pollutant
+de-carbonis,9999.0,22,0,0.0060240963855421,0.0,"de-carbonisation, de-carbonise, de-carbonised, de-carbonising",environmental,0.759,model,1,NA
+co2e,9999.0,22,0,0.0060240963855421,0.0,co2e,environmental,0.852,model,1,NA
+enveco,9999.0,22,0,0.0060240963855421,0.0,enveco,environmental,0.89,model,1,private company
+state-of-the-environ,9999.0,22,0,0.0060240963855421,0.0,state-of-the-environment,environmental,0.941,model,1,NA
+stormwat,9999.0,22,0,0.0060240963855421,0.0,stormwater,environmental,0.935,model,1,NA
+lizard,9999.0,21,0,0.0057502738225629,0.0,"lizard, lizards",environmental,0.767,model,1,endangered species - cool lizards
+water-sav,9999.0,21,0,0.0057502738225629,0.0,water-saving,environmental,0.793,model,1,NA
+general-information-on-habitats-and-speci,9999.0,21,0,0.0057502738225629,0.0,general-information-on-habitats-and-species,environmental,0.885,model,1,NA
+tetrafluorid,9999.0,21,0,0.0057502738225629,0.0,tetrafluoride,environmental,0.635,model,1,major pollutant
+clean-air,9999.0,20,0,0.0054764512595837,0.0,clean-air,environmental,0.783,model,1,NA
+sea-relat,9999.0,20,0,0.0054764512595837,0.0,sea-related,environmental,0.835,model,1,specific environment
+greenhouse-gases-view,9999.0,20,0,0.0054764512595837,0.0,greenhouse-gases-viewer,environmental,0.909,model,1,NA
+species-rich,9999.0,20,0,0.0054764512595837,0.0,species-rich,environmental,0.818,model,1,NA
+agro-chem,9999.0,20,0,0.0054764512595837,0.0,"agro-chemical, agro-chemicals",environmental,0.64,model,1,NA
+windfarm,9999.0,20,0,0.0054764512595837,0.0,"windfarm, windfarms",environmental,0.835,model,1,NA
+difluoromethan,9999.0,20,0,0.0054764512595837,0.0,difluoromethane,environmental,0.686,model,1,substitute for major pollutant
+soer,9999.0,20,0,0.0054764512595837,0.0,soer,environmental,1.0,known_acronym,1,NA
+ecgonin,9999.0,20,0,0.0054764512595837,0.0,ecgonine,environmental,0.979,model,1,environmental health indicator
+granivor,9999.0,20,0,0.0054764512595837,0.0,"granivore, granivores",environmental,0.956,model,1,managing habitats
+seagrass,9999.0,20,0,0.0054764512595837,0.0,"seagrass, seagrasses",environmental,0.982,model,1,NA
+micro-plast,9999.0,20,0,0.0054764512595837,0.0,"micro-plast, micro-plastic, micro-plastics",environmental,0.72,model,1,NA
+camchaticu,9999.0,20,0,0.0054764512595837,0.0,camchaticus,environmental,0.832,model,1,invasive species
+rbmp,980.6284227820372,215,1,0.0588718510405257,6.003482019571351e-05,"rbmp, rbmps",environmental,1.0,known_acronym,1,NA
+reforest,811.869112814896,178,1,0.0487404162102957,6.003482019571351e-05,"reforest, reforestation, reforested, reforesting",environmental,0.974,model,1,NA
+msfd,766.2584884994524,168,1,0.0460021905805038,6.003482019571351e-05,"msfd, msfds",environmental,1.0,known_acronym,1,NA
+water-relat,670.4761774370209,147,1,0.0402519167579408,6.003482019571351e-05,water-related,environmental,0.864,model,1,NA
+cropland,643.1098028477546,141,1,0.0386089813800657,6.003482019571351e-05,"cropland, croplands",environmental,0.81,model,1,NA
+peatland,643.1098028477546,141,1,0.0386089813800657,6.003482019571351e-05,"peatland, peatlands",environmental,0.963,model,1,NA
+runoff,515.4000547645127,113,1,0.0309419496166484,6.003482019571351e-05,"runoff, runoffs",environmental,0.84,model,1,NA
+carbon-intens,442.4230558598029,97,1,0.0265607886089813,6.003482019571351e-05,"carbon-intense, carbon-intensive",environmental,0.514,model,1,NA
+floodplain,437.8619934282585,96,1,0.0262869660460021,6.003482019571351e-05,"floodplain, floodplains",environmental,0.926,model,1,NA
+sub-basin,428.7398685651698,94,1,0.0257393209200438,6.003482019571351e-05,"sub-basin, sub-basins",environmental,0.632,model,1,NA
+climate-friendly,415.0566812705366,91,1,0.0249178532311062,6.003482019571351e-05,climate-friendly,environmental,0.922,model,1,NA
+wildfir,369.4460569550931,81,1,0.0221796276013143,6.003482019571351e-05,"wildfire, wildfires",environmental,0.915,model,1,NA
+bio-fuel,346.6407447973713,76,1,0.0208105147864184,6.003482019571351e-05,"bio-fuel, bio-fuels",environmental,0.693,model,1,NA
+pluvial,342.07968236582695,75,1,0.0205366922234392,6.003482019571351e-05,"pluvial, pluviales",environmental,0.861,model,1,specific environment
+benthic,342.07968236582695,75,1,0.0205366922234392,6.003482019571351e-05,benthic,environmental,0.773,model,1,specific environment
+co2eq,328.3964950711939,72,1,0.0197152245345016,6.003482019571351e-05,co2eq,environmental,0.883,model,1,NA
+bioeconomy,323.8354326396495,213,3,0.0583242059145673,0.0001801044605871,bioeconomy,environmental,0.923,model,1,NA
+climate-neutr,322.3150784958014,212,3,0.0580503833515881,0.0001801044605871,climate-neutral,environmental,0.823,model,1,NA
+zero-pollut,319.2743702081051,70,1,0.0191675794085432,6.003482019571351e-05,zero-pollution,environmental,0.706,model,1,NA
+hydropow,311.97667031763416,342,5,0.0936473165388828,0.0003001741009785,"hydropow, hydropower",environmental,0.624,model,1,NA
+on-shor,310.1522453450164,68,1,0.0186199342825848,6.003482019571351e-05,"on-shore, on-shores",environmental,0.569,model,1,NA
+lulucf,308.6318912011683,203,3,0.0555859802847754,0.0001801044605871,lulucf,environmental,1.0,known_acronym,1,NA
+phytoplankton,296.46905805038335,65,1,0.0177984665936473,6.003482019571351e-05,phytoplankton,environmental,0.979,model,1,environmental health indicator
+water-framework,287.34693318729467,63,1,0.0172508214676889,6.003482019571351e-05,water-framework,environmental,0.804,model,1,NA
+bio-economy,278.22480832420587,122,2,0.0334063526834611,0.0001200696403914,bio-economy,environmental,0.924,model,1,NA
+resource-efficiency,278.22480832420587,61,1,0.0167031763417305,6.003482019571351e-05,resource-efficiency,environmental,0.611,model,1,NA
+agri-environment-clim,278.22480832420587,61,1,0.0167031763417305,6.003482019571351e-05,agri-environment-climate,environmental,0.979,model,1,NA
+porpois,259.9805585980285,57,1,0.0156078860898138,6.003482019571351e-05,"porpoise, porpoises",environmental,0.781,model,1,endangered species
+wfd,250.85843373493975,275,5,0.0753012048192771,0.0003001741009785,"wfd, wfds",environmental,1.0,known_acronym,1,NA
+riverb,250.85843373493975,55,1,0.0150602409638554,6.003482019571351e-05,"riverbed, riverbeds",environmental,0.864,model,1,NA
+decarbon,246.2973713033954,54,1,0.0147864184008762,6.003482019571351e-05,"decarbonation, decarbonization, decarbonize",environmental,0.813,model,1,NA
+climate-relat,242.6485213581599,266,5,0.0728368017524644,0.0003001741009785,climate-related,environmental,0.965,model,1,NA
+climate-adapt,241.73630887185104,53,1,0.014512595837897,6.003482019571351e-05,"climate-adapt, climate-adaptable, climate-adaptation, climate-adapted, climate-adapting, climate-adaptive",environmental,0.862,model,1,NA
+bio-bas,238.6956005841548,157,3,0.0429901423877327,0.0001801044605871,bio-based,environmental,0.937,model,1,NA
+birdlif,237.1752464403067,52,1,0.0142387732749178,6.003482019571351e-05,birdlife,environmental,0.924,model,1,NA
+beetl,228.05312157721795,50,1,0.0136911281489594,6.003482019571351e-05,"beetle, beetles",environmental,0.848,model,1,keystone species
+fossil-bas,228.05312157721795,50,1,0.0136911281489594,6.003482019571351e-05,fossil-based,environmental,0.815,model,1,NA
+monofil,228.05312157721795,50,1,0.0136911281489594,6.003482019571351e-05,"monofil, monofills",environmental,0.753,model,1,NA
+macrophyt,223.4920591456736,49,1,0.0134173055859802,6.003482019571351e-05,"macrophyte, macrophytes, macrophytic",environmental,0.879,model,1,environmental health indicator
+run-off,221.97170500182543,146,3,0.0399780941949616,0.0001801044605871,"run-off, run-offs",environmental,0.599,model,1,NA
+weir,214.3699342825849,47,1,0.0128696604600219,6.003482019571351e-05,"weir, weirs",environmental,0.806,model,1,specific environment
+climate-chang,214.3699342825849,47,1,0.0128696604600219,6.003482019571351e-05,climate-change,environmental,0.905,model,1,NA
+riparian,214.3699342825849,141,3,0.0386089813800657,0.0001801044605871,"riparian, riparians",environmental,0.824,model,1,specific environment
+seab,208.89665936473168,229,5,0.0627053669222344,0.0003001741009785,"seabe, seabed, seabeds",environmental,0.915,model,1,specific environment
+fossil-fuel,202.967278203724,89,2,0.0243702081051478,0.0001200696403914,"fossil-fuel, fossil-fueled, fossil-fuelled, fossil-fuels",environmental,0.699,model,1,NA
+climate-proof,198.4062157721796,87,2,0.0238225629791894,0.0001200696403914,"climate-proof, climate-proofed, climate-proofing",environmental,0.845,model,1,NA
+biogeograph,198.4062157721796,87,2,0.0238225629791894,0.0001200696403914,"biogeographic, biogeographical",environmental,0.983,model,1,NA
+shorelin,196.12568455640744,43,1,0.0117743702081051,6.003482019571351e-05,"shoreline, shorelines",environmental,0.804,model,1,specific environment
+estuari,196.12568455640744,129,3,0.0353231106243154,0.0001801044605871,"estuarial, estuarie, estuaries, estuaris",environmental,0.941,model,1,specific environment
+lca,191.5646221248631,42,1,0.0115005476451259,6.003482019571351e-05,"lca, lcas",environmental,1.0,known_acronym,1,NA
+riverin,191.5646221248631,42,1,0.0115005476451259,6.003482019571351e-05,riverine,environmental,0.84,model,1,specific environment
+bio-diversity,187.00355969331872,82,2,0.0224534501642935,0.0001200696403914,bio-diversity,environmental,0.956,model,1,NA
+environm,187.00355969331872,41,1,0.0112267250821467,6.003482019571351e-05,"environm, environme",environmental,0.953,model,1,NA
+biota,185.48320554947057,122,3,0.0334063526834611,0.0001801044605871,biota,environmental,0.969,model,1,NA
+geotherm,182.44249726177435,200,5,0.0547645125958378,0.0003001741009785,"geotherm, geothermal, geothermic",environmental,0.801,model,1,NA
+reef,177.88143483023,78,2,0.0213581599123767,0.0001200696403914,"reef, reefs",environmental,0.921,model,1,specific environment
+hydrolog,173.8905052026287,305,8,0.0835158817086527,0.0004802785615657,"hydrologic, hydrological",environmental,0.601,model,1,NA
+coppic,173.32037239868566,38,1,0.0104052573932092,6.003482019571351e-05,"coppice, coppiced, coppices, coppicing",environmental,0.868,model,1,NA
+aquif,171.80001825483754,113,3,0.0309419496166484,0.0001801044605871,"aquifer, aquifers",environmental,0.827,model,1,NA
+eco-design,170.71405100923172,262,7,0.0717415115005476,0.0004202437413699,"eco-design, eco-designed, eco-designing, eco-designs",environmental,0.958,model,1,NA
+uwwtd,168.7593099671413,111,3,0.03039430449069,0.0001801044605871,uwwtd,environmental,1.0,known_acronym,1,NA
+horse-chestnut,168.7593099671413,37,1,0.01013143483023,6.003482019571351e-05,horse-chestnuts,environmental,0.71,model,1,endangered species
+sapwood,168.7593099671413,37,1,0.01013143483023,6.003482019571351e-05,sapwood,environmental,0.791,model,1,NA
+biotic,166.4787787513691,73,2,0.0199890470974808,0.0001200696403914,"biotic, biotics",environmental,0.969,model,1,NA
+greenwash,164.19824753559695,36,1,0.0098576122672508,6.003482019571351e-05,"greenwash, greenwashing",environmental,0.514,model,1,NA
+abiot,161.91771631982476,71,2,0.0194414019715224,0.0001200696403914,abiotic,environmental,0.569,model,1,NA
+salinis,161.91771631982476,71,2,0.0194414019715224,0.0001200696403914,"salinisation, salinised",environmental,0.568,model,1,NA
+f-gase,159.63718510405255,70,2,0.0191675794085432,0.0001200696403914,f-gases,environmental,0.687,model,1,major pollutant
+ecolabel,155.83629974443227,205,6,0.0561336254107338,0.0003602089211742,"ecolabel, ecolabelled, ecolabelling, ecolabels",environmental,0.754,model,1,NA
+deforest,150.51506024096386,363,11,0.0993975903614457,0.0006603830221528,"deforest, deforestation, deforestations, deforested, deforesting",environmental,0.913,model,1,NA
+carbonis,150.51506024096386,33,1,0.0090361445783132,6.003482019571351e-05,"carbonisation, carbonise, carbonised, carbonising",environmental,0.768,model,1,NA
+eucalyptu,150.51506024096386,33,1,0.0090361445783132,6.003482019571351e-05,eucalyptus,environmental,0.962,model,1,NA
+recyclability,149.60284775465496,164,5,0.044906900328587,0.0003001741009785,recyclability,environmental,0.674,model,1,NA
+n2o,148.23452902519168,65,2,0.0177984665936473,0.0001200696403914,n2o,environmental,1.0,known_acronym,1,major pollutant
+seveso,146.71417488134355,193,6,0.0528477546549835,0.0003602089211742,seveso,environmental,1.0,known_acronym,1,NA
+biodiversity-relat,145.9539978094195,64,2,0.0175246440306681,0.0001200696403914,biodiversity-related,environmental,0.991,model,1,NA
+jellyfish,145.9539978094195,32,1,0.008762322015334,6.003482019571351e-05,jellyfish,environmental,0.853,model,1,invasive species
+triphosph,145.9539978094195,32,1,0.008762322015334,6.003482019571351e-05,"triphosphate, triphosphates",environmental,0.716,model,1,major pollutant
+maricultur,145.9539978094195,32,1,0.008762322015334,6.003482019571351e-05,"mariculture, maricultures",environmental,0.952,model,1,NA
+ceacr,145.9539978094195,32,1,0.008762322015334,6.003482019571351e-05,ceacr,environmental,0.862,model,1,NA
+zero-energy,145.9539978094195,32,1,0.008762322015334,6.003482019571351e-05,zero-energy,environmental,0.568,model,1,NA
+cbd,144.65083711469254,222,7,0.06078860898138,0.0004202437413699,cbd,environmental,1.0,known_acronym,1,NA
+afforest,143.92685895095534,284,9,0.0777656078860898,0.0005403133817614,"afforest, afforestation, afforestations, afforested, afforesting",environmental,0.969,model,1,NA
+fraxinu,141.39293537787515,31,1,0.0084884994523548,6.003482019571351e-05,fraxinus,environmental,0.536,model,1,endangered species
+herbivor,141.39293537787515,31,1,0.0084884994523548,6.003482019571351e-05,"herbivore, herbivores, herbivorous",environmental,0.962,model,1,NA
+isoproturon,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,isoproturon,environmental,0.637,model,1,major pollutant
+pollachiu,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,pollachius,environmental,0.846,model,1,endangered species
+plant-bas,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,plant-based,environmental,0.943,model,1,NA
+evro,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,evros,environmental,0.801,model,1,specific environment
+boreal,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,boreal,environmental,0.659,model,1,specific environment
+e-vehicl,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,"e-vehicle, e-vehicles",environmental,0.539,model,1,NA
+biobas,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,"biobase, biobased",environmental,0.785,model,1,NA
+dike,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,"dike, dikes",environmental,0.747,model,1,NA
+ecofy,136.83187294633078,30,1,0.0082146768893756,6.003482019571351e-05,ecofys,environmental,0.982,model,1,private compant
+phosphin,134.5513417305586,59,2,0.0161555312157721,0.0001200696403914,"phosphinate, phosphinates, phosphine, phosphinic",environmental,0.71,model,1,major pollutant
+hydrofluorocarbon,133.79116465863453,88,3,0.0240963855421686,0.0001801044605871,"hydrofluorocarbon, hydrofluorocarbons",environmental,0.679,model,1,major pollutant
+eco-efficiency,132.27081051478643,58,2,0.0158817086527929,0.0001200696403914,eco-efficiency,environmental,0.991,model,1,NA
+leachat,132.27081051478643,29,1,0.0079408543263964,6.003482019571351e-05,"leachate, leachates",environmental,0.772,model,1,major pollutant
+silvicultur,132.27081051478643,29,1,0.0079408543263964,6.003482019571351e-05,"silvicultural, silviculture",environmental,0.887,model,1,NA
+walrus,132.27081051478643,29,1,0.0079408543263964,6.003482019571351e-05,walruses,environmental,0.783,model,1,endangered species
+anthracit,132.27081051478643,29,1,0.0079408543263964,6.003482019571351e-05,"anthracite, anthracites",environmental,0.789,model,1,NA
+sockey,132.27081051478643,29,1,0.0079408543263964,6.003482019571351e-05,sockeye,environmental,0.641,model,1,endangered species
+eco-effici,129.99027929901425,57,2,0.0156078860898138,0.0001200696403914,"eco-efficiant, eco-efficiencies, eco-efficient",environmental,0.917,model,1,NA
+dechloran,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,dechlorane,environmental,0.748,model,1,major pollutant
+bromotrifluoromethan,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,bromotrifluoromethane,environmental,0.722,model,1,major pollutant
+air_en,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,air_en,environmental,0.575,model,1,NA
+byproduct,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,"byproduct, byproducts",environmental,0.756,model,1,NA
+bromochlorodifluoromethan,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,bromochlorodifluoromethane,environmental,0.688,model,1,major pollutant
+polyphosphor,127.70974808324206,28,1,0.0076670317634173,6.003482019571351e-05,polyphosphoric,environmental,0.752,model,1,major pollutant
+pentachlorobenzen,125.42921686746988,55,2,0.0150602409638554,0.0001200696403914,pentachlorobenzene,environmental,0.673,model,1,major pollutant
+fertiliz,125.42921686746988,55,2,0.0150602409638554,0.0001200696403914,"fertilized, fertilizing",environmental,0.85,model,1,NA
+pyrolysi,123.1486856516977,54,2,0.0147864184008762,0.0001200696403914,pyrolysis,environmental,0.773,model,1,NA
+rainwat,119.72788882803944,105,4,0.0287513691128148,0.0002401392807828,rainwater,environmental,0.791,model,1,NA
+bromomethan,118.58762322015336,26,1,0.0071193866374589,6.003482019571351e-05,bromomethane,environmental,0.659,model,1,major pollutant
+chloromethan,118.58762322015336,26,1,0.0071193866374589,6.003482019571351e-05,chloromethane,environmental,0.726,model,1,major pollutant
+wind-pow,118.58762322015336,26,1,0.0071193866374589,6.003482019571351e-05,"wind-power, wind-powered",environmental,0.824,model,1,NA
+landslid,117.44735761226724,103,4,0.0282037239868565,0.0002401392807828,"landslide, landslides",environmental,0.823,model,1,NA
+groundwat,117.44735761226724,515,20,0.1410186199342825,0.0012006964039142,"groundwat, groundwater, groundwaters",environmental,0.857,model,1,NA
+pentachlorophenol,116.30709200438118,51,2,0.0139649507119386,0.0001200696403914,pentachlorophenol,environmental,0.549,model,1,major pollutant
+freshwat,114.59669359255204,402,16,0.1100766703176341,0.0009605571231314,"freshwater, freshwaters",environmental,0.926,model,1,specific environment
+ecology,114.02656078860898,150,6,0.0410733844468784,0.0003602089211742,ecology,environmental,0.993,model,1,NA
+emep,114.02656078860898,25,1,0.0068455640744797,6.003482019571351e-05,emep,environmental,0.601,model,1,NA
+porbeagl,114.02656078860898,25,1,0.0068455640744797,6.003482019571351e-05,porbeagle,environmental,0.592,model,1,endangered species
+chloropicrin,114.02656078860898,25,1,0.0068455640744797,6.003482019571351e-05,"chloropicrin, chloropicrine",environmental,0.681,model,1,major pollutant
+gaec,112.50620664476088,74,3,0.02026286966046,0.0001801044605871,"gaec, gaecs",environmental,0.726,model,1,NA
+bref,111.7460295728368,98,4,0.0268346111719605,0.0002401392807828,"bref, brefs",environmental,1.0,known_acronym,1,NA
+co2-eq,111.7460295728368,49,2,0.0134173055859802,0.0001200696403914,co2-eq,environmental,0.701,model,1,NA
+climate-induc,109.46549835706462,24,1,0.0065717415115005,6.003482019571351e-05,climate-induced,environmental,0.891,model,1,NA
+biodiv,109.46549835706462,24,1,0.0065717415115005,6.003482019571351e-05,"biodiv, biodive, biodiver, biodivers",environmental,0.993,model,1,NA
+venerida,109.46549835706462,24,1,0.0065717415115005,6.003482019571351e-05,veneridae,environmental,0.727,model,1,environmental health indicator
+underwat,107.5107573149742,165,7,0.0451807228915662,0.0004202437413699,"underwat, underwater",environmental,0.861,model,1,specific environment
+eco-industri,107.18496714129245,47,2,0.0128696604600219,0.0001200696403914,"eco-industrial, eco-industries",environmental,0.874,model,1,NA
+envir,107.18496714129245,47,2,0.0128696604600219,0.0001200696403914,envir,environmental,0.901,model,1,NA
+eco-friendly,104.90443592552026,69,3,0.018893756845564,0.0001801044605871,eco-friendly,environmental,0.99,model,1,NA
+car-shar,104.90443592552026,23,1,0.0062979189485213,6.003482019571351e-05,car-sharing,environmental,0.508,model,1,NA
+plankton,104.90443592552026,23,1,0.0062979189485213,6.003482019571351e-05,"plankton, planktonic",environmental,0.931,model,1,environmental health indicator
+hydrometeorolog,104.90443592552026,23,1,0.0062979189485213,6.003482019571351e-05,hydrometeorological,environmental,0.947,model,1,NA
+ecologically,104.1442588535962,137,6,0.0375136911281489,0.0003602089211742,ecologically,environmental,0.992,model,1,NA
+leach,103.9922234392114,114,5,0.0312157721796276,0.0003001741009785,"leach, leache, leached, leaching",environmental,0.702,model,1,NA
+waste-wat,103.9922234392114,114,5,0.0312157721796276,0.0003001741009785,waste-water,environmental,0.79,model,1,NA
+ecosystem-bas,102.62390470974807,90,4,0.024644030668127,0.0002401392807828,ecosystem-based,environmental,0.994,model,1,NA
+quercu,102.62390470974807,45,2,0.0123220153340635,0.0001200696403914,quercus,environmental,0.636,model,1,keystone species
+biospher,101.86372763782404,67,3,0.0183461117196056,0.0001801044605871,"biosphere, biospheric",environmental,0.989,model,1,NA
+stratospher,100.3433734939759,22,1,0.0060240963855421,6.003482019571351e-05,"stratosphere, stratospheric",environmental,0.819,model,1,NA
+hedgerow,100.3433734939759,22,1,0.0060240963855421,6.003482019571351e-05,"hedgerow, hedgerows",environmental,0.826,model,1,specific environment
+post-kyoto,100.3433734939759,22,1,0.0060240963855421,6.003482019571351e-05,post-kyoto,environmental,0.594,model,1,NA
+cemagref,100.3433734939759,22,1,0.0060240963855421,6.003482019571351e-05,cemagref,environmental,0.788,model,1,private company
+seawat,98.06284227820372,86,4,0.0235487404162102,0.0002401392807828,"seawater, seawaters",environmental,0.887,model,1,NA
+farmland,97.49270947426068,171,8,0.0468236582694414,0.0004802785615657,"farmland, farmlands",environmental,0.771,model,1,NA
+climate-smart,95.78231106243156,21,1,0.0057502738225629,6.003482019571351e-05,climate-smart,environmental,0.941,model,1,NA
+angustifolium,95.78231106243156,21,1,0.0057502738225629,6.003482019571351e-05,angustifolium,environmental,0.752,model,1,keystone species
+clrtap,95.78231106243156,21,1,0.0057502738225629,6.003482019571351e-05,clrtap,environmental,1.0,known_acronym,1,NA
+evapotranspir,95.78231106243156,21,1,0.0057502738225629,6.003482019571351e-05,evapotranspiration,environmental,0.839,model,1,NA
+wilder,95.78231106243156,21,1,0.0057502738225629,6.003482019571351e-05,"wilder, wilderness",environmental,0.932,model,1,NA
+environment-relat,95.3262048192771,209,10,0.0572289156626506,0.0006003482019571,environment-related,environmental,0.987,model,1,NA
+eia,95.2121782584885,334,16,0.0914567360350493,0.0009605571231314,"eia, eias",environmental,1.0,known_acronym,1,NA
+bat,94.53838494473764,228,11,0.0624315443592552,0.0006603830221528,"bat, bating, bats",environmental,1.0,known_acronym,1,NA
+dolphin,92.74160277473528,61,3,0.0167031763417305,0.0001801044605871,"dolphin, dolphins",environmental,0.809,model,1,environmental health indicator
+iucn,91.2212486308872,80,4,0.0219058050383351,0.0002401392807828,iucn,environmental,1.0,known_acronym,1,NA
+deforestation-fre,91.2212486308872,40,2,0.0109529025191675,0.0001200696403914,deforestation-free,environmental,0.919,model,1,NA
+fossil-fre,91.2212486308872,20,1,0.0054764512595837,6.003482019571351e-05,fossil-free,environmental,0.841,model,1,NA
+harvester-thresh,91.2212486308872,20,1,0.0054764512595837,6.003482019571351e-05,harvester-threshers,environmental,0.885,model,1,NA
+waste-manag,91.2212486308872,20,1,0.0054764512595837,6.003482019571351e-05,waste-management,environmental,0.755,model,1,NA
+brownfield,88.940717415115,39,2,0.0106790799561883,0.0001200696403914,"brownfield, brownfields",environmental,0.9,model,1,NA
+flood-pron,88.940717415115,39,2,0.0106790799561883,0.0001200696403914,flood-prone,environmental,0.779,model,1,NA
+ndc,88.94071741511499,117,6,0.0320372398685651,0.0003602089211742,"ndc, ndcs",environmental,1.0,known_acronym,1,NA
+agronomist,86.66018619934283,38,2,0.0104052573932092,0.0001200696403914,"agronomist, agronomists",environmental,0.867,model,1,NA
+biomass,85.87828978250666,659,35,0.1804490690032858,0.0021012187068499,"biomass, biomasse, biomasses",environmental,0.939,model,1,NA
+land-us,84.9497877875137,298,16,0.0815991237677984,0.0009605571231314,"land-use, land-used",environmental,0.799,model,1,NA
+biodegradability,84.37965498357065,37,2,0.01013143483023,0.0001200696403914,biodegradability,environmental,0.926,model,1,NA
+ospar,82.85930083972252,109,6,0.0298466593647316,0.0003602089211742,ospar,environmental,0.631,model,1,NA
+sea-basin,82.09912376779847,36,2,0.0098576122672508,0.0001200696403914,"sea-basin, sea-basins",environmental,0.912,model,1,specific environment
+overfish,81.18691128148959,89,5,0.0243702081051478,0.0003001741009785,"overfished, overfishing",environmental,0.907,model,1,NA
+creosot,80.57876962395035,53,3,0.014512595837897,0.0001801044605871,"creosote, creosotes",environmental,0.867,model,1,major pollutant
+agro-ecolog,79.81859255202627,35,2,0.0095837897042716,0.0001200696403914,agro-ecological,environmental,0.997,model,1,NA
+whale,79.49280237834455,122,7,0.0334063526834611,0.0004202437413699,"whale, whales",environmental,0.777,model,1,environmental health indicator
+shale,79.36248630887185,174,10,0.0476451259583789,0.0006003482019571,"shale, shales",environmental,0.827,model,1,NA
+bioaccumul,79.24845974808325,139,8,0.0380613362541073,0.0004802785615657,"bioaccumulable, bioaccumulate, bioaccumulates, bioaccumulation, bioaccumulative, bioaccumulive",environmental,0.664,model,1,NA
+pollin,79.05841548010224,156,9,0.0427163198247535,0.0005403133817614,"pollin, pollinate, pollination, pollinator, pollinators, pollinizers",environmental,0.955,model,1,NA
+seabird,79.05841548010223,52,3,0.0142387732749178,0.0001801044605871,"seabird, seabirds",environmental,0.864,model,1,environmental health indicator
+lignit,77.74538235586976,375,22,0.102683461117196,0.0013207660443056,"lignit, lignite, lignites",environmental,0.831,model,1,NA
+bioenergy,76.017707192406,150,9,0.0410733844468784,0.0005403133817614,bioenergy,environmental,0.725,model,1,NA
+poach,76.01770719240598,50,3,0.0136911281489594,0.0001801044605871,"poach, poached, poaching",environmental,0.704,model,1,NA
+clp,75.87949317932889,183,11,0.0501095290251916,0.0006603830221528,clp,environmental,1.0,known_acronym,1,NA
+abalon,75.25753012048193,33,2,0.0090361445783132,0.0001200696403914,"abalon, abalone, abalones",environmental,0.807,model,1,endangered species
+agroforestry,74.11726451259584,65,4,0.0177984665936473,0.0002401392807828,agroforestry,environmental,0.978,model,1,NA
+cbam,72.97699890470975,32,2,0.008762322015334,0.0001200696403914,cbam,environmental,1.0,known_acronym,1,NA
+topsoil,72.97699890470975,32,2,0.008762322015334,0.0001200696403914,"topsoil, topsoils",environmental,0.718,model,1,NA
+bio-accumul,71.83673329682367,63,4,0.0172508214676889,0.0002401392807828,"bio-accumulate, bio-accumulation, bio-accumulative, bio-accumulators",environmental,0.764,model,1,NA
+cetacean,71.45664476086162,47,3,0.0128696604600219,0.0001801044605871,"cetacean, cetaceans",environmental,0.788,model,1,environmental health indicator
+desert,71.45664476086162,47,3,0.0128696604600219,0.0001801044605871,"desert, deserted, deserting, desertion, deserts",environmental,0.776,model,1,NA
+eco-manag,71.07655622489959,187,12,0.0512048192771084,0.0007204178423485,"eco-management, eco-managers",environmental,0.994,model,1,NA
+esri,70.69646768893757,31,2,0.0084884994523548,0.0001200696403914,esri,environmental,0.669,model,1,NA
+agri-environment,70.48914666932193,170,11,0.0465498357064622,0.0006603830221528,agri-environmental,environmental,0.992,model,1,NA
+hydrogeolog,69.93629061701351,46,3,0.0125958378970427,0.0001801044605871,hydrogeological,environmental,0.978,model,1,NA
+forest-bas,69.55620208105147,61,4,0.0167031763417305,0.0002401392807828,forest-based,environmental,0.948,model,1,NA
+mussel,69.32814895947426,76,5,0.0208105147864184,0.0003001741009785,"mussel, mussels",environmental,0.904,model,1,environmental health indicator
+eionet,69.1361042255145,288,19,0.0788608981380065,0.0011406615837185,eionet,environmental,1.0,known_acronym,1,NA
+eel,68.41593647316539,90,6,0.024644030668127,0.0003602089211742,"eel, eels",environmental,0.885,model,1,NA
+geodesy,68.41593647316539,45,3,0.0123220153340635,0.0001801044605871,geodesy,environmental,0.954,model,1,NA
+air-quality,68.41593647316539,45,3,0.0123220153340635,0.0001801044605871,air-quality,environmental,0.937,model,1,NA
+geodet,68.41593647316539,45,3,0.0123220153340635,0.0001801044605871,geodetic,environmental,0.981,model,1,NA
+cypermethrin,68.41593647316539,30,2,0.0082146768893756,0.0001200696403914,"cypermethrin, cypermethrine",environmental,0.859,model,1,major pollutant
+gadida,68.41593647316539,30,2,0.0082146768893756,0.0001200696403914,gadidae,environmental,0.771,model,1,NA
+caspian,67.76435612580191,104,7,0.0284775465498357,0.0004202437413699,caspian,environmental,0.622,model,1,specific environment
+manur,66.89558232931728,264,18,0.072289156626506,0.0010806267635228,"manure, manured, manures, manuring",environmental,0.889,model,1,NA
+sediment,66.64218997200926,263,18,0.0720153340635268,0.0010806267635228,"sediment, sedimentation, sediments",environmental,0.947,model,1,NA
+lagoon,63.85487404162103,56,4,0.0153340635268346,0.0002401392807828,"lagoon, lagoonal, lagooning, lagoons",environmental,0.917,model,1,specific environment
+biofuel,62.91583177630307,469,34,0.1284227820372398,0.0020411838866542,"biofuel, biofuels",environmental,0.715,model,1,NA
+chp,62.84130461238895,124,9,0.0339539978094194,0.0005403133817614,"chp, chps",environmental,1.0,known_acronym,1,NA
+voc,62.71460843373494,110,8,0.0301204819277108,0.0004802785615657,"voc, vocs",environmental,1.0,known_acronym,1,NA
+shellfish,62.610947923927114,151,11,0.0413472070098576,0.0006603830221528,shellfish,environmental,0.896,model,1,NA
+sac,62.45147021653045,178,13,0.0487404162102957,0.0007804526625442,"sac, sacs",environmental,1.0,known_acronym,1,NA
+larva,62.33451989777291,82,6,0.0224534501642935,0.0003602089211742,"larva, larvae",environmental,0.816,model,1,NA
+agribusi,62.33451989777291,41,3,0.0112267250821467,0.0001801044605871,"agribusiness, agribusinesses",environmental,0.507,model,1,NA
+nox,62.25850219058051,273,20,0.0747535596933187,0.0012006964039142,nox,environmental,1.0,known_acronym,1,NA
+pfc,61.57434282584885,81,6,0.0221796276013143,0.0003602089211742,"pfc, pfcs",environmental,1.0,known_acronym,1,NA
+vinifera,61.57434282584885,27,2,0.0073932092004381,0.0001200696403914,vinifera,environmental,0.806,model,1,endangered species
+air-pollut,60.81416575392478,40,3,0.0109529025191675,0.0001801044605871,"air-pollutant, air-polluting, air-pollution",environmental,0.754,model,1,NA
+salin,58.83770536692224,129,10,0.0353231106243154,0.0006003482019571,"salination, saline, salinities, salinization, salins",environmental,0.568,model,1,NA
+charcoal,57.95232265962245,216,17,0.0591456736035049,0.0010205919433271,"charcoal, charcoals",environmental,0.583,model,1,NA
+nec,57.890407784986095,165,13,0.0451807228915662,0.0007804526625442,"nec, necs",environmental,1.0,known_acronym,1,NA
+de-oil,57.77345746622855,76,6,0.0208105147864184,0.0003602089211742,de-oiling,environmental,0.858,model,1,NA
+bio-geograph,57.01328039430449,25,2,0.0068455640744797,0.0001200696403914,"bio-geographic, bio-geographical",environmental,0.972,model,1,NA
+biodiesel,56.68749022062275,174,14,0.0476451259583789,0.0008404874827399,"biodiesel, biodiesels",environmental,0.844,model,1,NA
+desalt,56.44314759036145,99,8,0.0271084337349397,0.0004802785615657,"desalter, desalting",environmental,0.73,model,1,NA
+cistern,56.25310332238043,37,3,0.01013143483023,0.0001801044605871,"cistern, cisterns",environmental,0.809,model,1,NA
+dogfish,56.25310332238043,37,3,0.01013143483023,0.0001801044605871,dogfish,environmental,0.797,model,1,invasive species
+biomateri,56.25310332238043,37,3,0.01013143483023,0.0001801044605871,"biomaterial, biomaterials",environmental,0.813,model,1,NA
+biomonitor,56.25310332238043,37,3,0.01013143483023,0.0001801044605871,"biomonitor, biomonitoring, biomonitors",environmental,0.706,model,1,NA
+sea-level,55.8730147864184,49,4,0.0134173055859802,0.0002401392807828,"sea-level, sea-levels",environmental,0.766,model,1,NA
+hfc,55.644961664841176,122,10,0.0334063526834611,0.0006003482019571,"hfc, hfcs",environmental,1.0,known_acronym,1,NA
+ceer,55.644961664841176,61,5,0.0167031763417305,0.0003001741009785,ceer,environmental,0.554,model,1,NA
+drought,54.29836228028999,500,42,0.1369112814895947,0.0025214624482199,"drought, droughts",environmental,0.828,model,1,NA
+footprint,53.93456325301205,473,40,0.1295180722891566,0.0024013928078285,"footprint, footprinting, footprints",environmental,0.712,model,1,NA
+catchment,53.71917974930024,212,18,0.0580503833515881,0.0010806267635228,"catchment, catchments",environmental,0.916,model,1,specific environment
+fallow,53.71917974930024,106,9,0.029025191675794,0.0005403133817614,"fallow, fallowed, fallowing, fallows",environmental,0.789,model,1,NA
+dithiocarbam,53.212395034684185,35,3,0.0095837897042716,0.0001801044605871,"dithiocarbamate, dithiocarbamates",environmental,0.712,model,1,major pollutant
+eco-label,52.62764344089645,150,13,0.0410733844468784,0.0007804526625442,"eco-label, eco-labeled, eco-labeling, eco-labelled, eco-labelling, eco-labels",environmental,0.916,model,1,NA
+bio-safety,52.45221796276013,23,2,0.0062979189485213,0.0001200696403914,bio-safety,environmental,0.842,model,1,NA
+tropospher,52.45221796276013,23,2,0.0062979189485213,0.0001200696403914,"troposphere, tropospheric",environmental,0.885,model,1,specific environment
+environmentally-friendly,51.99611171960569,171,15,0.0468236582694414,0.0009005223029357,environmentally-friendly,environmental,0.913,model,1,NA
+watercours,51.57509057207852,147,13,0.0402519167579408,0.0007804526625442,"watercourse, watercourses",environmental,0.843,model,1,specific environment
+estuary,51.311952354874045,45,4,0.0123220153340635,0.0002401392807828,estuary,environmental,0.977,model,1,specific environment
+climate-neutrality,50.931863818912014,67,6,0.0183461117196056,0.0003602089211742,climate-neutrality,environmental,0.858,model,1,NA
+tyndp,50.17168674698795,22,2,0.0060240963855421,0.0001200696403914,"tyndp, tyndps",environmental,1.0,known_acronym,1,NA
+honeybe,50.17168674698795,22,2,0.0060240963855421,0.0001200696403914,"honeybee, honeybees",environmental,0.774,model,1,keystone species
+regener,49.57676556026478,250,23,0.0684556407447973,0.0013808008645014,"regenerate, regenerates, regeneration, regenerations, regenerators",environmental,0.694,model,1,NA
+enviro,49.031421139101866,43,4,0.0117743702081051,0.0002401392807828,"enviro, enviroment, enviros",environmental,0.981,model,1,NA
+semi-arid,48.65133260313983,32,3,0.008762322015334,0.0001801044605871,semi-arid,environmental,0.521,model,1,specific environment
+cowberri,47.89115553121577,21,2,0.0057502738225629,0.0001200696403914,cowberries,environmental,0.734,model,1,keystone species
+pfo,47.565365357534034,73,7,0.0199890470974808,0.0004202437413699,"pfo, pfos",environmental,1.0,known_acronym,1,major pollutant
+dioxin,46.75088992332968,164,16,0.044906900328587,0.0009605571231314,"dioxin, dioxine, dioxines, dioxins",environmental,0.729,model,1,major pollutant
+clean-up,45.610624315443594,170,17,0.0465498357064622,0.0010205919433271,"clean-up, clean-ups",environmental,0.762,model,1,NA
+zero-carbon,45.610624315443594,30,3,0.0082146768893756,0.0001801044605871,zero-carbon,environmental,0.684,model,1,NA
+eco-industry,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,eco-industry,environmental,0.987,model,1,NA
+reprotox,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,"reprotox, reprotoxic",environmental,0.851,model,1,major pollutant
+sustainability-relat,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,sustainability-related,environmental,0.81,model,1,NA
+bioreactor,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,"bioreactor, bioreactors",environmental,0.955,model,1,NA
+heathland,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,"heathland, heathlands",environmental,0.93,model,1,specific environment
+beaver,45.610624315443594,20,2,0.0054764512595837,0.0001200696403914,"beaver, beavers",environmental,0.925,model,1,endangered species
+prei,45.61062431544359,70,7,0.0191675794085432,0.0004202437413699,"prei, preis, prey, preying, preys",environmental,0.857,model,1,NA
+lake,45.53198530800317,579,58,0.1585432639649507,0.0034820195713513,"lake, lakes",environmental,0.875,model,1,specific environment
+saltwat,43.330093099671416,38,4,0.0104052573932092,0.0002401392807828,saltwater,environmental,0.742,model,1,specific environment
+biologist,42.87398685651698,47,5,0.0128696604600219,0.0003001741009785,"biologist, biologiste, biologists",environmental,0.962,model,1,NA
+snail,42.56991602774735,56,6,0.0153340635268346,0.0003602089211742,"snail, snails",environmental,0.719,model,1,environmental health indicator
+conifer,42.3527225786262,65,7,0.0177984665936473,0.0004202437413699,coniferous,environmental,0.77,model,1,NA
+wildlif,41.98250647216967,405,44,0.1108981380065717,0.0026415320886113,wildlife,environmental,0.965,model,1,NA
+coastlin,41.67152494274619,201,22,0.055038335158817,0.0013207660443056,"coastline, coastlines",environmental,0.815,model,1,specific environment
+peat,41.65770354143848,274,30,0.0750273822562979,0.0018010446058714,"peat, peats",environmental,0.744,model,1,specific environment
+batteri,41.04956188389924,540,60,0.1478641840087623,0.0036020892117428,"batteri, batterie, batteries",environmental,0.57,model,1,NA
+efsi,41.04956188389924,153,17,0.0418948521358159,0.0010205919433271,efsi,environmental,0.854,model,1,NA
+borehol,41.04956188389924,36,4,0.0098576122672508,0.0002401392807828,"borehole, boreholes",environmental,0.844,model,1,NA
+water-bas,41.04956188389924,36,4,0.0098576122672508,0.0002401392807828,water-based,environmental,0.858,model,1,specific environment
+efi,41.04956188389923,27,3,0.0073932092004381,0.0001801044605871,"efi, efie, efis",environmental,0.541,model,1,NA
+thresher,41.04956188389923,27,3,0.0073932092004381,0.0001801044605871,"thresher, threshers",environmental,0.857,model,1,NA
+arctic,40.796169526591214,161,18,0.0440854326396495,0.0010806267635228,arctic,environmental,0.844,model,1,specific environment
+invertebr,40.44142022635999,266,30,0.0728368017524644,0.0018010446058714,"invertebr, invertebrate, invertebrates",environmental,0.818,model,1,NA
+amphibian,40.289384811975175,53,6,0.014512595837897,0.0003602089211742,"amphibian, amphibians",environmental,0.782,model,1,NA
+tide,40.22027780543662,97,11,0.0265607886089813,0.0006603830221528,"tide, tides",environmental,0.688,model,1,NA
+turbin,39.249142503026455,327,38,0.0895399780941949,0.0022813231674371,"turbine, turbines",environmental,0.628,model,1,NA
+sustainabledevelop,38.76903066812705,34,4,0.0093099671412924,0.0002401392807828,sustainabledevelopment,environmental,0.762,model,1,NA
+kyoto,38.412697665662655,539,64,0.1475903614457831,0.0038422284925256,kyoto,environmental,0.522,model,1,NA
+ozon,38.08487130339539,501,60,0.1371851040525739,0.0036020892117428,"ozon, ozonation, ozonator, ozone",environmental,0.875,model,1,NA
+species-specif,38.00885359620299,25,3,0.0068455640744797,0.0001801044605871,"species-specif, species-specific",environmental,0.906,model,1,NA
+alga,37.67834182580123,190,23,0.052026286966046,0.0013808008645014,"alga, algae, algaes, algas",environmental,0.941,model,1,environmental health indicator
+bee-keep,37.628765060240966,33,4,0.0090361445783132,0.0002401392807828,"bee-keeper, bee-keepers, bee-keeping",environmental,0.751,model,1,NA
+scrubber,37.628765060240966,33,4,0.0090361445783132,0.0002401392807828,"scrubber, scrubbers",environmental,0.834,model,1,NA
+regen,37.50206888158696,74,9,0.02026286966046,0.0005403133817614,"regen, regene, regenerative",environmental,0.783,model,1,NA
+toothfish,36.48849945235487,32,4,0.008762322015334,0.0002401392807828,"toothfish, toothfishes",environmental,0.803,model,1,endangered species
+unep,36.33646403797006,239,30,0.0654435925520262,0.0018010446058714,unep,environmental,0.737,model,1,NA
+fluvial,36.07385741312357,87,11,0.0238225629791894,0.0006603830221528,"fluvial, fluviale, fluviales",environmental,0.903,model,1,specific environment
+clima,35.72832238043081,188,24,0.0514786418400876,0.0014408356846971,"clima, climas",environmental,0.974,model,1,NA
+flare,35.72832238043081,47,6,0.0128696604600219,0.0003602089211742,"flare, flares",environmental,0.531,model,1,NA
+dichloromethan,35.72832238043081,47,6,0.0128696604600219,0.0003602089211742,dichloromethane,environmental,0.723,model,1,major pollutant
+zoolog,35.576286966046,39,5,0.0106790799561883,0.0003001741009785,zoological,environmental,0.991,model,1,NA
+agri-environ,35.34823384446879,124,16,0.0339539978094194,0.0009605571231314,agri-environment,environmental,0.991,model,1,NA
+woodland,35.27221613727638,116,15,0.0317634173055859,0.0009005223029357,"woodland, woodlands",environmental,0.941,model,1,specific environment
+grassland,34.968145308506756,253,33,0.0692771084337349,0.0019811490664585,"grassland, grasslands",environmental,0.969,model,1,specific environment
+adriat,34.968145308506756,184,24,0.0503833515881708,0.0014408356846971,adriatic,environmental,0.768,model,1,specific environment
+subsoil,34.968145308506756,138,18,0.0377875136911281,0.0010806267635228,"subsoil, subsoiling, subsoils",environmental,0.906,model,1,NA
+carnivor,34.66407447973713,38,5,0.0104052573932092,0.0003001741009785,"carnivore, carnivores, carnivorous, carnivors",environmental,0.891,model,1,NA
+dioxin-lik,34.66407447973713,38,5,0.0104052573932092,0.0003001741009785,dioxin-like,environmental,0.755,model,1,major pollutant
+biowast,34.38339371471901,98,13,0.0268346111719605,0.0007804526625442,"biowaste, biowastes",environmental,0.965,model,1,NA
+bio-wast,34.360003650967506,113,15,0.0309419496166484,0.0009005223029357,"bio-waste, bio-wastes",environmental,0.858,model,1,NA
+monocultur,34.207968236582694,30,4,0.0082146768893756,0.0002401392807828,"monocultural, monoculture, monocultures",environmental,0.759,model,1,NA
+poplar,34.207968236582694,30,4,0.0082146768893756,0.0002401392807828,"poplar, poplars",environmental,0.822,model,1,keystone species
+pcb,33.91050764322111,171,23,0.0468236582694414,0.0013808008645014,"pcb, pcbs",environmental,1.0,known_acronym,1,major pollutant
+pfa,33.63783543263965,59,8,0.0161555312157721,0.0004802785615657,"pfa, pfas",environmental,1.0,known_acronym,1,major pollutant
+aerosol,33.60782844295843,280,38,0.076670317634173,0.0022813231674371,"aerosol, aerosole, aerosoler, aerosoles, aerosolization, aerosols",environmental,0.804,model,1,major pollutant
+beach,33.51389351873899,169,23,0.046276013143483,0.0013808008645014,"beach, beached, beaches, beaching",environmental,0.795,model,1,NA
+de-min,33.06770262869661,29,4,0.0079408543263964,0.0002401392807828,"de-mined, de-mining",environmental,0.93,model,1,NA
+biocid,32.9410064500426,260,36,0.0711938663745892,0.0021612535270456,"biocid, biocidal, biocide, biocider, biocides",environmental,0.701,model,1,NA
+reptil,32.90480754185574,101,14,0.0276560788608981,0.0008404874827399,"reptile, reptiles",environmental,0.693,model,1,NA
+ozone-deplet,32.83964950711939,72,10,0.0197152245345016,0.0006003482019571,"ozone-depleters, ozone-depleting",environmental,0.88,model,1,NA
+carpathian,32.83964950711939,36,5,0.0098576122672508,0.0003001741009785,"carpathian, carpathians",environmental,0.878,model,1,specific environment
+biosecurity,32.34207906004182,78,11,0.0213581599123767,0.0006603830221528,biosecurity,environmental,0.932,model,1,NA
+de-pollut,31.927437020810515,28,4,0.0076670317634173,0.0002401392807828,"de-pollute, de-polluting, de-pollution",environmental,0.837,model,1,NA
+environment-friendly,31.927437020810512,91,13,0.0249178532311062,0.0007804526625442,environment-friendly,environmental,0.928,model,1,NA
+epbd,31.927437020810512,42,6,0.0115005476451259,0.0003602089211742,epbd,environmental,1.0,known_acronym,1,NA
+evaporat,30.787171412924422,54,8,0.0147864184008762,0.0004802785615657,"evaporated, evaporating",environmental,0.666,model,1,NA
+potass,30.40708287696239,20,3,0.0054764512595837,0.0001801044605871,"potasse, potasses, potassic",environmental,0.891,model,1,NA
+acidif,30.255047462577583,199,30,0.0544906900328587,0.0018010446058714,acidification,environmental,0.712,model,1,NA
+deer,29.646905805038337,65,10,0.0177984665936473,0.0006003482019571,"deer, deere, deers",environmental,0.803,model,1,NA
+ryegrass,29.646905805038337,26,4,0.0071193866374589,0.0002401392807828,ryegrass,environmental,0.914,model,1,keystone species
+rhododendron,29.190799561883896,32,5,0.008762322015334,0.0003001741009785,"rhododendron, rhododendrons",environmental,0.875,model,1,invasive species
+roh,28.506640197152244,50,8,0.0136911281489594,0.0004802785615657,rohs,environmental,1.0,known_acronym,1,NA
+brook,28.506640197152244,25,4,0.0068455640744797,0.0002401392807828,"brook, brooke, brookes, brookings, brooks",environmental,0.63,model,1,NA
+decidu,28.506640197152244,25,4,0.0068455640744797,0.0002401392807828,deciduous,environmental,0.588,model,1,NA
+timber-produc,28.506640197152244,25,4,0.0068455640744797,0.0002401392807828,timber-producing,environmental,0.626,model,1,NA
+pleuronectida,28.278587075575025,31,5,0.0084884994523548,0.0003001741009785,pleuronectidae,environmental,0.832,model,1,endangered species
+reservoir,27.83820863390867,354,58,0.096933187294633,0.0034820195713513,"reservoir, reservoirs",environmental,0.805,model,1,NA
+ema,27.796663497902415,323,53,0.0884446878422782,0.0031818454703728,"ema, emas",environmental,1.0,known_acronym,1,NA
+emsa,27.366374589266155,120,20,0.0328587075575027,0.0012006964039142,emsa,environmental,0.512,model,1,NA
+glacier,27.366374589266155,36,6,0.0098576122672508,0.0003602089211742,"glacier, glaciers",environmental,0.895,model,1,specific environment
+chlordecon,27.366374589266155,30,5,0.0082146768893756,0.0003001741009785,chlordecone,environmental,0.731,model,1,major pollutant
+fisher,27.04058441558442,83,14,0.0227272727272727,0.0008404874827399,"fisher, fishers",environmental,0.898,model,1,NA
+aquacultur,26.768202467096405,716,122,0.1960569550930996,0.007324248063877,"aquacultural, aquaculture, aquacultured, aquacultures",environmental,0.801,model,1,NA
+water-separ,26.714794241902677,41,7,0.0112267250821467,0.0004202437413699,water-separation,environmental,0.903,model,1,NA
+coral,26.6822152245345,117,20,0.0320372398685651,0.0012006964039142,"coral, corals",environmental,0.805,model,1,specific environment
+biologically,26.66467267672087,76,13,0.0208105147864184,0.0007804526625442,biologically,environmental,0.975,model,1,NA
+end-of-wast,26.606197517342093,35,6,0.0095837897042716,0.0003602089211742,end-of-waste,environmental,0.72,model,1,NA
+depopul,26.537090510803544,64,11,0.0175246440306681,0.0006603830221528,depopulation,environmental,0.82,model,1,NA
+archipelago,26.454162102957284,58,10,0.0158817086527929,0.0006003482019571,"archipelago, archipelagos",environmental,0.742,model,1,NA
+urophyci,26.454162102957284,29,5,0.0079408543263964,0.0003001741009785,urophycis,environmental,0.961,model,1,NA
+culvert,26.454162102957284,29,5,0.0079408543263964,0.0003001741009785,"culvert, culverted, culverts",environmental,0.847,model,1,NA
+eros,26.352805160034077,572,99,0.1566265060240964,0.0059434471993756,"erosion, erosions, erosive",environmental,0.749,model,1,NA
+tidal,26.30212668857247,173,30,0.0473713033953997,0.0018010446058714,tidal,environmental,0.54,model,1,NA
+energy-europ,26.226108981380065,23,4,0.0062979189485213,0.0002401392807828,energy-europe,environmental,0.627,model,1,NA
+anti-flood,26.226108981380065,23,4,0.0062979189485213,0.0002401392807828,"anti-flood, anti-flooding",environmental,0.862,model,1,NA
+salmonida,26.063213894539196,40,7,0.0109529025191675,0.0004202437413699,salmonidae,environmental,0.776,model,1,endangered species
+rhizom,26.063213894539196,40,7,0.0109529025191675,0.0004202437413699,"rhizome, rhizomes",environmental,0.884,model,1,NA
+shore,25.628826996296873,236,42,0.0646221248630887,0.0025214624482199,"shore, shores",environmental,0.668,model,1,NA
+conif,25.41163354717572,39,7,0.0106790799561883,0.0004202437413699,"conifer, conifers",environmental,0.933,model,1,NA
+pop,25.248738460334845,155,28,0.0424424972617743,0.0016809749654799,"pop, pops",environmental,1.0,known_acronym,1,NA
+efca,25.085843373493976,22,4,0.0060240963855421,0.0002401392807828,efca,environmental,0.941,model,1,NA
+timber,24.817545583403135,370,68,0.1013143483023001,0.0040823677733085,"timber, timbers",environmental,0.633,model,1,NA
+spruce,24.760053199812237,38,7,0.0104052573932092,0.0004202437413699,"spruce, spruces",environmental,0.832,model,1,NA
+agro-environment,24.62973713033954,27,5,0.0073932092004381,0.0003001741009785,agro-environmental,environmental,0.994,model,1,NA
+hydro-electr,24.62973713033954,27,5,0.0073932092004381,0.0003001741009785,"hydro-electric, hydro-electrical",environmental,0.651,model,1,NA
+pyrene,24.515710569550933,43,8,0.0117743702081051,0.0004802785615657,pyrenees,environmental,0.696,model,1,specific environment
+crayfish,24.325666301569917,48,9,0.013143483023001,0.0005403133817614,crayfish,environmental,0.797,model,1,invasive species
+polyphosph,24.32566630156991,32,6,0.008762322015334,0.0003602089211742,"polyphosphate, polyphosphates",environmental,0.728,model,1,major pollutant
+sepa,24.208715982812368,69,13,0.018893756845564,0.0007804526625442,"sepa, sepas",environmental,0.567,model,1,NA
+geo,23.717524644030668,78,15,0.0213581599123767,0.0009005223029357,"geo, geos",environmental,0.992,model,1,NA
+otter,23.717524644030668,26,5,0.0071193866374589,0.0003001741009785,"otter, otters",environmental,0.851,model,1,keystone species
+greenfield,23.507014070267083,67,13,0.0183461117196056,0.0007804526625442,"greenfield, greenfields",environmental,0.819,model,1,NA
+irrig,23.48606774451946,345,67,0.0944687842278203,0.0040223329531128,"irrigable, irrigate, irrigation, irrigational, irrigations, irrigator, irrigators",environmental,0.597,model,1,NA
+tweed,23.45689250508528,36,7,0.0098576122672508,0.0004202437413699,"tweed, tweede",environmental,0.663,model,1,specific environment
+bison,23.37544496166484,41,8,0.0112267250821467,0.0004802785615657,"bison, bisons",environmental,0.825,model,1,endangered species
+ecory,23.170197152245343,127,25,0.034775465498357,0.0015008705048928,ecorys,environmental,0.977,model,1,private company
+coalfish,22.805312157721797,30,6,0.0082146768893756,0.0003602089211742,coalfish,environmental,0.905,model,1,keystone species
+eiti,22.805312157721797,30,6,0.0082146768893756,0.0003602089211742,eiti,environmental,0.808,model,1,NA
+foliag,22.805312157721794,150,30,0.0410733844468784,0.0018010446058714,foliage,environmental,0.8,model,1,NA
+compost,22.5714115202067,193,39,0.0528477546549835,0.0023413579876328,"compost, compostable, composted, composters, composting, composts",environmental,0.864,model,1,NA
+cite,22.50622609663692,301,61,0.082420591456736,0.0036621240319385,"cite, cites",environmental,1.0,known_acronym,1,NA
+denatur,22.402865472585532,167,34,0.0457283680175246,0.0020411838866542,"denaturant, denaturants, denaturation, denature, denatured, denatures, denaturing",environmental,0.771,model,1,NA
+chlorofluorocarbon,22.39067011849049,54,11,0.0147864184008762,0.0006603830221528,"chlorofluorocarbon, chlorofluorocarbons",environmental,0.711,model,1,major pollutant
+oceanography,22.045135085797735,29,6,0.0079408543263964,0.0003602089211742,oceanography,environmental,0.986,model,1,NA
+halogen,22.000418787449263,82,17,0.0224534501642935,0.0010205919433271,"halogen, halogenates, halogenic, halogens",environmental,0.646,model,1,major pollutant
+antarctica,21.893099671412923,24,5,0.0065717415115005,0.0003001741009785,antarctica,environmental,0.875,model,1,specific environment
+fungi,21.791742728489716,129,27,0.0353231106243154,0.0016209401452842,fungi,environmental,0.855,model,1,environmental health indicators
+oyster,21.752759288903867,62,13,0.0169769989047097,0.0007804526625442,"oyster, oysters",environmental,0.808,model,1,environmental health indicators
+mylopharyngodon,21.284958013873673,28,6,0.0076670317634173,0.0003602089211742,mylopharyngodon,environmental,0.829,model,1,invasive species
+butterfly,21.09491374589266,74,16,0.02026286966046,0.0009605571231314,butterfly,environmental,0.539,model,1,keystone species
+countrysid,21.03973960357559,143,31,0.0391566265060241,0.0018610794260671,countryside,environmental,0.819,model,1,specific environment
+seabream,20.980887185104052,23,5,0.0062979189485213,0.0003001741009785,"seabream, seabreams",environmental,0.895,model,1,NA
+drainag,20.942342995541704,326,71,0.0892661555312157,0.0042624722338956,"drainage, drainages",environmental,0.886,model,1,NA
+pine,20.616002190580502,113,25,0.0309419496166484,0.0015008705048928,"pine, pines",environmental,0.866,model,1,NA
+hatcheri,20.52478094194962,36,8,0.0098576122672508,0.0004802785615657,hatcheries,environmental,0.942,model,1,NA
+dibenzo-p-dioxin,20.524780941949615,27,6,0.0073932092004381,0.0003602089211742,"dibenzo-p-dioxin, dibenzo-p-dioxins",environmental,0.716,model,1,major pollutant
+feeder,20.41618421738904,94,21,0.0257393209200438,0.0012607312241099,"feeder, feedering, feeders",environmental,0.784,model,1,NA
+greenpeac,20.06867469879518,22,5,0.0060240963855421,0.0003001741009785,greenpeace,environmental,0.919,model,1,NA
+poa,19.90281788310266,48,11,0.013143483023001,0.0006603830221528,poa,environmental,0.733,model,1,major pollutant
+anaerob,19.764603870025557,117,27,0.0320372398685651,0.0016209401452842,"anaerobe, anaerobes, anaerobic",environmental,0.919,model,1,specific environment
+herbac,19.647653551268007,56,13,0.0153340635268346,0.0007804526625442,herbaceous,environmental,0.831,model,1,NA
+halogenat,19.511211512717537,154,36,0.0421686746987951,0.0021612535270456,halogenated,environmental,0.545,model,1,major pollutant
+acorn,19.488175843871353,47,11,0.0128696604600219,0.0006603830221528,"acorn, acorns",environmental,0.82,model,1,NA
+post-harvest,19.38451533406353,51,12,0.0139649507119386,0.0007204178423485,"post-harvest, post-harvesting",environmental,0.881,model,1,NA
+eru,19.38451533406353,51,12,0.0139649507119386,0.0007204178423485,"eru, erus",environmental,0.561,model,1,NA
+extinct,19.187917815462473,122,29,0.0334063526834611,0.0017410097856756,"extinct, extincted, extinction, extinctions",environmental,0.827,model,1,NA
+invas,19.14743040569117,424,101,0.1161007667031763,0.006063516839767,"invasion, invasions, invasive, invasiveness",environmental,0.619,model,1,NA
+butterfli,19.004426798101495,25,6,0.0068455640744797,0.0003602089211742,butterflies,environmental,0.748,model,1,NA
+evapor,18.94595163872272,162,39,0.0443592552026287,0.0023413579876328,"evaporant, evaporate, evaporates, evaporation, evaporative, evaporator, evaporators",environmental,0.82,model,1,NA
+eippcb,18.895830073540917,29,7,0.0079408543263964,0.0004202437413699,eippcb,environmental,0.562,model,1,NA
+ceci,18.85239138371669,62,15,0.0169769989047097,0.0009005223029357,"ceci, cecis",environmental,0.51,model,1,NA
+bloom,18.85239138371669,62,15,0.0169769989047097,0.0009005223029357,"bloom, bloomed, blooming, blooms",environmental,0.767,model,1,NA
+oceanograph,18.814382530120483,99,24,0.0271084337349397,0.0014408356846971,"oceanographers, oceanographic, oceanographical",environmental,0.943,model,1,NA
+meadow,18.765514004068223,144,35,0.0394304490690032,0.0021012187068499,"meadow, meadows",environmental,0.919,model,1,specific environment
+phosphat,18.33030750790469,213,53,0.0583242059145673,0.0031818454703728,"phosphate, phosphated, phosphates, phosphatic",environmental,0.765,model,1,fertilizer that's non-renewable?
+bee,18.244249726177436,136,34,0.0372398685651697,0.0020411838866542,"bee, beeing, bees",environmental,0.852,model,1,pollinator
+pollen,18.244249726177436,48,12,0.013143483023001,0.0007204178423485,"pollen, pollens",environmental,0.909,model,1,NA
+euaa,18.244249726177436,20,5,0.0054764512595837,0.0003001741009785,euaa,environmental,0.596,model,1,NA
+antarct,18.02705627705628,83,21,0.0227272727272727,0.0012607312241099,antarctic,environmental,0.928,model,1,specific environment
+insecticid,17.967821700023237,130,33,0.0355969331872946,0.0019811490664585,"insecticidal, insecticide, insecticides",environmental,0.674,model,1,major pollutant
+wave,17.839639349185596,485,124,0.1328039430449069,0.0074443177042684,"wave, waves",environmental,0.566,model,1,NA
+volcano,17.788143483023,39,10,0.0106790799561883,0.0006003482019571,"volcano, volcanoes, volcanos",environmental,0.805,model,1,NA
+anti-pollut,17.788143483023,39,10,0.0106790799561883,0.0006003482019571,"anti-polluting, anti-pollution",environmental,0.849,model,1,NA
+agrochem,17.788143483023,39,10,0.0106790799561883,0.0006003482019571,"agrochemical, agrochemicals",environmental,0.61,model,1,NA
+dredger,17.788143483023,39,10,0.0106790799561883,0.0006003482019571,"dredger, dredgers",environmental,0.735,model,1,NA
+beekeep,17.414965647714826,42,11,0.0115005476451259,0.0006603830221528,"beekeeper, beekeepers, beekeeping",environmental,0.721,model,1,NA
+fertil,17.173796298366003,369,98,0.1010405257393209,0.0058834123791799,"fertil, fertile, fertilization, fertilize, fertilizer, fertilizers",environmental,0.722,model,1,NA
+forag,17.138537621560623,124,33,0.0339539978094194,0.0019811490664585,"forage, forages, foraging",environmental,0.92,model,1,NA
+decontaminat,17.103984118291347,30,8,0.0082146768893756,0.0004802785615657,"decontaminat, decontaminated, decontaminating",environmental,0.722,model,1,NA
+hunter,16.941089031450478,26,7,0.0071193866374589,0.0004202437413699,"hunter, hunters",environmental,0.811,model,1,hunting - harmful population culling
+waste-relat,16.941089031450478,26,7,0.0071193866374589,0.0004202437413699,waste-related,environmental,0.741,model,1,NA
+gase,16.816866878895567,1025,278,0.2806681270536692,0.0166896800144083,"gase, gases",environmental,0.834,model,1,NA
+cyprinu,16.72389558232932,33,9,0.0090361445783132,0.0005403133817614,cyprinus,environmental,0.761,model,1,endangered/ invasive species
+cogeca,16.723895582329316,22,6,0.0060240963855421,0.0003602089211742,cogeca,environmental,0.884,model,1,agro lobby group
+aegean,16.61529885776874,153,42,0.0418948521358159,0.0025214624482199,aegean,environmental,0.931,model,1,specific environment
+embank,16.585681569252216,40,11,0.0109529025191675,0.0006603830221528,"embanked, embankment, embankments",environmental,0.755,model,1,NA
+eafrd,16.556656626506022,363,100,0.0993975903614457,0.0060034820195713,eafrd,environmental,0.957,model,1,agro lobby group
+colza,16.32380238657981,68,19,0.0186199342825848,0.0011406615837185,colza,environmental,0.767,model,1,NA
+fertilis,16.262359502946854,599,168,0.1640197152245345,0.0100858497928798,"fertilisation, fertilisations, fertilise, fertilised, fertiliser, fertilisers, fertilising",environmental,0.877,model,1,NA
+dolomit,16.217110867713277,96,27,0.0262869660460021,0.0016209401452842,"dolomit, dolomite, dolomites, dolomitic",environmental,0.761,model,1,specific environment
+ecotoxicology,16.217110867713277,32,9,0.008762322015334,0.0005403133817614,ecotoxicology,environmental,0.998,model,1,NA
+azalea,16.217110867713277,32,9,0.008762322015334,0.0005403133817614,"azalea, azaleas",environmental,0.884,model,1,invasvie species
+precipit,16.002371581859023,207,59,0.0566812705366922,0.003542054391547,"precipitate, precipitates, precipitation, precipitations, precipitator, precipitators, precipitous",environmental,0.828,model,1,environmental health indicator
+biomark,15.963718510405258,28,8,0.0076670317634173,0.0004802785615657,"biomarker, biomarkers",environmental,0.797,model,1,NA
+replant,15.963718510405256,35,10,0.0095837897042716,0.0006003482019571,"replant, replanted, replanting, replantings",environmental,0.868,model,1,NA
+phosphit,15.678652108433734,55,16,0.0150602409638554,0.0009605571231314,"phosphite, phosphites",environmental,0.827,model,1,major pollutant
+deep-sea,15.54907647117395,75,22,0.0205366922234392,0.0013207660443056,deep-sea,environmental,0.733,model,1,specific environment
+mine,15.531203969482943,395,116,0.1081599123767798,0.0069640391427027,"mine, minee, mines",environmental,0.776,model,1,NA
+ccu,15.051506024096383,33,10,0.0090361445783132,0.0006003482019571,"ccu, ccus",environmental,1.0,known_acronym,1,NA
+entsog,15.051506024096383,33,10,0.0090361445783132,0.0006003482019571,entsog,environmental,0.845,model,1,NA
+arid,14.927113412326996,36,11,0.0098576122672508,0.0006603830221528,"arid, aride",environmental,0.573,model,1,NA
+crawfish,14.927113412326996,36,11,0.0098576122672508,0.0006603830221528,crawfish,environmental,0.79,model,1,invasive species
+tree,14.568570001932866,543,170,0.1486856516976999,0.0102059194332712,"tree, trees",environmental,0.926,model,1,NA
+beetroot,14.488080664905612,54,17,0.0147864184008762,0.0010205919433271,"beetroot, beetroots",environmental,0.821,model,1,NA
+viticultur,14.44336436655714,57,18,0.0156078860898138,0.0010806267635228,"viticultural, viticulture",environmental,0.638,model,1,NA
+mulberri,14.384889207178365,41,13,0.0112267250821467,0.0007804526625442,mulberries,environmental,0.76,model,1,keystone species
+biogen,14.334767641996558,44,14,0.0120481927710843,0.0008404874827399,"biogen, biogenic",environmental,0.967,model,1,NA
+bioethanol,14.334767641996557,66,21,0.0180722891566265,0.0012607312241099,bioethanol,environmental,0.802,model,1,NA
+hydrolysi,14.139293537787513,31,10,0.0084884994523548,0.0006003482019571,hydrolysis,environmental,0.713,model,1,NA
+sunflow,14.03403825090572,160,52,0.0438116100766703,0.0031218106501771,"sunflower, sunflowers",environmental,0.753,model,1,NA
+linse,13.900380743754235,64,21,0.0175246440306681,0.0012607312241099,"linseed, linseeds",environmental,0.75,model,1,NA
+avian,13.683187294633075,132,44,0.036144578313253,0.0026415320886113,"avian, avians",environmental,0.749,model,1,NA
+ecotoxicolog,13.683187294633075,36,12,0.0098576122672508,0.0007204178423485,ecotoxicological,environmental,0.998,model,1,NA
+boar,13.436643379414464,109,37,0.0298466593647316,0.0022212883472414,"boar, boars",environmental,0.896,model,1,endangered species
+kohlrabi,13.357397120951338,41,14,0.0112267250821467,0.0008404874827399,"kohlrabi, kohlrabies",environmental,0.887,model,1,NA
+waterwai,13.340098527658505,661,226,0.1809967141292442,0.0135678693642312,"waterway, waterways",environmental,0.905,model,1,NA
+gazprom,13.031606947269598,40,14,0.0109529025191675,0.0008404874827399,gazprom,environmental,0.812,model,1,NA
+efda,13.031606947269598,20,7,0.0054764512595837,0.0004202437413699,efda,environmental,0.815,model,1,NA
+ebro,12.827988088718511,45,16,0.0123220153340635,0.0009605571231314,ebro,environmental,0.724,model,1,NA
+ecotoxicity,12.6099961342697,47,17,0.0128696604600219,0.0010205919433271,ecotoxicity,environmental,0.993,model,1,NA
+plantat,12.516403881912428,118,43,0.0323110624315443,0.0025814972684156,"plantation, plantations",environmental,0.796,model,1,NA
+rapese,12.439261176939162,60,22,0.0164293537787513,0.0013207660443056,"rapeseed, rapeseeds",environmental,0.841,model,1,NA
+chlorpyrifo,12.439261176939162,30,11,0.0082146768893756,0.0006603830221528,chlorpyrifos,environmental,0.735,model,1,NA
+seawe,12.424963175586358,79,29,0.0216319824753559,0.0017410097856756,"seaweed, seaweeds",environmental,0.945,model,1,NA
+lichen,12.38002659990612,38,14,0.0104052573932092,0.0008404874827399,"lichen, lichens",environmental,0.93,model,1,NA
+iotc,12.31486856516977,27,10,0.0073932092004381,0.0006003482019571,iotc,environmental,0.758,model,1,NA
+arabl,12.30104716386206,267,99,0.0731106243154435,0.0059434471993756,"arable, arables",environmental,0.54,model,1,NA
+irrigat,12.211876832844576,83,31,0.0227272727272727,0.0018610794260671,"irrigated, irrigating",environmental,0.729,model,1,NA
+asparagu,12.162833150784955,64,24,0.0175246440306681,0.0014408356846971,asparagus,environmental,0.851,model,1,review?
+agronom,12.115322083789705,85,32,0.0232749178532311,0.0019211142462628,"agronomic, agronomical, agronomics",environmental,0.61,model,1,NA
+cross-fertilis,12.024619137707855,58,22,0.0158817086527929,0.0013207660443056,"cross-fertilisation, cross-fertilise, cross-fertilised, cross-fertilising",environmental,0.693,model,1,NA
+horticultur,11.91957648776926,196,75,0.0536692223439211,0.0045026115146785,"horticultur, horticultural, horticulture",environmental,0.634,model,1,NA
+fungicid,11.91461206607506,128,49,0.0350492880613362,0.0029417061895899,"fungicidal, fungicide, fungicides",environmental,0.696,model,1,NA
+brucellosi,11.762739955035451,49,19,0.0134173055859802,0.0011406615837185,brucellosis,environmental,0.739,model,1,disease due to environmental degradation
+beet,11.626970624674556,311,122,0.0851588170865279,0.007324248063877,"beet, beete, beets",environmental,0.754,model,1,NA
+wood,11.596601548823928,867,341,0.2374041621029572,0.0204718736867383,"wood, wooded, woods",environmental,0.828,model,1,NA
+bleach,11.43227336737742,193,77,0.0528477546549835,0.0046226811550699,"bleach, bleached, bleaches, bleaching",environmental,0.707,model,1,environmental degradation
+herbicid,11.36645717067404,157,63,0.0429901423877327,0.0037821936723299,"herbicidal, herbicide, herbicides",environmental,0.796,model,1,NA
+reed,11.311434830230011,62,25,0.0169769989047097,0.0015008705048928,"reed, reeding, reeds",environmental,0.934,model,1,prevents land movement
+epizoot,11.227230600724576,64,26,0.0175246440306681,0.0015609053250885,"epizootic, epizootics",environmental,0.848,model,1,result of envrionmental degradation
+crustacean,11.216490265328474,241,98,0.0659912376779846,0.0058834123791799,"crustacean, crustaceans",environmental,0.736,model,1,NA
+csp,11.195335059245249,81,33,0.0221796276013143,0.0019811490664585,"csp, csps",environmental,1.0,known_acronym,1,NA
+chlorophyl,11.195335059245243,27,11,0.0073932092004381,0.0006603830221528,"chlorophyl, chlorophyll, chlorophylls",environmental,0.831,model,1,NA
+oxygen,11.145907531389858,369,151,0.1010405257393209,0.0090652578495527,"oxygen, oxygenate, oxygenates, oxygenation",environmental,0.768,model,1,Oxygen Envrionmental - 2/3rd biggest landowners in Scorland
+biosafety,11.063002493533126,114,47,0.0312157721796276,0.0028216365491985,biosafety,environmental,0.93,model,1,NA
+flower,11.048780545379008,281,116,0.0769441401971522,0.0069640391427027,"flower, flowered, flowering, flowerings, flowers",environmental,0.738,model,1,NA
+bream,11.042572202686342,46,19,0.0125958378970427,0.0011406615837185,"bream, breams",environmental,0.851,model,1,NA
+locust,10.689990073932092,75,32,0.0205366922234392,0.0019211142462628,"locust, locusts",environmental,0.88,model,1,NA
+sheep,10.677032510206114,412,176,0.112814895947426,0.0105661283544455,sheep,environmental,0.836,model,1,NA
+bamboo,10.642479006936838,77,33,0.0210843373493975,0.0019811490664585,"bamboo, bamboos",environmental,0.787,model,1,invasive species
+beech,10.581664841182914,58,25,0.0158817086527929,0.0015008705048928,"beech, beeches",environmental,0.892,model,1,NA
+piedmont,10.463613813542942,39,17,0.0106790799561883,0.0010205919433271,piedmont,environmental,0.533,model,1,specific environment
+insect,10.418897515194468,233,102,0.0638006571741511,0.0061235516599627,"insect, insectes, insects",environmental,0.776,model,1,NA
+mackerel,10.26239047097481,72,32,0.0197152245345016,0.0019211142462628,"mackerel, mackerels",environmental,0.815,model,1,NA
+mushroom,10.095151515151516,166,75,0.0454545454545454,0.0045026115146785,"mushroom, mushroomed, mushrooming, mushrooms",environmental,0.806,model,1,NA
+erod,10.03433734939759,165,75,0.0451807228915662,0.0045026115146785,"erod, erode, eroded, erodes, erodible, eroding",environmental,0.701,model,1,envrionmental degradation
+eagf,10.03433734939759,99,45,0.0271084337349397,0.0027015669088071,eagf,environmental,0.897,model,1,NA
+outdoor,9.791638614508072,234,109,0.0640744797371303,0.0065437954013327,"outdoor, outdoors",environmental,0.882,model,1,NA
+agro,9.602236697988124,80,38,0.0219058050383351,0.0022813231674371,"agro, agros",environmental,0.962,model,1,NA
+upland,9.502213399050747,25,12,0.0068455640744797,0.0007204178423485,"upland, uplands",environmental,0.898,model,1,NA
+by-catch,9.39578860898138,103,50,0.0282037239868565,0.0030017410097856,"by-catch, by-catches",environmental,0.816,model,1,NA
+pastur,9.263188649631328,197,97,0.0539430449069003,0.0058233775589842,"pasturable, pasture, pastured, pastures, pasturing",environmental,0.949,model,1,NA
+plant-health,9.122124863088718,32,16,0.008762322015334,0.0009605571231314,plant-health,environmental,0.946,model,1,NA
+uproot,9.122124863088718,26,13,0.0071193866374589,0.0007804526625442,"uproot, uprooted, uprooter, uprooting",environmental,0.761,model,1,NA
+tuna-fish,9.122124863088718,26,13,0.0071193866374589,0.0007804526625442,tuna-fishing,environmental,0.589,model,1,NA
+speci,8.939377787367407,1174,599,0.3214676889375684,0.0359608572972324,"speci, specie, species",environmental,0.903,model,1,NA
+environn,8.886207840767458,113,58,0.0309419496166484,0.0034820195713513,"environnement, environnent, environnment",environmental,0.985,model,1,NA
+botan,8.882068945639015,74,38,0.02026286966046,0.0022813231674371,"botanic, botanical, botanicals",environmental,0.864,model,1,NA
+rainfal,8.699804267575352,206,108,0.056407447973713,0.006483760581137,"rainfall, rainfalls",environmental,0.862,model,1,environmental indicator
+weed,8.680731724552167,59,31,0.0161555312157721,0.0018610794260671,"weed, weeding, weeds",environmental,0.927,model,1,NA
+junip,8.666018619934283,38,20,0.0104052573932092,0.0012006964039142,"juniper, junipers",environmental,0.91,model,1,NA
+badger,8.666018619934283,38,20,0.0104052573932092,0.0012006964039142,"badger, badgers",environmental,0.877,model,1,badger protection exists in UK
+evolutionary,8.470544515725239,39,21,0.0106790799561883,0.0012607312241099,evolutionary,environmental,0.63,model,1,review - but evolutionary economics?
+coast,8.412626262626263,581,315,0.1590909090909091,0.0189109683616497,"coast, coasting, coasts",environmental,0.624,model,1,environment
+geosynthet,8.292840784626108,20,11,0.0054764512595837,0.0006603830221528,"geosynthetic, geosynthetics",environmental,0.978,model,1,NA
+einec,8.266925657174152,29,16,0.0079408543263964,0.0009605571231314,einecs,environmental,0.915,model,1,prohibition of chemicals - some of which are pretty environmentally unfriendly
+habit,8.166473686955614,188,105,0.0514786418400876,0.0063036561205499,"habit, habitable, habitant, habitants, habitation, habited, habiter, habits",environmental,0.735,model,1,NA
+inlet,8.06957199427079,92,52,0.0251916757940854,0.0031218106501771,"inlet, inlets",environmental,0.717,model,1,environment
+avalanch,7.981859255202628,35,20,0.0095837897042716,0.0012006964039142,"avalanche, avalanches",environmental,0.782,model,1,environmental degradation?
+nitrit,7.411726451259583,78,48,0.0213581599123767,0.0028816713693942,"nitrite, nitrited, nitrites, nitrition",environmental,0.618,model,1,review- pollutant
+veget,7.276748013576955,903,566,0.2472617743702081,0.0339797082307738,"veget, vegetable, vegetables, vegetal, vegetation, vegetative",environmental,0.839,model,1,NA
+salmon,7.194915384971384,112,71,0.0306681270536692,0.0042624722338956,"salmon, salmones, salmons",environmental,0.758,model,1,NA
+vallei,7.069646768893756,248,160,0.0679079956188389,0.0096055712313141,"valley, valleys",environmental,0.763,model,1,NA
+pelag,6.968289825970549,55,36,0.0150602409638554,0.0021612535270456,"pelagic, pelagics, pelagous",environmental,0.923,model,1,NA
+sierra,6.866654429907442,137,91,0.0375136911281489,0.0054631686378099,"sierra, sierras",environmental,0.735,model,1,NA
+agri,6.824947434062727,205,137,0.0561336254107338,0.0082247703668127,agri,environmental,0.853,model,1,NA
+amin,6.727567086527929,59,40,0.0161555312157721,0.0024013928078285,"amin, aminants, amine, amines",environmental,0.549,model,1,NA
+renew,6.724942434233562,2306,1564,0.6314348302300109,0.0938944587860959,"renew, renewable, renewables, renewal, renewals, renewed, renewing, renews",environmental,0.717,model,1,NA
+terrain,6.697256228596782,116,79,0.0317634173055859,0.0047427507954613,"terrain, terrains",environmental,0.772,model,1,NA
+fishery,6.467178074577822,570,402,0.156078860898138,0.0241339977186768,fishery,environmental,0.93,model,1,NA
+alluvi,6.3529083867939296,39,28,0.0106790799561883,0.0016809749654799,alluvial,environmental,0.89,model,1,NA
+grain-ori,6.334808932700499,25,18,0.0068455640744797,0.0010806267635228,grain-oriented,environmental,0.609,model,1,review - might be about production
+desicc,6.0814165753924785,20,15,0.0054764512595837,0.0009005223029357,"desiccant, desiccants, desiccation, desiccator",environmental,0.724,model,1,drying state of environments
+halon,6.0814165753924785,20,15,0.0054764512595837,0.0009005223029357,"halon, halons",environmental,0.543,model,1,harmful to the ozone layer
+andean,6.0123095688539285,58,44,0.0158817086527929,0.0026415320886113,"andean, andeans",environmental,0.568,model,1,review - mountain range experiencing degradation?
+oak,5.952573003879926,77,59,0.0210843373493975,0.003542054391547,"oak, oaked, oaks",environmental,0.793,model,1,review - native european species?
+tuna,5.896007533459781,212,164,0.0580503833515881,0.009845710512097,"tuna, tunas",environmental,0.751,model,1,NA
+eurof,5.864223126271319,27,21,0.0073932092004381,0.0012607312241099,eurofer,environmental,0.948,model,1,NA
+oliv,5.605580545638488,322,262,0.088170865279299,0.0157291228912769,"olival, olive, oliver, olives, oliving",environmental,0.743,model,1,review - think this is heavily hit by eco concerns
+orang,5.588907486540271,174,142,0.0476451259583789,0.0085249444677913,"orange, oranges",environmental,0.637,model,1,NA
+silag,5.57463186077644,44,36,0.0120481927710843,0.0021612535270456,"silage, silaging",environmental,0.939,model,1,NA
+polyphenol,5.473274917853231,24,20,0.0065717415115005,0.0012006964039142,"polyphenol, polyphenols",environmental,0.641,model,1,combat UV harm
+bovin,5.148129873228287,342,303,0.0936473165388828,0.0181905505193011,"bovin, bovine, bovines, bovins",environmental,0.6,model,1,NA
+wine-grow,5.054150261981587,41,37,0.0112267250821467,0.0022212883472414,"wine-grower, wine-growers, wine-growing",environmental,0.595,model,1,NA
+feedingstuff,5.021775808468032,109,99,0.0298466593647316,0.0059434471993756,"feedingstuff, feedingstuffs",environmental,0.699,model,1,NA
+eac,4.9820835790715305,71,65,0.0194414019715224,0.0039022633127213,"eac, eace, eacs",environmental,0.558,model,1,NA
+oleic,4.642509974964795,57,56,0.0156078860898138,0.0033619499309599,oleic,environmental,0.725,model,1,NA
+cephalopod,4.44703587075575,39,40,0.0106790799561883,0.0024013928078285,"cephalopod, cephalopods",environmental,0.735,model,1,NA
+ecosoc,4.426913536498937,33,34,0.0090361445783132,0.0020411838866542,ecosoc,environmental,0.979,model,1,NA
+aerob,4.034785997135395,23,26,0.0062979189485213,0.0015609053250885,aerobic,environmental,0.94,model,1,specific environment
+riversid,3.8593605189990736,22,26,0.0060240963855421,0.0015609053250885,"riverside, riversides",environmental,0.825,model,1,specific environment
+grapevin,3.782344455427029,34,41,0.0093099671412924,0.0024614276280242,"grapevine, grapevines",environmental,0.864,model,1,NA
+grove,3.648849945235488,44,55,0.0120481927710843,0.0033019151107642,"grove, groves",environmental,0.935,model,1,NA
+oenolog,3.648849945235487,52,65,0.0142387732749178,0.0039022633127213,oenological,environmental,0.99,model,1,NA
+caribbean,3.499342435602917,323,421,0.0884446878422782,0.0252746593023953,caribbean,environmental,0.713,model,1,specific environment
+natur,3.46000743422255,3287,4333,0.9000547645125958,0.2601308759080266,"natur, natural, naturalization, naturalness, naturals, naturance, nature, natures, naturing",environmental,0.768,model,1,NA
+eaggf,3.3028383124976397,63,87,0.0172508214676889,0.005223029357027,eaggf,environmental,0.838,model,1,NA
+ewe,3.008360327188833,31,47,0.0084884994523548,0.0028216365491985,"ewe, ewes",environmental,0.746,model,1,review
+trawler,2.8195658667728765,34,55,0.0093099671412924,0.0033019151107642,"trawler, trawlers",environmental,0.672,model,1,fishing boat
