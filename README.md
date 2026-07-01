@@ -5,7 +5,7 @@ Computational identification of climate policy paradigms in EU pre-legislative d
 
 ## Overview
 
-The 'pipeline.tex' file included in the repository documents the full pipeline architecture -- from corpus construction through model fine-tuning to corpus-level classification -- necessary for replication. This document offers a more in-depth explanation of that architecture. 
+The 'pipeline.txt' file included in the repository documents the full pipeline architecture -- from corpus construction through model fine-tuning to corpus-level classification -- necessary for replication. This document offers a more in-depth explanation of that architecture. 
 
 
 ## Project Objectives
