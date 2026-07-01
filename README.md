@@ -1,18 +1,21 @@
 
 # AdJUST Project
 
+Computational identification of climate policy paradigms in EU pre-legislative documents (1990-2025). 
+
 ## Overview
 
-[Forthcoming.]
+The 'pipeline.tex' file included in the repository documents the full pipeline architecture -- from corpus construction through model fine-tuning to corpus-level classification -- necessary for replication. This document offers a more in-depth explanation of that architecture. 
+
 
 ## Project Objectives
 
-- Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance
-- Manually annotate a representative subsample to identify environmental policy paradigms (neoclassical economics, green growth, evolutionary economics, post-growth)
-- Develop and apply computational classification methods (presently, distilBERT, LegalBERT, RoBERTA-xlm) to classify paradigms across the full corpus
-- Use an LLM approach (model TBD) to validate BERT results
-- Analyse paradigm distribution patterns to assess EU policy coherence and identify tensions between economic and environmental priorities
-- Create an API and database for continued access to the corpus, thereby ensuring future research on the topic (Railway-hosted)
+- Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance (broader than climate policy relevance)
+- Manually annotate a representative subsample to identify climate policy paradigms (neoclassical economics, green growth, evolutionary economics, post-growth)
+- Develop and apply computational classification methods (ensemble inclusive of ClimateBERT, DeBERTa-v1, ESG-BERT, FinBERT, RoBERTa-base, and SciBERT) to classify paradigms across the full corpus
+- Use LLMs (GPT-4o and Llama 3.3) to benchmark ensemble results
+- Perform a battery of robustness tests
+- Analyse paradigm distribution patterns to assess EU policy coherence and identify tensions between economic and climate priorities
 
 ## Technical Approach
 
