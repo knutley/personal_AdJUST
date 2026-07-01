@@ -1,0 +1,54 @@
+An overview of the AdJUST pipeline: 
+
+adjust-project/
+├── README.md
+├── environment/
+│   ├── requirements.txt        # Python deps
+│   └── renv.lock / DESCRIPTION # R deps
+│
+├── data/
+│   ├── raw/                    # scraped, untouched
+│   ├── interim/                # screening/filtering intermediate outputs
+│   ├── processed/               # final corpora used for modelling
+│   └── external/                # NOT committed — see note below
+│
+├── src/
+│   ├── 01_collection/
+│   │   └── text_scraper.py
+│   ├── 02_screening/
+│   │   ├── structural_relevance_sampling.py   # hypergeometric sampling (App. A)
+│   │   └── keyword_extraction.py               # → seed_keywords_*.xlsx
+│   ├── 03_keyword_discovery/
+│   │   ├── two_stage_keyword_discovery.py      # → discovered_keywords_*.csv
+│   │   ├── bart_classifier.py                  # renamed from env_class_roberta.py
+│   │   └── keyword_density.py                  # → corpus_85th_percentile.csv
+│   ├── 04_validation/
+│   │   └── validation_85thper.R                # validation sample + keystone legislation
+│   ├── 05_meckling_allan/
+│   │   ├── meckling_allan_api_access.py        # drop the timestamp suffix
+│   │   └── cleaning_meckling_data.R
+│   ├── 06_stage1_finetuning/
+│   │   └── train_stage1_ensemble.py            # 6 models, phrase/sentence/paragraph level
+│   ├── 07_stage2_finetuning/
+│   │   └── train_stage2_ensemble.py            # document-level multilabel
+│   ├── 08_llm_benchmark/
+│   │   ├── gpt4o_fewshot.py
+│   │   └── llama33_fewshot.py
+│   ├── 09_corpus_application/
+│   │   └── apply_ensemble_full_corpus.py       # threshold selection, label assignment
+│   ├── 10_robustness/
+│   │   ├── finbert_vs_ensemble.py
+│   │   ├── prompt_sensitivity_gpt4o.py
+│   │   └── just_transition_filter.py
+│   └── 11_analysis/
+│       ├── temporal_trends.R
+│       ├── directory_distribution.R
+│       └── density_visualisations.R
+│
+├── results/
+│   ├── figures/                 # paradigm_trends.png, keyword_density_distribution.png, etc.
+│   ├── tables/
+│   └── llm_comparison.csv
+│
+└── docs/
+    └── codebook.md              # paradigm definitions used for hand-coding/annotation
