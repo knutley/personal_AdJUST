@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.positai
+.RDataTmp
+.DS_Store
+checkpoints/
+*.safetensors
+*.bin
+__pycache__/
