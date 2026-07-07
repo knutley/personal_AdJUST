@@ -112,32 +112,22 @@ adjust-project/
                 ├── llm_benchmarking.py
                 ├── llm_comparison_summary.csv
                 ├── prompt_sensitivy.csv # GPT-4o/4/8-shot only 
-        ├──
+        ├── threshold_selection/
+                ├── threshold_comparison.py           
+                ├── threshold_comparison_corpus.csv    # by raw sigmoid threshold (0.4–0.7)
+                ├── two_threshold_classification.py      
+                ├── corpus_classified_two_threshold.csv    # unable to upload due to size constraints 
+        ├── robustness/
+                ├── finbert/
+                        ├── robustness_check.py # comparing 
+                        ├── robustness_check.csv # 
+                        ├── robustness_temporal_trends.png # visualisation
+                ├── just_transition/ 
+                        ├── plot_5yr_bins_excl_just_transition.py
+                        ├── paradigm_trends_5yr_bins_excl_just_transition.csv
+                        ├── plot_5yr_bins_excl_just_transition.png # visualisation
+        ├── visualisations/
+                 ├── paradigm_trends_5yr_bins.png
+                 ├── paradigm_trends_either.png
+                 ├── paradigm_trends_either_smoothed.png
 
-         
-
-
-
-│   ├── 07_stage2_finetuning/
-│   │   └── train_stage2_ensemble.py            # document-level multilabel
-│   ├── 08_llm_benchmark/
-│   │   ├── gpt4o_fewshot.py
-│   │   └── llama33_fewshot.py
-│   ├── 09_corpus_application/
-│   │   └── apply_ensemble_full_corpus.py       # threshold selection, label assignment
-│   ├── 10_robustness/
-│   │   ├── finbert_vs_ensemble.py
-│   │   ├── prompt_sensitivity_gpt4o.py
-│   │   └── just_transition_filter.py
-│   └── 11_analysis/
-│       ├── temporal_trends.R
-│       ├── directory_distribution.R
-│       └── density_visualisations.R
-│
-├── results/
-│   ├── figures/                 # paradigm_trends.png, keyword_density_distribution.png, etc.
-│   ├── tables/
-│   └── llm_comparison.csv
-│
-└── docs/
-    └── codebook.md              # paradigm definitions used for hand-coding/annotation
