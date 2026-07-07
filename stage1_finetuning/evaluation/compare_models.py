@@ -1,3 +1,7 @@
+# Author: Katie Nutley
+# Date: 2026-04-22
+# Title: Comparing Stage 1 Model Results; Soft-Vote Ensemble
+
 """
 compare_models.py  —  Head-to-head comparison + soft-vote ensemble
 Loads all fine-tuned checkpoints, runs on the same test set,
