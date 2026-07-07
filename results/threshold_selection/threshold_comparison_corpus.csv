@@ -1,0 +1,5 @@
+threshold,no_label,no_label_pct,Admin-Only,Admin-Only_pct,Green_Growth,Green_Growth_pct,Neoclassical,Neoclassical_pct,Post-Growth,Post-Growth_pct
+0.4,0,0.0,493,16.1,1977,64.7,2695,88.2,2288,74.9
+0.5,25,0.8,375,12.3,1225,40.1,2449,80.1,935,30.6
+0.6,498,16.3,307,10.0,798,26.1,1724,56.4,406,13.3
+0.7,1881,61.6,256,8.4,301,9.8,534,17.5,158,5.2
