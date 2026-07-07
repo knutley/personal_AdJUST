@@ -96,13 +96,21 @@ adjust-project/
                 ├── compare_models2.py
                 ├── ensemble_report.txt # ensemble results 
                 ├── model_comparison.csv # comparison of different models
-                ├── logits/
-                        ├── logits_climatebert.npy
-                        ├── logits_deberta.npy
-                        ├── logits_esgbert.npy
-                        ├── logits_finbert.npy
-                        ├── logits_roberta.npy
-                        ├── logits_scibert.npy
+├── classification/
+        ├── logits/
+                ├── logits_climatebert.npy
+                ├── logits_deberta.npy
+                ├── logits_esgbert.npy
+                ├── logits_finbert.npy
+                ├── logits_roberta.npy
+                ├── logits_scibert.npy
+├── results/
+        ├── baseline_comparison/
+                ├── llm_benchmarking.py
+                ├── llm_comparison_summary.csv
+                ├── prompt_sensitivy.csv # GPT-4o/4/8-shot only 
+        ├──
+
          
 
 
