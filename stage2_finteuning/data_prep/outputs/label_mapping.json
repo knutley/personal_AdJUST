@@ -1,0 +1,21 @@
+{
+  "label2id": {
+    "Admin-Only": 0,
+    "Green_Growth": 1,
+    "Neoclassical": 2,
+    "Post-Growth": 3
+  },
+  "id2label": {
+    "0": "Admin-Only",
+    "1": "Green_Growth",
+    "2": "Neoclassical",
+    "3": "Post-Growth"
+  },
+  "label_names": [
+    "Admin-Only",
+    "Green_Growth",
+    "Neoclassical",
+    "Post-Growth"
+  ],
+  "multilabel": true
+}
