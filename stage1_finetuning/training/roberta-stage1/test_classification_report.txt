@@ -1,0 +1,11 @@
+Model: roberta-base
+
+              precision    recall  f1-score   support
+
+Green_Growth     0.8235    0.8750    0.8485        32
+Neoclassical     0.8095    0.8500    0.8293        40
+ Post-Growth     0.7500    0.3750    0.5000         8
+
+    accuracy                         0.8125        80
+   macro avg     0.7944    0.7000    0.7259        80
+weighted avg     0.8092    0.8125    0.8040        80
