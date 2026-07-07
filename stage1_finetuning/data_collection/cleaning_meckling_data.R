@@ -1,24 +1,43 @@
-# Cleaning up the Meckling and Allan Scraped Data 
-# Author: Katelyn Nutley 
+# Cleaning up the Meckling and Allan Scraped Data
+# Author: Katelyn Nutley
 # Date: 17/04/2026
 
 library(readr)
-meckling_df <- read_csv("~/Downloads/all_comments_20260417_172737.csv")
+library(here)
 
-# Okay, I think this looks really good, but what I'm going to do is get rid of the 
-# miscellaneous comments that don't pertain to the coding scheme; 
+# ── Input ──────────────────────────────────────────────────────────────────────
+# NOTE: the raw scrape (all_comments_TIMESTAMP.csv) is the direct export from
+# the Google Docs API access script (meckling_allan_api_access2.py) and is not
+# tracked in this repo — it's upstream raw data, not a pipeline artifact.
+# Drop your own export into data_collection/raw/ and update the filename below,
+# or pass a path in via the RAW_MECKLING_CSV environment variable.
+raw_csv_path <- Sys.getenv(
+  "RAW_MECKLING_CSV",
+  unset = here("data_collection", "raw", "all_comments.csv")
+)
+output_path <- here("stage1_finetuning", "data_collection", "cleaned_meckling_data.csv")
+
+meckling_df <- read_csv(raw_csv_path)
+
+# Okay, I think this looks really good, but what I'm going to do is get rid of the
+# miscellaneous comments that don't pertain to the coding scheme;
 
 # Numbers: 57, 76, 87, 111, 137, 142, 143, 217, 278, 312, 315, 454, 466, 472, 516, 525, 1052, 1053, 1054, 1055, 1056
 
 rows_to_remove <- c(57, 76, 87, 111, 137, 142, 143, 217, 278, 312, 315, 454, 466, 472, 516, 525, 1052, 1053, 1054, 1055, 1056)
 meckling_df1 <- meckling_df[-rows_to_remove, ]
-table(meckling_df1$comment_text) # okay, this removed everything that didn't have some kind of label 
+table(meckling_df1$comment_text) # okay, this removed everything that didn't have some kind of label
 
 # ── Label lookups ─────────────────────────────────────────────────────────────
 
 # Discourse labels: N = Neoclassical, K/S = Green Growth, M = Limits to Growth
-# Tags with no N/K/S/M annotation are assigned based on which discourse 
+# Tags with no N/K/S/M annotation are assigned based on which discourse
 # section they appear in within the Meckling & Allan coding scheme
+#
+# NOTE: a few tag combinations below appear more than once in this named vector
+# (e.g. "C-CT C-IF", "P-CO P-PR") — R silently keeps only the last definition
+# for a duplicate name, so these are harmless but redundant. Left as-is to
+# match the original coding pass; safe to de-duplicate later.
 tag_labels <- c(
   # Neoclassical (N)
   "G-WC" = "Neoclassical",
@@ -73,7 +92,7 @@ tag_labels <- c(
   "C-MK-" = "Limits to Growth",
   "C-IR-" = "Limits to Growth",
   "C-AM" = "Limits to Growth",
-  "C-CO, P-PR" = "Limits to Growth", 
+  "C-CO, P-PR" = "Limits to Growth",
   "P-CO P-PR" = "Limits to Growth",
   "P-CO P-PV" = "Limits to Growth",
   "P-PR P-CO" = "Limits to Growth",
@@ -169,8 +188,7 @@ table(is.na(meckling_df1$matched_tag))
 # ── Spot checks ───────────────────────────────────────────────────────────────
 
 # Inspect any unmatched rows
-meckling_df1[is.na(meckling_df1$matched_tag), "comment_text"] # looks good, will do some of these by hand I think 
+meckling_df1[is.na(meckling_df1$matched_tag), "comment_text"] # looks good, will do some of these by hand I think
 table(is.na(meckling_df1$matched_tag))
 
-write_csv(meckling_df1, "cleaned_meckling_data.csv")
-
+write_csv(meckling_df1, output_path)
