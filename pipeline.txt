@@ -44,8 +44,11 @@ adjust-project/
                 ├── calc_alpha.R # Kripendorf's alpha calculation using PI samples 
         ├── codebook/
                 ├── codebook_v2.docx # finalised coodebook
+        ├── ra_samples/
+                ├── ra_total_coded.csv # ra manual annotations 
+├── stage1_finetuning/
+        ├── meckling_allan_api_access2.py # using Google Docs API to access Meckling & Allan's data
         ├── 
-            
 
 ├── src/
 │   ├── 01_collection/
