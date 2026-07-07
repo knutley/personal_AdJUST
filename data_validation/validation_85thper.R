@@ -4,14 +4,21 @@
 # Pulls from 85th percentile filtered corpus
 
 library(tidyverse)
+library(here)
 
-setwd("~/Documents/GitHub/personal_AdJUST/output/")
+# ── Paths (relative to repo root, works on any machine) ───────────────────────
+# NOTE: corpus_85th_percentile.csv ships in this repo as a zipped file
+# (data_screening/corpus_85th_percentile.csv.zip) due to GitHub's file-size
+# limit. Unzip it once before running this script:
+#   unzip data_screening/corpus_85th_percentile.csv.zip -d data_screening/
+corpus_path  <- here("data_screening", "corpus_85th_percentile.csv")
+output_dir   <- here("data_validation")
 
 # =============================================================================
 # LOAD DATA
 # =============================================================================
 
-mod_corpus <- read_csv("corpus_85th_percentile.csv")
+mod_corpus <- read_csv(corpus_path)
 cat("Corpus size:", nrow(mod_corpus), "documents\n")
 cat("Density range:", round(min(mod_corpus$density), 4), "to", round(max(mod_corpus$density), 4), "\n")
 
@@ -21,8 +28,8 @@ cat("Density range:", round(min(mod_corpus$density), 4), "to", round(max(mod_cor
 
 set.seed(123)
 sub_mod_corpus <- mod_corpus %>% slice_sample(n = 20)
-write_csv(sub_mod_corpus, "sub_mod_corpus_85th.csv")
-cat("Random sample saved to sub_mod_corpus_85th.csv\n")
+write_csv(sub_mod_corpus, file.path(output_dir, "sub_mod_corpus_85th.csv"))
+cat("Random sample saved to", file.path(output_dir, "sub_mod_corpus_85th.csv"), "\n")
 
 # =============================================================================
 # SEARCH FUNCTION
@@ -30,15 +37,15 @@ cat("Random sample saved to sub_mod_corpus_85th.csv\n")
 
 search_by_regex <- function(corpus_df, regex_patterns) {
   text_cols <- names(corpus_df)[sapply(corpus_df, is.character)]
-  
+
   map_df(1:nrow(regex_patterns), function(i) {
     pattern  <- regex_patterns$pattern[i]
     category <- regex_patterns$doc_category[i]
-    
+
     matches <- corpus_df %>%
       filter(if_any(all_of(text_cols),
                     ~str_detect(., regex(pattern, ignore_case = TRUE))))
-    
+
     tibble(
       category  = category,
       pattern   = pattern,
