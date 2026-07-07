@@ -47,11 +47,27 @@ adjust-project/
         ├── ra_samples/
                 ├── ra_total_coded.csv # ra manual annotations 
 ├── stage1_finetuning/
-        ├── data_prep/
+        ├── data_collection/
                 ├── meckling_allan_api_access2.py # using Google Docs API to access Meckling & Allan's data
                 ├── cleaning_meckling_data.R # cleaning the Meckling & Allan data
-                ├── data_prep.py # preparing the Meckling & Allan data for fine tuning
-        ├── 
+        ├── data_prep/
+                ├── data_prep.py # preparing Meckling & Allan data for fine-tuning, provides 80/10/10 output below: 
+                ├── outputs/
+                         ├── clf_train.csv # training set - 636 obs. 
+                         ├── clf_val.csv # validation set - 80 obs. 
+                         ├── clf_test.csv # test set - 80 obs. 
+        ├── training/
+                ├── finetune1.py # trains on those splits; single-label 3-class
+                ├── checkpoints/ 
+                        ├── climatebert-stage1/│
+                                ├── best_model/
+                                ├── test_classification_report.txt
+                        ├── scibert-stage1/ # this just repeats with the above 
+                        ├── esgbert-stage1/
+                        ├── deberta-stage1/
+                        ├── roberta-stage1/
+                        ├──  finbert-stage1/
+
 
 
 
