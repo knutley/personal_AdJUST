@@ -31,8 +31,20 @@ adjust-project/
             ├── Expert-Curated keywords # provided by Fergus and Marion
         ├── keyword_integration/
             ├── keyword_density.py # integrating the two sets of keywords to score the corpus
+                ├── corpus_density_scored.csv # scored corpus, unable to upload due to GitHub file constraints
             ├── 85per_corpus.py # filtering by applying a threshold at the 85th percentile
-            
+        ├── corpus_85th_percentile.csv # final corpus, unable to upload due to GitHub file constraints
+├── data_validation/ 
+        ├── 85th_percent_validation.xlsx # manual annotation of random sample to check validity 
+        ├── validation_85thper.R # code checking keystone legislation exists within corpus 
+├── manual_annotation/
+        ├── pi_samples/
+                ├── pi_coding_sample_final_FG.xlsx # PI sample for Fergus Green
+                ├── pi_coding_sample_final_MD.xlsx # PI sample for Marion Dumas
+                ├── calc_alpha.R # Kripendorf's alpha calculation using PI samples 
+        ├── codebook/
+                ├── codebook_v2.docx # finalised coodebook
+        ├── 
             
 
 ├── src/
