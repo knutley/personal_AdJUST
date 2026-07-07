@@ -54,18 +54,7 @@ adjust-project/
         ├── 
 
 
-├── src/
-│   ├── 01_collection/
-│   │   └── text_scraper.py
-│   ├── 02_screening/
-│   │   ├── structural_relevance_sampling.py   # hypergeometric sampling (App. A)
-│   │   └── keyword_extraction.py               # → seed_keywords_*.xlsx
-│   ├── 03_keyword_discovery/
-│   │   ├── two_stage_keyword_discovery.py      # → discovered_keywords_*.csv
-│   │   ├── bart_classifier.py                  # renamed from env_class_roberta.py
-│   │   └── keyword_density.py                  # → corpus_85th_percentile.csv
-│   ├── 04_validation/
-│   │   └── validation_85thper.R                # validation sample + keystone legislation
+
 │   ├── 05_meckling_allan/
 │   │   ├── meckling_allan_api_access.py        # drop the timestamp suffix
 │   │   └── cleaning_meckling_data.R
