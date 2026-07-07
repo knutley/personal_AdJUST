@@ -13,8 +13,8 @@ library(irr)
 setwd("~/Downloads/")
 
 # Load PI Sheets
-fergus_sheet <- read_xlsx("pi_coding_sample1_final.xlsx", sheet = 2)
-marion_sheet <- read_xlsx("pi_coding_sample1 (1).xlsx", sheet = 2)
+fergus_sheet <- read_xlsx("pi_coding_sample_final_FG.xlsx", sheet = 2)
+marion_sheet <- read_xlsx("pi_coding_sample_final_MD.xlsx", sheet = 2)
 
 # Clean and Deduplicate 
 # Both sheets had duplicate IDs 52016PC0395 and 52022SC0267;
