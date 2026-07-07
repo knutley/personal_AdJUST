@@ -1,0 +1,8 @@
+model,accuracy,macro_f1,micro_f1
+ENSEMBLE,0.8875,0.8638,0.8875
+deberta-stage1,0.9125,0.8307,0.9125
+esgbert-stage1,0.8375,0.7653,0.8375
+climatebert-stage1,0.775,0.7487,0.775
+roberta-stage1,0.8125,0.7259,0.8125
+scibert-stage1,0.8125,0.716,0.8125
+finbert-stage1,0.6125,0.6321,0.6125
