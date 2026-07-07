@@ -1,0 +1,17 @@
+section,metric,value
+summary,exact_label_set_agreement,0.659
+summary,mean_per_label_agreement,0.902
+summary,ensemble_no_label_pct,61.6
+summary,finbert_no_label_pct,73.1
+
+section,label,ensemble_pct,single_model_pct,diff_pp
+distribution,Admin-Only,8.4,7.5,-0.9
+distribution,Green_Growth,9.8,4.9,-4.9
+distribution,Neoclassical,17.5,0.9,-16.5
+distribution,Post-Growth,5.2,13.6,8.4
+
+section,label,agreement,pearson_r
+agreement,Admin-Only,0.989,0.742
+agreement,Green_Growth,0.933,0.759
+agreement,Neoclassical,0.831,0.700
+agreement,Post-Growth,0.857,0.727
