@@ -1,0 +1,7 @@
+model,exact_match,macro_f1,micro_f1
+climatebert,0.4545,0.7117,0.7619
+finbert,0.6818,0.8070,0.8529
+roberta,0.5455,0.7693,0.7941
+esgbert,0.3636,0.6907,0.6933
+scibert,0.6364,0.7665,0.8065
+deberta,0.5909,0.6984,0.7869

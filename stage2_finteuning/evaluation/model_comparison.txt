@@ -1,9 +1,0 @@
-============================================================
-INDIVIDUAL MODEL RESULTS
-============================================================
-climatebert  — exact: 0.4545  macro F1: 0.7117  micro F1: 0.7619
-finbert      — exact: 0.6818  macro F1: 0.8070  micro F1: 0.8529
-roberta      — exact: 0.5455  macro F1: 0.7693  micro F1: 0.7941
-esgbert      — exact: 0.3636  macro F1: 0.6907  micro F1: 0.6933
-scibert      — exact: 0.6364  macro F1: 0.7665  micro F1: 0.8065
-deberta      — exact: 0.5909  macro F1: 0.6984  micro F1: 0.7869
