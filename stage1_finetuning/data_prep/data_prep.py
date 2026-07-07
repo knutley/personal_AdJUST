@@ -1,3 +1,7 @@
+# Author: Katie Nutley
+# Date: 2026-04-18
+# Title: Domain Pre-Training for Meckling and Allan Data
+
 """
 data_prep.py
 Prepares the Meckling CSV for:
