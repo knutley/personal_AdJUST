@@ -1,0 +1,12 @@
+{
+  "label2id": {
+    "Green_Growth": 0,
+    "Neoclassical": 1,
+    "Post-Growth": 2
+  },
+  "id2label": {
+    "0": "Green_Growth",
+    "1": "Neoclassical",
+    "2": "Post-Growth"
+  }
+}
