@@ -1,3 +1,9 @@
+# Author: Katie Nutley
+# Date: 2026-04-17
+# Description: Scraping Data from Mackling & Allan Google Docs Folder using Google API 
+
+import pandas as pd
+
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
