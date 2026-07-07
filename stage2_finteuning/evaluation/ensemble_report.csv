@@ -1,15 +1,16 @@
-============================================================
 STAGE 2 ENSEMBLE (multi-label)
-============================================================
-Exact match: 0.6364  Macro F1: 0.7945  Micro F1: 0.8438
-              precision    recall  f1-score   support
 
-  Admin-Only       1.00      0.88      0.93         8
-Green_Growth       0.75      0.75      0.75         8
-Neoclassical       0.86      1.00      0.92        12
- Post-Growth       0.67      0.50      0.57         4
+metric,value
+exact_match,0.6364
+macro_f1,0.7945
+micro_f1,0.8438
 
-   micro avg       0.84      0.84      0.84        32
-   macro avg       0.82      0.78      0.79        32
-weighted avg       0.84      0.84      0.84        32
- samples avg       0.88      0.88      0.85        32
+class,precision,recall,f1-score,support
+Admin-Only,1.0,0.88,0.93,8
+Green_Growth,0.75,0.75,0.75,8
+Neoclassical,0.86,1.0,0.92,12
+Post-Growth,0.67,0.5,0.57,4
+micro avg,0.84,0.84,0.84,32
+macro avg,0.82,0.78,0.79,32
+weighted avg,0.84,0.84,0.84,32
+samples avg,0.88,0.88,0.85,32
