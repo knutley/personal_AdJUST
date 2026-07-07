@@ -11,4 +11,34 @@ Principal Investigators (PIs) to assess structural relevance -- i.e., whether
 each document type was likely to contain articulations of policy paradigms.
 
 This note is intended as a record of process for internal reference and future
-replication.
+replication. Below, find the number of documents sampled for each resource type.
+
+Name                                  Resource Type              Number of Docs Sampled
+Interinstitutional Agreement Draft    AGREE_INTERINSTIT_DRAFT    1
+Amended Proposal                      AMEND_PROP                 1
+Joint White Paper                     JOINT_PAPER_WHITE          1
+Joint Proposed Regulation             JOINT_PROP_REG             1
+Proposed Resolution                   PROP_RES                   1 
+Draft Recommendation                  RECO_DRAFT                 4
+Draft Resolutions                     RES_DRAFT                  8
+White Paper                           PAPER_WHITE                17
+Working Document                      WORK_DOC                   28
+Joint Proposed Decision               JONT_PROP_DEC              31
+Proposed Implementing Regulation      PROP_REG_IMPL              31
+Draft Directive                       DIR_DRAFT                  33
+Proposed Recommendation               PROP_RECO                  34
+Joint Staff Working Document          JOINT_SWD                  40
+Draft Regulation                      REG_DRAFT                  44
+Recommendation for a Decision         RECO_DEC                   47
+Proposed Implementing Decision        PROP_DEC_IMPL              48
+Amended Proposal for a Decision       AMEND_PROP_DEC             51
+Draft Decision                        DEC_DRAFT                  50
+Amended Proposal for a Regulation     AMEND_PROP_REG             53
+Recommendation                        RECO                       54
+Amended Proposal for a Directive      AMEND_PROP_DIR             56
+Proposal for a Directive              PROP_DIR                   57
+Working Document                      SWD                        58
+Proposal for a Decision               PROP_DEC                   58
+Proposal for a Decision (No Adressee) PROP_DEC_NO_ADRESSEE       58
+Proposal for a Regulation             PROP_REG                   58
+Communication                         COMMUNIC                   58
