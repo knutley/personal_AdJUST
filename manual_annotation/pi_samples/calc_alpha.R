@@ -9,14 +9,18 @@
 library(readxl)
 library(dplyr)
 library(irr)
+library(here)
+library(writexl)
 
-setwd("~/Downloads/")
+# ── Paths (relative to repo root, works on any machine) ───────────────────────
+pi_samples_dir <- here("manual_annotation", "pi_samples")
+output_dir     <- here("manual_annotation", "pi_samples")
 
 # Load PI Sheets
-fergus_sheet <- read_xlsx("pi_coding_sample_final_FG.xlsx", sheet = 2)
-marion_sheet <- read_xlsx("pi_coding_sample_final_MD.xlsx", sheet = 2)
+fergus_sheet <- read_xlsx(file.path(pi_samples_dir, "pi_coding_sample_final_FG.xlsx"), sheet = 2)
+marion_sheet <- read_xlsx(file.path(pi_samples_dir, "pi_coding_sample_final_MD.xlsx"), sheet = 2)
 
-# Clean and Deduplicate 
+# Clean and Deduplicate
 # Both sheets had duplicate IDs 52016PC0395 and 52022SC0267;
 # first occurrence retained in both cases (second row was NA or identical)
 fergus_clean <- fergus_sheet %>%
@@ -40,8 +44,8 @@ marion_clean <- marion_sheet %>%
   )
 
 # Merge
-merged <- inner_join(fergus_clean, marion_clean, by = "ID") # this is just something you 
-# apparently have to do to use the IRR package 
+merged <- inner_join(fergus_clean, marion_clean, by = "ID") # this is just something you
+# apparently have to do to use the IRR package
 
 # Fix Marion's "Unsure" relevance on 52022PC0451 — she still assigned Post-Growth
 merged$relevant_marion[merged$ID == "52022PC0451"] <- "Yes"
@@ -59,11 +63,11 @@ coding <- merged %>%
 
 cat("N documents in clean coding set:", nrow(coding), "\n")
 
-# Labels! 
+# Labels!
 all_labels <- c("Admin-only", "GG-Evolutionary", "GG-Keynesianism",
                 "Neoclassical", "Post-Growth")
 
-# Per label binary alphas 
+# Per label binary alphas
 # A document gets 1 for a label if it appears in either the primary, secondary, or tertiary
 # column for that coder — ordering is ignored.
 alphas <- numeric(length(all_labels))
@@ -88,7 +92,7 @@ cat("\n=== Per-label Alphas (primary + secondary labels) ===\n")
 print(round(alphas, 3))
 cat("\nMean alpha across labels:", round(mean(alphas), 3), "\n")
 
-# Overall alpha (primary label only — conservative lower bound) 
+# Overall alpha (primary label only — conservative lower bound)
 # A single authoritative label per doc is required for overall alpha;
 # primary label only is used here. Per-label mean above is the main figure.
 r1_int <- as.integer(factor(coding$primary_fergus, levels = all_labels))
@@ -99,12 +103,10 @@ cat("\n=== Overall Alpha (primary label only, conservative lower bound) ===\n")
 print(kripp.alpha(rbind(r1_int, r2_int), method = "nominal")) # Not great, below
 # Krippendorff's alpha >0.67
 
-######## 
-# Going to try to reconcile the two; don't need it for alpha, but to give to the RA;  
+########
+# Going to try to reconcile the two; don't need it for alpha, but to give to the RA;
 
 colnames(fergus_clean)
-
-library(writexl)
 
 # Build per-document label sets and find overlap
 coding_sets <- coding %>%
@@ -116,7 +118,7 @@ coding_sets <- coding %>%
   ) %>%
   ungroup()
 
-# Split into reconciled (any overlap) and disputed (no overlap) 
+# Split into reconciled (any overlap) and disputed (no overlap)
 reconciled <- coding_sets %>%
   filter(lengths(agreed) > 0) %>%
   mutate(reconciled_primary = map_chr(agreed, 1))  # first agreed label as primary
@@ -137,17 +139,17 @@ reconciled_sheet <- reconciled %>%
     marion_additional = paste(setdiff(set_marion, agreed), collapse = "; ") %>% na_if("")
   ) %>%
   ungroup() %>%
-  select(ID, 
+  select(ID,
          agreed_primary = reconciled_primary,  # rename on the fly
          agreed_secondary, agreed_tertiary,
          fergus_additional, marion_additional)
 
-# Disputed tab 
+# Disputed tab
 disputed_sheet <- flagged_docs %>%
   mutate(adjudicated_label = NA_character_)
 
-# Going to add this back now, 
-# Bind reconciled + disputed into one label lookup 
+# Going to add this back now,
+# Bind reconciled + disputed into one label lookup
 # For disputed, adjudicated_label will be NA until you fill them in manually
 label_lookup <- bind_rows(
   reconciled_sheet %>% mutate(status = "reconciled"),
@@ -161,7 +163,7 @@ label_lookup <- bind_rows(
            status = "disputed")
 )
 
-# Join back to full original sheet 
+# Join back to full original sheet
 # Use fergus_sheet as the base — document metadata is the same in both
 
 colnames(marion_sheet)[which(names(marion_sheet) == "Label")] <- "Label.Marion"
@@ -172,8 +174,8 @@ colnames(marion_sheet)[which(names(marion_sheet) == "Notes")] <- "Notes.Marion"
 final_sheet <- fergus_sheet %>%
   distinct(ID, .keep_all = TRUE) %>%
   left_join(label_lookup, by = "ID") %>%
-  left_join(marion_sheet %>% select(ID, Label.Marion, `Secondary Label.Marion`, 
-                                    `Tertiary Label.Marion`, Notes.Marion), 
+  left_join(marion_sheet %>% select(ID, Label.Marion, `Secondary Label.Marion`,
+                                    `Tertiary Label.Marion`, Notes.Marion),
             by = "ID") %>%
   relocate(Label.Marion, `Secondary Label.Marion`, `Tertiary Label.Marion`, Notes.Marion,
            .after = Notes) %>%
@@ -183,5 +185,4 @@ final_sheet <- fergus_sheet %>%
     TRUE                ~ status
   ))
 
-library(writexl)
-write_xlsx(final_sheet, "reconciled_sheet.xlsx")
+write_xlsx(final_sheet, file.path(output_dir, "reconciled_sheet.xlsx"))
