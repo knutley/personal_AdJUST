@@ -1,0 +1,11 @@
+Ensemble of: /content/drive/MyDrive/AdJUST/checkpoints/climatebert-stage1/best_model, /content/drive/MyDrive/AdJUST/checkpoints/roberta-stage1/best_model, /content/drive/MyDrive/AdJUST/checkpoints/esgbert-stage1/best_model, /content/drive/MyDrive/AdJUST/checkpoints/scibert-stage1/best_model, /content/drive/MyDrive/AdJUST/checkpoints/finbert-stage1/best_model, /content/drive/MyDrive/AdJUST/checkpoints/deberta-stage1/best_model
+
+              precision    recall  f1-score   support
+
+Green_Growth     0.9032    0.8750    0.8889        32
+Neoclassical     0.8810    0.9250    0.9024        40
+ Post-Growth     0.8571    0.7500    0.8000         8
+
+    accuracy                         0.8875        80
+   macro avg     0.8804    0.8500    0.8638        80
+weighted avg     0.8875    0.8875    0.8868        80
