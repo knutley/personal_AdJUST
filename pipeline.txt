@@ -47,8 +47,12 @@ adjust-project/
         ├── ra_samples/
                 ├── ra_total_coded.csv # ra manual annotations 
 ├── stage1_finetuning/
-        ├── meckling_allan_api_access2.py # using Google Docs API to access Meckling & Allan's data
+        ├── data_prep/
+                ├── meckling_allan_api_access2.py # using Google Docs API to access Meckling & Allan's data
+                ├── cleaning_meckling_data.R # cleaning the Meckling & Allan data
+                ├── data_prep.py # preparing the Meckling & Allan data for fine tuning
         ├── 
+
 
 ├── src/
 │   ├── 01_collection/
