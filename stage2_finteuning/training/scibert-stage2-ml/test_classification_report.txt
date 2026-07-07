@@ -1,0 +1,14 @@
+Model: /content/drive/MyDrive/AdJUST/checkpoints/scibert-stage1/best_model
+Threshold: 0.5
+
+              precision    recall  f1-score   support
+
+  Admin-Only       0.88      0.88      0.88         8
+Green_Growth       0.75      0.75      0.75         8
+Neoclassical       0.91      0.83      0.87        12
+ Post-Growth       0.67      0.50      0.57         4
+
+   micro avg       0.83      0.78      0.81        32
+   macro avg       0.80      0.74      0.77        32
+weighted avg       0.83      0.78      0.80        32
+ samples avg       0.86      0.83      0.83        32
