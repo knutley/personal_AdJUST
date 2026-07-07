@@ -74,7 +74,13 @@ adjust-project/
                 ├── model_comparison.csv # comparison of different models
 ├── stage2_finetuning/
         ├── data_prep/ 
-                ├── ra_data_prep2.py # prepping data annotated by PIs and RA; order matters here
+                ├── ra_data_prep2.py # prepping data annotated by PIs and RA; 70/15/15 split 
+                ├── outputs/
+                         ├── clf_train.csv # training set - 100 obs. 
+                         ├── clf_val.csv # validation set - 22 obs. 
+                         ├── clf_test.csv # test set - 22 obs. 
+                         ├── label_mapping.json 
+        
          ├── training/
                 ├── finetune2.py # multilabel; BCEwithLogitsLoss; starts from Stage 1 checkpoints
                 ├── checkpoints/ 
@@ -86,6 +92,16 @@ adjust-project/
                         ├── deberta-stage2-ml/
                         ├── roberta-stage2-ml/
                         ├── finbert-stage2-ml/
+        ├── evaluation/
+                ├── compare_models2.py
+                ├── logits/
+                        ├── logits_climatebert.npy
+                        ├── logits_deberta.npy
+                        ├── logits_esgbert.npy
+                        ├── logits_finbert.npy
+                        ├── logits_roberta.npy
+                        ├── logits_scibert.npy
+         
 
 
 
