@@ -1,0 +1,11 @@
+Model: allenai/scibert_scivocab_uncased
+
+              precision    recall  f1-score   support
+
+Green_Growth     0.9600    0.7500    0.8421        32
+Neoclassical     0.7600    0.9500    0.8444        40
+ Post-Growth     0.6000    0.3750    0.4615         8
+
+    accuracy                         0.8125        80
+   macro avg     0.7733    0.6917    0.7160        80
+weighted avg     0.8240    0.8125    0.8052        80
