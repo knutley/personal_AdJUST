@@ -1,0 +1,40 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+*.ipynb_checkpoints/
+
+# ── R ────────────────────────────────────────────────────────────────────────
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+renv/library/
+renv/staging/
+renv/python/
+
+# ── Model checkpoints (large binaries — see README for hosting location) ──────
+**/best_model/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# ── OS / editor junk ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ── Local scratch / staging ────────────────────────────────────────────────────
+/tmp/
+*.tmp
+.env
+
+# ── Logs ────────────────────────────────────────────────────────────────────────
+*.log
