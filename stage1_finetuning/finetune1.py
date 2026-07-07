@@ -1,3 +1,7 @@
+# Author: Katie Nutley  
+# Date: 2026-05-07
+# Title: Stage 1 Fine-Tuning on Meckling and Allan Data
+
 """
 finetune.py  —  Supervised Classification Fine-tuning
 Stage 1: fine-tune on Meckling & Allan data (3 or 4 classes)
