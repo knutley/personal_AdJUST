@@ -1,3 +1,7 @@
+# Author: Katie Nutley
+# Date: 2026-05-15
+# Title: Stage 2 Finetuning Data Prep
+
 """
 ra_data_prep2.py
 Merges RA and one or more PI annotated EU pre-legislative documents into
@@ -9,8 +13,8 @@ Label schema (4-class, multi-label):
 Usage (Google Colab):
     !python /content/drive/MyDrive/AdJUST/data/ra_data_prep2.py \
         --ra_file    /content/drive/MyDrive/AdJUST/data/ra_total_coded.csv \
-        --pi_files   /content/drive/MyDrive/AdJUST/data/marion_total.csv \
-                     /content/drive/MyDrive/AdJUST/data/fergus_total.csv \
+        --pi_files   /content/drive/MyDrive/AdJUST/data/pi_coding_sample_final_MD.csv \
+                     /content/drive/MyDrive/AdJUST/data/pi_coding_sample_final_FG.csv \
         --output_dir /content/drive/MyDrive/AdJUST/ra_data
 
 NOTE: pi_files order matters. With keep="last", the last file listed wins
