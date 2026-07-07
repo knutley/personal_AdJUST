@@ -74,13 +74,21 @@ adjust-project/
                 ├── model_comparison.csv # comparison of different models
 ├── stage2_finetuning/
         ├── data_prep/ 
-                ├── ra_data_prep2.py #
+                ├── ra_data_prep2.py # prepping data annotated by PIs and RA; order matters here
+         ├── training/
+                ├── finetune2.py # multilabel; BCEwithLogitsLoss; starts from Stage 1 checkpoints
+                ├── checkpoints/ 
+                         ├── climatebert-stage2-ml/│
+                                ├── best_model/ # unable to upload due to size constraints
+                                ├── test_classification_report.txt
+                        ├── scibert-stage2-ml/ 
+                        ├── esgbert-stage2-ml/
+                        ├── deberta-stage2-ml/
+                        ├── roberta-stage2-ml/
+                        ├── finbert-stage2-ml/
 
-│   ├── 05_meckling_allan/
-│   │   ├── meckling_allan_api_access.py        # drop the timestamp suffix
-│   │   └── cleaning_meckling_data.R
-│   ├── 06_stage1_finetuning/
-│   │   └── train_stage1_ensemble.py            # 6 models, phrase/sentence/paragraph level
+
+
 │   ├── 07_stage2_finetuning/
 │   │   └── train_stage2_ensemble.py            # document-level multilabel
 │   ├── 08_llm_benchmark/
