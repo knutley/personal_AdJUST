@@ -1,0 +1,4 @@
+name,exact_match,macro_f1,micro_f1
+GPT-4o (few-shot),0.590909,0.709722,0.779661
+Llama 3.3 (few-shot),0.409091,0.467857,0.581818
+AdJUST Ensemble,0.636364,0.794460,0.843750
