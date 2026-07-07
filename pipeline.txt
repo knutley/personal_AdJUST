@@ -60,7 +60,7 @@ adjust-project/
                 ├── finetune1.py # trains on those splits; single-label 3-class
                 ├── checkpoints/ 
                         ├── climatebert-stage1/│
-                                ├── best_model/
+                                ├── best_model/ # unable to upload due to size constraints
                                 ├── test_classification_report.txt
                         ├── scibert-stage1/ # this just repeats with the above 
                         ├── esgbert-stage1/
