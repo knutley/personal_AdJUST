@@ -1,4 +1,4 @@
-# Corpus Validation Report
+# Corpus Validation Report for Keystone Legislation
 # Author: Katie Nutley
 # Date: 20-02-2025
 # Pulls from 85th percentile filtered corpus
@@ -206,7 +206,7 @@ if (nrow(missing_eco) > 0) {
   cat("All eco-social documents found!\n")
 }
 
-# Note: PSLF documents may be missing but this is not hugely concerning.
+# Note: PSLF documents may be missing, but this is not hugely concerning.
 
 # =============================================================================
 # GREEN GROWTH PARADIGM: MARION'S DOCUMENTS
