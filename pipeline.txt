@@ -94,6 +94,8 @@ adjust-project/
                         ├── finbert-stage2-ml/
         ├── evaluation/
                 ├── compare_models2.py
+                ├── ensemble_report.txt # ensemble results 
+                ├── model_comparison.csv # comparison of different models
                 ├── logits/
                         ├── logits_climatebert.npy
                         ├── logits_deberta.npy
