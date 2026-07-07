@@ -1,3 +1,7 @@
+# Author: Katie Nutley
+# Date: 2026-05-14
+# Title: Second Stage Fine-Tuning (Meckling & Allan -> AdJUST data) 
+
 """
 finetune2.py  —  Multi-Label Classification Fine-tuning
 Stage 1: fine-tune on Meckling & Allan data (3-class, single-label)
