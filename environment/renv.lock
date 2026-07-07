@@ -1,0 +1,20 @@
+# environment/DESCRIPTION  (or convert to renv.lock via renv::snapshot())
+
+Imports:
+    dplyr,
+    eurlex,
+    ggiraph,
+    ggplot2,
+    httr,
+    knitr,
+    purrr,
+    rmarkdown,
+    rvest,
+    testthat,
+    tidyr,
+    wordcloud,
+    readr,
+    tidyverse,
+    readxl,
+    irr,
+    writexl
