@@ -114,7 +114,6 @@ adjust-project/
                 ├── prompt_sensitivy.csv # GPT-4o/4/8-shot only 
         ├── threshold_selection/
                 ├── threshold_comparison.py           
-                ├── threshold_comparison_corpus.csv    # by raw sigmoid threshold (0.4–0.7)
                 ├── two_threshold_classification.py      
                 ├── corpus_classified_two_threshold.csv    # unable to upload due to size constraints 
         ├── robustness/
