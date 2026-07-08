@@ -7,7 +7,7 @@ Computational identification of climate policy paradigms in EU pre-legislative d
 
 This repository documents the full pipeline architecture — from corpus construction through model fine-tuning to corpus-level classification — necessary to replicate "AdJUST Project: Policy Paradigms in EU Public Bodies" (Green, Dumas & Nutley, submitted to Nature Climate Change). pipeline.txt provides the file-level directory map; this document explains the methodology behind each stage.
 
-Large intermediate/output files (full corpus with text, scored corpus, final classified corpus, and fine-tuned model checkpoints) are not stored in this repository due to size constraints. They are archived on Zenodo with a permanent DOI — see Data and Model Availability below.
+Large intermediate/output files (full corpus with text, scored corpus, final classified corpus, and fine-tuned model checkpoints) are not stored in this repository due to size constraints. They are archived on Zenodo with a permanent DOI — 10.5281/zenodo.21263220. See Data and Model Availability for any further questions.
 
 ## Project Objectives
 
@@ -22,42 +22,25 @@ Large intermediate/output files (full corpus with text, scored corpus, final cla
 
 ### Phase 1: Corpus Collection and Standardisation
 
-**Data Source:** EurLex Database - utilising the `eurlex` R package for efficient data sourcing 
+**Data Source:** EurLex Database - utilising the `eurlex` R package for efficient metadata sourcing 
     - Code for the EurLex scrape entitled **reworked_eurlex_scrape.R**
-    - Data produced entitled **deduplicated_scrape.csv** 
-
-**Standardisation Framework:**
-- Standardised metadata schema capturing:
-  - Type: resource type, i.e. PROP_REG, DEC_DRAFT, SWD, etc.
-      - Information on resource_types found here: https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?        uri=http://publications.europa.eu/resource/authority/resource-type
-  - Document ID: celex number (the alphanumeric identifier used by the EU)
-  - Date: publication date
-  - Author: body responsible
-  - Directory: directory
-        - Information on directory found here: https://eur-lex.europa.eu/browse/directories/legislation.html
-  - Resource Type Used: manual or predefined
-  - URL
-  - Title
- 
-  **Deduplication:**
-  - Exact Matching: Document ID comparison; automated merging
-  - Fuzzy Matching: Title similarity analysis
-  - Quality Assurance: Probabilstic sampling for manual review;
- 
-  Ultimately, nothing was flagged. 
 
 ### Phase 2: Text Scraping 
 
-**Text Scraper:** EurLex only gives title names, so it was necessary to build a separate scraper; entitled **text_scraper.py**
-- Worth noting is that I had to ex post facto include a secondary script to clean the checkpoints built into the scraper; entitled **clean_checkpoints.py**
-- The output file is called corpus_with_text.csv in the code and is not uploaded here due to space concerns 
+EurLex metadata does not include full document text, so text was retrieved separately. 
 
+- **text_scraper.py** — queries each document's EUR-Lex URL (with CELEX-constructed URLs as fallback), extracts text from parsed HTML via BeautifulSoup/requests, targeting document-body elements with paragraph-level extraction as a fallback.
+- **clean_checkpoints.py** — cleans scraper checkpoint files; run in a second terminal while the scraper is active.
+- Output: **corpus_with_text.csv** (archived on Zenodo — not included in this repository; see below).
+  
 ### Phase 3: Document Screening
 
+Screening proceeds in two stages: structural relevance (is this document type likely to contain paradigmatic content?) and substantive relevance (does this specific document engage with environmental/climate topics?). 
+
 **Structural Relevance:** 
-- Random, discrete sampling based on doc_type (28 total in deduplicated_scrape.csv) combined with ad hoc review for structural relevance 
-    - Overview available in the corresponding paper; but, samples cannot be provided due to space concerns.
-    - Upshot is that AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC, AMEND_PROP_REG, RECO, and AMEND_PROP_DIR were excluded (leaving 23 doc_types and 20,316 documents)
+- A confidence-bound approach using the hypergeometric distribution was used to decide, for each of the 28 resource types, whether it could be excluded with 95% confidence that fewer than 5% of its documents are structurally relevant (full derivation in the paper's Appendix A).
+- Rare types (≤8 documents) were reviewed in full; more populous types were sampled at calculated sizes (converging to ~58 documents for large types) and manually reviewed by a legal expert.
+Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC, AMEND_PROP_REG, RECO, AMEND_PROP_DIR), leaving 23 resource types and 20,309 documents.
 
 **Substantive Relevance (Hybridisation):** 
 
