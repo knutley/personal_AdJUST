@@ -121,7 +121,8 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 - **R Packages**: `eurlex`, 'reticulate', 'tidyverse', etc. 
 - **Python Libraries**: `BeautifulSoup`, `Scrapy`, `transformers`, 
 - **APIs**: EU Publications Office Elasticsearch API, Google Docs API 
-- **ML Models**: BERT (HuggingFace transformers)
+- **BERT Models**: ClimateBERT, DeBERTa-v1, ESG-BERT, FinBERT, RoBERTa, SciBERT
+- **LLMs**: GPT-4o, LLama 3.3 
 
 ## Contributing
 
