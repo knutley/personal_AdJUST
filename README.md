@@ -1,19 +1,19 @@
 
-# AdJUST Project
+# AdJUST Project (WP4.4)
 
-Computational identification of climate policy paradigms in EU pre-legislative documents (1990-2025). 
+This work package (4.4) of the AdJUST Project (HORIZON-CL5-2021-D2-01-12) focuses on the computational identification of climate policy paradigms in EU pre-legislative documents (1990-2025). 
 
 ## Overview
 
-This repository documents the full pipeline architecture — from corpus construction through model fine-tuning to corpus-level classification — necessary to replicate "AdJUST Project: Policy Paradigms in EU Public Bodies" (Green, Dumas & Nutley, submitted to Nature Climate Change). pipeline.txt provides the file-level directory map; this document explains the methodology behind each stage.
+This repository documents the full pipeline architecture — from corpus construction through model fine-tuning to corpus-level classification — necessary to replicate "Climate Policy Paradigms at the European Commission" (Green, Dumas & Nutley, submitted to Nature Climate Change). The pipeline.txt provides the file-level directory map; this document explains the methodology behind each stage.
 
-Large intermediate/output files (full corpus with text, scored corpus, final classified corpus, and fine-tuned model checkpoints) are not stored in this repository due to size constraints. They are archived on Zenodo with a permanent DOI — 10.5281/zenodo.21263220. See Data and Model Availability for any further questions.
+Large or intermediate output files (e.g., full corpus with text, scored corpus, final classified corpus, and fine-tuned model checkpoints) are not stored in this repository due to GitHub's size constraints. They are archived on Zenodo with a permanent DOI — 10.5281/zenodo.21263220. See Data and Model Availability for any further questions.
 
 ## Project Objectives
 
-- Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance (broader than climate policy relevance)
-- Manually annotate a representative subsample to identify climate policy paradigms (neoclassical economics, green growth, evolutionary economics, post-growth)
-- Develop and apply computational classification methods (ensemble inclusive of ClimateBERT, DeBERTa-v1, ESG-BERT, FinBERT, RoBERTa-base, and SciBERT) to classify paradigms across the full corpus
+- Construct a corpus of EU pre-legislative documents filtered for environmental policy relevance 
+- Manually annotate a representative subsample to identify climate policy paradigms - Green Growth (inclusive of Keynesian and Schumpeterian), Neoclassical, and Post-Growth 
+- Develop and apply computational classification methods (ensemble of ClimateBERT, DeBERTa-v1, ESG-BERT, FinBERT, RoBERTa-base, and SciBERT) to classify paradigms across the full corpus
 - Use few-shot prompting of two frontier LLMs (GPT-4o and Llama 3.3) to benchmark ensemble results
 - Perform a battery of robustness tests (individual-model comparison, LLM prompt sensitivity, Just Transition lexical filtering)
 - Analyse paradigm distribution patterns to assess EU policy coherence and identify tensions between economic and climate priorities
