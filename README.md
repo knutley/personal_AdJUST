@@ -65,20 +65,28 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 - **Random Sample**: a random sample was manually annotated for environmental relevance with 68 of 100 documents deemed relevant (**85th_percent_validation.xlsx**)
 - **Key Legislation**: the two principal investigators (PIs) compiled lists of paradigm-representative instrucments stpanning the three paradigms; corpus searches confirmed 100% recovery of all 35 instruments. 
 
-### Phase 4: Manual Labelling and Machine Learning Classification:
+### Phase 4: Codebook Construction and Manual Annotation:
 
-- Bootstrap labelled training set
-- Active learning with BERT predictions
-- Iterative improvement through expert validation
-- Inter-coder reliability assessment (Cohen's kappa)
+- Manually annotated PI samples, 58 observations in total, entitled **pi_coding_sample_final_FG.xlsx** and **pi_coding_sample_final_MD.xlsx**.
+- Krippendorf's alpha calculated using **calc_alpha.R** and any remaining disputes resolved in favour of Fergus where there was disagreement and Marion's additional tags included.
+- The PIs used their coding samples to create **codebook_v2.docx**, which was given to the RA (along with their samples) as a worked example.
+- RA coded 410 observations; entitled **ra_total_coded.csv**.
 
-### Phase 5: Paradigm Classification
+### Phase 5: Two-Stage Fine-Tuning and Classification
 
-**Few-Shot Prompt Engineering:**
-- Expert-curated paradigm examples
-- Adaptive few-shot prompting with k-means clustering
-- Hierarchical classification strategy
-- Confidence scoring system
+**Stage 1: Meckling and Allan Data**
+
+- Data collected from Meckling and Allan (2020) using Google Docs API; code entitled **meckling_allan_api_access2.py**.
+- Meckling and Allan (2020) data cleaned manually and via **cleaning_meckling_data.R**.
+- Trained 6 BERT-based models (ClimateBERT, DeBERTav1, ESG-BERT, FinBERT, RoBERTa, and SciBERT) using **finetune1.py**.
+- Evaluation and outputs available in **stage1_finetuning/** folder. 
+
+**Stage 2: AdJUST Data**
+
+### Phase 6: Benchmarking Against Frontier Models (GPT-4o and Llama3.3) 
+
+
+
 
 ## Technical Requirements
 
