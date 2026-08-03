@@ -35,7 +35,7 @@ EurLex metadata does not include full document text, so text was retrieved separ
   
 ### Phase 3: Document Screening
 
-Screening proceeds in two stages: structural relevance (is this document type likely to contain paradigmatic content?) and substantive relevance (does this specific document engage with environmental/climate topics?). 
+Screening proceeds in two stages: structural relevance (is this document type likely to contain paradigmatic content?) and substantive relevance (does this specific document engage with environmental topics?). 
 
 **Structural Relevance:** 
 - A confidence-bound approach using the hypergeometric distribution was used to decide, for each of the 28 resource types, whether it could be excluded with 95% confidence that fewer than 5% of its documents are structurally relevant (full derivation in the paper's Appendix A).
@@ -44,24 +44,27 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 
 **Substantive Relevance (Hybridisation):** 
 
-- **Data-driven Approach (Frequency Analysis):**
-    - Random sample (n =100) of the remaining 20,316 documents taken and hand-coded for positive vs. negative set class relevance; sample entitled **corpus_random.xlsx**
-    - This resulted in a list of 1,833 keywords; the code is entitled **keyword_extraction.py** and the entire keyword list is entitled **frequency_analysis_keywords.txt**
-    - This was then further filtered to 187 keywords that had a precision score > 0.75 and/or were ostensibly climate-related; entitled: **retained_frequency_keywords.txt**
+- **Data-driven Approach (Seeded Keyword Discovery):**
+    - Random sample (n =100) of the remaining 20,309 documents taken and hand-coded for positive vs. negative set class relevance; sample entitled **corpus_random.xlsx**. 
+    - This resulted in a list of 1,113 seeds; the code is entitled **keyword_extraction.py** and the unfiltered seed list is entitled **unfiltered_seeds.csv**
+    - This was manually filtered to 109 keywords with clear environmental relevance; entitled: **filtered_seeds.csv**
+    - The 109 seed keywords were applied to the 20,309-document corpus using **two_stage_keyword_discovery.py**; the output is **unfiltered_discovered_keywords.csv**.
+    - The 18,807 unfiltered, discovered keywords were filtered using **bart_classifier.py**; producing the 5,504 filtered keywords in **filtered_discovered_keywords.csv**.
+    - The BART-MNLI filtered keywords were then manually filtered to produce 791 keywords found in **double_filtered_discovered_keywords.csv**.
  
 - **Expert-led Approach:**
-    - An expert-curated list of keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords**
+    - An expert-curated list of 138 keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords.txt**
  
-- **Integration of Approaches:** 
-- Keywords organised into three reliability tiers through iterative review (tiers explained in **tiered_keywords.txt**) with paradigm bonus:
-  - **Tier 1 (High-Confidence):** Core environmental policy terms with strong signal (weight: 3.0)
-  - **Tier 2 (Moderate-Confidence):** Contextually relevant terms requiring validation (weight: 1.5)
-  - **Tier 3 (Ambiguous):** Context-dependent terms (weight: 0.5)
-- ***Scoring Formula:***
-```
-  Score = 3.0 × n_Tier1 + 1.5 × n_Tier2 + 0.5 × n_Tier3 + 2.0 × n_Paradigm
-```
+- **Integration of Approaches:**
+- The 109 seeded keywords (**filtered_seeds.csv**), 791 discovered keywords (**double_filtered_discovered_keywords.csv**) and the 138 expert-curated keywords (**Expert-Curated Keywords.txt**) were combined into a unified keyword set. Each key
+
+
+
+
 - Application of tiered, scoring framework and a small, initial filter entitled **combined_keyword_intial_filtering.py**
+
+
+  
 - ***Robustness Check:*** 
 - As the weighted scoring system is ordinal (and not reflective of some diagnostic value), we performed a robustness check with different values, but similar logic. Below we employed a 4:2:1 split plus a 3-point paradigm bonus:
 ```
