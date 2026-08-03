@@ -132,7 +132,7 @@ This project involves collaboration between technical developers and domain expe
 
 - **Principal Investigator(s)**: Dr. Fergus Green (UCL), Dr. Marion Dumas (LSE) 
 - **Computational Researcher**: Katelyn Nutley, kn32@st-andrews.ac.uk
-**Institutional Affiliation**: UCL/LSE  
+- **Institutional Affiliation**: UCL/LSE  
 
 ## Contribution Taxonomy ## 
 
