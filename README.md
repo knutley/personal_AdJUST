@@ -111,6 +111,10 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 
 - Excluding mention of 'Just Transition' using **plot_5yr_bins_excl_just_transition.py** to produce a visualisation **paradigm_trends_5yr_bins_excl_just_transition.png** and a table **paradigm_trends_5yr_bins_excl_just_transition.csv**. Retains the trends, suggesting that the outcomes are not particularly dependent on one lexical signal. 
 
+## Data Availability
+- **Zenodo**: 10.5281/zenodo.21263220
+- **Google Colab**: 
+
 ## Technical Requirements
 
 ### Dependencies
