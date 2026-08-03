@@ -56,25 +56,12 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
     - An expert-curated list of 138 keywords was supplemented by Fergus Greene and [insert colleague's name here]; the list is entitled **Expert-Curated Keywords.txt**
  
 - **Integration of Approaches:**
-- The 109 seeded keywords (**filtered_seeds.csv**), 791 discovered keywords (**double_filtered_discovered_keywords.csv**) and the 138 expert-curated keywords (**Expert-Curated Keywords.txt**) were combined into a unified keyword set. Each key
+    - The 109 seeded keywords (**filtered_seeds.csv**), 791 discovered keywords (**double_filtered_discovered_keywords.csv**) and the 138 expert-curated keywords (**Expert-Curated Keywords.txt**) were         combined into a unified keyword set.
+    - This set was stemmed, applied to the corpus, and scored according to density; the code is entitled **keyword_density.py**.
+    - The distribution was analysed, and a threshold was applied at the 85th percentile (**85per_corpus.py**) to produce **corpus_85th_percentile.csv**.
 
-
-
-
-- Application of tiered, scoring framework and a small, initial filter entitled **combined_keyword_intial_filtering.py**
-
-
-  
-- ***Robustness Check:*** 
-- As the weighted scoring system is ordinal (and not reflective of some diagnostic value), we performed a robustness check with different values, but similar logic. Below we employed a 4:2:1 split plus a 3-point paradigm bonus:
-```
- Score = 4.0 × n_Tier1 + 2.0 × n_Tier2 + 1.0 × n_Tier3 + 3.0 × n_Paradigm
-```
-- The primary filtering logic remained the same (3 Tier 1 words plus a signal from Tier 2 and 3); 
-    - 4:2:1 filter: n_tier1 > 3, score > 14.0 
-    - 3:1.5:0.5 filter: n_tier1 > 3, score > 10
- - The outcome was 10,805 docs (3:1.5:0.5) and 10,805 (4:2:1), with 100% overlap across cases. Meaning, of course, that although the logic may change, the substantive findings do not.
- - ***Threshold***: samples in the fourth quartile (above the 75th percentile) were retained; this was done in the expectation that only 
+- ***Robustness Check***
+    - 
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
