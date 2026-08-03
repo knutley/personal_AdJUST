@@ -74,32 +74,50 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 
 ### Phase 5: Two-Stage Fine-Tuning and Classification
 
-**Stage 1: Meckling and Allan Data**
+**Stage 1: Meckling and Allan Data** (***please note, this is not accessible to the public***) 
 
 - Data collected from Meckling and Allan (2020) using Google Docs API; code entitled **meckling_allan_api_access2.py**.
 - Meckling and Allan (2020) data cleaned manually and via **cleaning_meckling_data.R**.
-- Trained 6 BERT-based models (ClimateBERT, DeBERTav1, ESG-BERT, FinBERT, RoBERTa, and SciBERT) using **finetune1.py**.
-- Evaluation and outputs available in **stage1_finetuning/** folder. 
+- Trained 6 BERT-based models (ClimateBERT, DeBERTa-v1, ESG-BERT, FinBERT, RoBERTa, and SciBERT) on an 80/10/10 split using **finetune1.py**.
+- Test classification reports are available in **stage1_finetuning/training/[MODEL_NAME]/test_classification_report.txt**. 
+- Models were compared using **compare_models.py**, producing **model_comparison.csv**.
+- The stage 1 ensemble report is available (**ensemble_report.txt**), however, individual model-specific JSONs, configs, etc. are available in the Zenodo archive.
 
 **Stage 2: AdJUST Data**
 
-### Phase 6: Benchmarking Against Frontier Models (GPT-4o and Llama3.3) 
+- Multi-label classification of 468 documents (combining the RA and the reconciled PI samples) - 144 deemed relevant.
+- Using a 70/15/15 split, the ensemble was trained using **finetune2.py**
+- Test classification reports are available in **stage2_finetuning/training/[MODEL_NAME]/test_classification_report.txt**.
+- Models were compared using **compare_models2.py**, producing **model_comparison.csv**.
+- The stage 2 ensemble report is available (**ensemble_report.txt**), however, individual model-specific JSONs, configs, etc. are available in the Zenodo archive.
 
+### Phase 6: Robustness Checks
 
+**FinBERT vs. Ensemble** 
 
+- **robustness_check.csv** shows the defree to which there is agreement and differential distribution between FinBERT and the ensemble (relied on **robustness_check.py**).
+- **disputed_nroclassicaly_postgrowth.xlsx** is a manually worked example displaying the most disagreement between FinBERT and the ensemble; resolving in favour of the ensemble - 35/43 times. 
+- Shows visualisation of temporal trends of paradigm distribution between FinBERT and the ensemble in **robustness_temporal_trends.png**
+
+**LLM Benchmarking** 
+
+- **Primary comparison (token-matched):** GPT-4o (OpenAI API) and Llama 3.3 70B (Groq API) evaluated few-shot against the ensemble on the same 22-document test set. All documents truncated to a 512-token budget (matching the BERT ensemble's input) using a `roberta-base` reference tokeniser; few-shot examples truncated to 128 tokens. Predictions saved to **llm_comparison_matched.csv**. Reported (Exact Match / Macro F1 / Micro F1): GPT-4o 0.50/0.60/0.66, Llama 3.3 0.50/0.59/0.72, AdJUST Ensemble 0.64/0.79/0.84.
+
+- **Naive-truncation robustness check:** same models/test set, but with fixed character truncation (800 chars/document, 300 chars/few-shot example) instead of token-matching. Predictions saved to **llm_comparison.csv**. Results: GPT-4o 0.59/0.71/0.78, Llama 3.3 0.41/0.47/0.58, AdJUST Ensemble 0.64/0.79/0.83 
+
+- **GPT-4o prompt-sensitivity check** (0-/4-/8-shot, naive truncation): output saved to **prompt_sensitivity.csv**. Macro F1: 0.35 (0-shot) → 0.50 (4-shot) → 0.69 (8-shot), consistent with the paper's reported figures.
+
+**Just Transition Exclusion**
+
+- Excluding mention of 'Just Transition' using **plot_5yr_bins_excl_just_transition.py** to produce a visualisation **paradigm_trends_5yr_bins_excl_just_transition.png** and a table **paradigm_trends_5yr_bins_excl_just_transition.csv**. Retains the trends, suggesting that the outcomes are not particularly dependent on one lexical signal. 
 
 ## Technical Requirements
 
 ### Dependencies
 - **R Packages**: `eurlex`, 'reticulate', 'tidyverse', etc. 
 - **Python Libraries**: `BeautifulSoup`, `Scrapy`, `transformers`, 
-- **APIs**: EU Publications Office Elasticsearch API
+- **APIs**: EU Publications Office Elasticsearch API, Google Docs API 
 - **ML Models**: BERT (HuggingFace transformers)
-
-### Infrastructure (Needs to be Discussed) 
-- API rate limiting and management
-- Distributed processing capabilities
-- Version control and data lineage tracking
 
 ## Contributing
 
@@ -107,7 +125,7 @@ This project involves collaboration between technical developers and domain expe
 
 ## Contact
 
-- **Principal Investigator(s)**: Dr. Marion Dumas and Dr. Fergus Green
+- **Principal Investigator(s)**: Dr. Fergus Green (UCL), Dr. Marion Dumas (LSE) 
 - **Computational Researcher**: Katelyn Nutley, kn32@st-andrews.ac.uk
 **Institutional Affiliation**: UCL/LSE  
 
