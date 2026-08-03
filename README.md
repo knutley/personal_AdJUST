@@ -113,7 +113,7 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
 
 ## Data Availability
 - **Zenodo**: 10.5281/zenodo.21263220
-- **Google Colab**: 
+- **Google Colab**: https://colab.research.google.com/drive/1iLOOQ6TP0V86HzDiSN2O2vGkGZUPh845?usp=sharing
 
 ## Technical Requirements
 
