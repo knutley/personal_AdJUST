@@ -60,8 +60,10 @@ Result: 5 of 28 resource types excluded (AGREE_INTERINSTIT_DRAFT, AMEND_PROP_DEC
     - This set was stemmed, applied to the corpus, and scored according to density; the code is entitled **keyword_density.py**.
     - The distribution was analysed, and a threshold was applied at the 85th percentile (**85per_corpus.py**) to produce **corpus_85th_percentile.csv**.
 
-- ***Robustness Check***
-    - 
+**Corpus Validation**
+
+- **Random Sample**: a random sample was manually annotated for environmental relevance with 68 of 100 documents deemed relevant (**85th_percent_validation.xlsx**)
+- **Key Legislation**: the two principal investigators (PIs) compiled lists of paradigm-representative instrucments stpanning the three paradigms; corpus searches confirmed 100% recovery of all 35 instruments. 
 
 ### Phase 4: Manual Labelling and Machine Learning Classification:
 
